@@ -1,31 +1,44 @@
 # Daily watchlist job. Scheduled at 12:00 by Task Scheduler as "Intellia AI Watchlist".
 # Run by hand: powershell -ExecutionPolicy Bypass -File daily.ps1
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"  # native tools write progress to stderr; exit codes decide failure
 $OutputEncoding = [Text.UTF8Encoding]::new($false)  # PowerShell 5.1 pipes ASCII to native programs by default
 Set-Location $PSScriptRoot
 New-Item -ItemType Directory -Force logs | Out-Null
-function Log($m) { Add-Content logs\daily.log "$(Get-Date -Format s) $m"; Write-Host $m }
+$log = "logs\daily.log"
+function Log($m) { Add-Content $log "$(Get-Date -Format s) $m" -Encoding utf8; Write-Host $m }
+function Step($name, [scriptblock]$cmd) {
+  & $cmd 2>&1 | ForEach-Object { "$_" } | Add-Content $log -Encoding utf8
+  if ($LASTEXITCODE) { throw "$name failed (exit $LASTEXITCODE)" }
+}
 
 try {
-  git pull --ff-only
-  if ($LASTEXITCODE) { throw "git pull failed" }
-  python build.py
-  if ($LASTEXITCODE) { throw "build.py failed" }
+  Log "start"
+  Step "git pull" { git pull --ff-only }
+  Step "build" { python build.py }
 
+  # Claude curates in a scratch folder holding only its inputs, so text from the
+  # feeds cannot steer it into editing the repo's code or reading other files.
+  $work = Join-Path $env:TEMP "intellia-watchlist-curate"
+  Remove-Item $work -Recurse -Force -ErrorAction SilentlyContinue
+  New-Item -ItemType Directory $work | Out-Null
+  Copy-Item editorial.md, pool.json $work
+  if (Test-Path today.json) { Copy-Item today.json $work }
   $before = if (Test-Path today.json) { (Get-FileHash today.json).Hash } else { "" }
-  # The prompt goes in on stdin: PowerShell 5.1 cuts native arguments at the first double quote.
-  Get-Content prompt.md -Raw | claude -p --allowedTools "Read,Write" --permission-mode acceptEdits
-  if ($LASTEXITCODE) { throw "claude failed" }
+  Push-Location $work
+  try {
+    # The prompt goes in on stdin: PowerShell 5.1 cuts native arguments at the first double quote.
+    Step "claude" { Get-Content "$PSScriptRoot\prompt.md" -Raw | claude -p --allowedTools "Read,Write" --permission-mode acceptEdits }
+  } finally { Pop-Location }
+  Copy-Item (Join-Path $work today.json) today.json -Force
   if ((Get-FileHash today.json).Hash -eq $before) { throw "today.json unchanged" }
 
-  python render.py
-  if ($LASTEXITCODE) { throw "render.py failed" }
-  git add today.json index.html
-  git commit -m "daily: $(Get-Date -Format yyyy-MM-dd)"
-  git push
-  if ($LASTEXITCODE) { throw "git push failed" }
+  Step "render" { python render.py }
+  Step "git add" { git add today.json index.html }
+  Step "git commit" { git commit -m "daily: $(Get-Date -Format yyyy-MM-dd)" }
+  Step "git push" { git push }
   Log "ok"
 } catch {
+  git checkout -- today.json index.html 2>&1 | Out-Null  # keep yesterday's issue as the base for tomorrow
   Log "FAIL $_"
   exit 1
 }

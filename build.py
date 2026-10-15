@@ -2,6 +2,7 @@
 
 Run: python build.py
 """
+
 import gzip
 import hashlib
 import html
@@ -25,7 +26,9 @@ NS = {
 
 
 def decode(body):
-    if body[:2] == bytes([0x1F, 0x8B]):  # gzip magic; some servers compress even when not asked
+    if body[:2] == bytes(
+        [0x1F, 0x8B]
+    ):  # gzip magic; some servers compress even when not asked
         body = gzip.decompress(body)
     return body.decode("utf-8", "replace")
 
@@ -59,7 +62,9 @@ def parse_date(s):
     return d.astimezone(timezone.utc)
 
 
-def item(section, title, url, source, published, summary="", thumbnail=None, extra=None):
+def item(
+    section, title, url, source, published, summary="", thumbnail=None, extra=None
+):
     return {
         "id": hashlib.sha1(url.encode()).hexdigest()[:12],
         "section": section,
@@ -77,7 +82,9 @@ def source_name(url, feed_title):
     m = re.search(r"reddit\.com/r/([^/]+)", url)
     if m:
         return "r/" + m.group(1)
-    return clean(feed_title, 60) or re.sub(r"^www\.", "", urllib.parse.urlparse(url).netloc)
+    return clean(feed_title, 60) or re.sub(
+        r"^www\.", "", urllib.parse.urlparse(url).netloc
+    )
 
 
 def parse_feed(text, section, url):
@@ -86,22 +93,48 @@ def parse_feed(text, section, url):
     if root.tag.endswith("feed"):  # Atom: YouTube, Reddit, GitHub
         source = source_name(url, root.findtext("a:title", "", NS))
         for e in root.findall("a:entry", NS):
-            link = e.find("a:link", NS)
+            link = next(
+                (
+                    l
+                    for l in e.findall("a:link", NS)
+                    if l.get("rel", "alternate") == "alternate"
+                ),
+                None,
+            )
             href = (link.get("href") if link is not None else "").strip()
             vid = e.findtext("yt:videoId", "", NS)
             thumb = f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg" if vid else None
-            summary = (e.findtext("m:group/m:description", "", NS)
-                       or e.findtext("a:summary", "", NS)
-                       or e.findtext("a:content", "", NS))
+            summary = (
+                e.findtext("m:group/m:description", "", NS)
+                or e.findtext("a:summary", "", NS)
+                or e.findtext("a:content", "", NS)
+            )
             when = e.findtext("a:published", "", NS) or e.findtext("a:updated", "", NS)
-            items.append(item(section, e.findtext("a:title", "", NS), href, source,
-                              parse_date(when), summary, thumb))
+            items.append(
+                item(
+                    section,
+                    e.findtext("a:title", "", NS),
+                    href,
+                    source,
+                    parse_date(when),
+                    summary,
+                    thumb,
+                )
+            )
     else:  # RSS 2.0
         ch = root.find("channel")
         source = source_name(url, ch.findtext("title", ""))
         for e in ch.findall("item"):
-            items.append(item(section, e.findtext("title", ""), (e.findtext("link") or "").strip(),
-                              source, parse_date(e.findtext("pubDate", "")), e.findtext("description", "")))
+            items.append(
+                item(
+                    section,
+                    e.findtext("title", ""),
+                    (e.findtext("link") or "").strip(),
+                    source,
+                    parse_date(e.findtext("pubDate", "")),
+                    e.findtext("description", ""),
+                )
+            )
     return items
 
 
@@ -114,9 +147,21 @@ def parse_trending(text, section, now):
         repo = m.group(1)
         desc = re.search(r'<p class="col-9[^"]*">(.*?)</p>', block, re.S)
         stars = re.search(r"([\d,]+)\s+stars today", block)
-        out.append(item(section, repo, f"https://github.com/{repo}", "GitHub trending", now,
-                        desc.group(1) if desc else "",
-                        extra={"stars_today": int(stars.group(1).replace(",", "")) if stars else None}))
+        out.append(
+            item(
+                section,
+                repo,
+                f"https://github.com/{repo}",
+                "GitHub trending",
+                now,
+                desc.group(1) if desc else "",
+                extra={
+                    "stars_today": int(stars.group(1).replace(",", ""))
+                    if stars
+                    else None
+                },
+            )
+        )
     return out
 
 
@@ -124,10 +169,21 @@ def parse_hn(text, section):
     out = []
     for h in json.loads(text)["hits"]:
         discussion = f"https://news.ycombinator.com/item?id={h['objectID']}"
-        out.append(item(section, h.get("title") or "", h.get("url") or discussion, "Hacker News",
-                        parse_date(h.get("created_at")), "",
-                        extra={"points": h.get("points"), "comments": h.get("num_comments"),
-                               "discussion": discussion}))
+        out.append(
+            item(
+                section,
+                h.get("title") or "",
+                h.get("url") or discussion,
+                "Hacker News",
+                parse_date(h.get("created_at")),
+                "",
+                extra={
+                    "points": h.get("points"),
+                    "comments": h.get("num_comments"),
+                    "discussion": discussion,
+                },
+            )
+        )
     return out
 
 
@@ -138,7 +194,11 @@ def load_sources(path="sources.txt"):
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        section, url, *name = line.split(None, 2)
+        parts = line.split(None, 2)
+        if len(parts) < 2:
+            print(f"warning: sources.txt: no url in {line!r}", file=sys.stderr)
+            continue
+        section, url, *name = parts
         rows.append((section, url, name[0].strip() if name else None))
     return rows
 
@@ -169,9 +229,12 @@ def collect(pairs, now):
 def prune(items, now):
     seen, out = set(), []
     for it in sorted(items, key=lambda i: i["published"] or "", reverse=True):
-        if not it["published"] or now - datetime.fromisoformat(it["published"]) > WINDOW:
+        if (
+            not it["published"]
+            or now - datetime.fromisoformat(it["published"]) > WINDOW
+        ):
             continue
-        if it["url"] in seen:
+        if not it["url"] or it["url"] in seen:
             continue
         seen.add(it["url"])
         out.append(it)
@@ -184,6 +247,8 @@ if __name__ == "__main__":
     if not pool:
         sys.exit("error: no items from any feed")
     with open("pool.json", "w", encoding="utf-8") as f:
-        json.dump({"built": now.isoformat(), "items": pool}, f, indent=1, ensure_ascii=False)
+        json.dump(
+            {"built": now.isoformat(), "items": pool}, f, indent=1, ensure_ascii=False
+        )
     sources = sorted(set(i["source"] for i in pool))
     print(f"{len(pool)} items from {len(sources)} sources -> pool.json")

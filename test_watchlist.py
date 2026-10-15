@@ -114,45 +114,151 @@ def test_load_sources_reads_optional_name():
         ("models", "https://b", None),
     ]
 
+
 TODAY = {
     "generated": "2026-10-16T07:00:00+00:00",
     "previous_generated": "2026-10-15T07:00:00+00:00",
     "date_label": "Friday 16 October 2026",
     "standfirst": "What is new this week.",
     "digest": ["First paragraph.", "Second <b>paragraph</b>."],
-    "sections": [{"key": "watch", "title": "Watch", "items": [
-        {"title": "A <video>", "url": "https://youtube.com/watch?v=1", "source": "Fireship",
-         "published": "2026-10-16T01:00:00+00:00", "summary": "Why it matters.",
-         "thumbnail": "https://i.ytimg.com/vi/1/mqdefault.jpg"},
-        {"title": "Old one", "url": "https://youtube.com/watch?v=2", "source": "Fireship",
-         "published": "2026-10-14T01:00:00+00:00", "summary": "Older.", "thumbnail": None},
-    ]}],
+    "sections": [
+        {
+            "key": "watch",
+            "title": "Watch",
+            "items": [
+                {
+                    "title": "A <video>",
+                    "url": "https://youtube.com/watch?v=1",
+                    "source": "Fireship",
+                    "published": "2026-10-16T01:00:00+00:00",
+                    "summary": "Why it matters.",
+                    "thumbnail": "https://i.ytimg.com/vi/1/mqdefault.jpg",
+                },
+                {
+                    "title": "Old one",
+                    "url": "https://youtube.com/watch?v=2",
+                    "source": "Fireship",
+                    "published": "2026-10-14T01:00:00+00:00",
+                    "summary": "Older.",
+                    "thumbnail": None,
+                },
+            ],
+        }
+    ],
 }
 
 
 def test_render_fills_template_and_escapes():
     from render import render
-    out = render(TODAY, "$date_label|$digest|$sections|$legend|$updated|$feed_count", feed_count=24)
+
+    out = render(
+        TODAY,
+        "$date_label|$digest|$sections|$legend|$updated|$feed_count",
+        feed_count=24,
+    )
     assert "Friday 16 October 2026" in out
     assert "Second &lt;b&gt;paragraph&lt;/b&gt;" in out
     assert "A &lt;video&gt;" in out
     assert 'src="https://i.ytimg.com/vi/1/mqdefault.jpg"' in out
-    assert '<span class="new">6h</span>' in out       # newer than previous issue
-    assert "Fireship · 2d" in out                     # older item, plain age
-    assert "class=\"item video\"" in out and "class=\"item\"" in out
-    assert "16 October 2026 at 12:00" in out          # generated shown in Pakistan time
+    assert '<span class="new">6h</span>' in out  # newer than previous issue
+    assert "Fireship · 2d" in out  # older item, plain age
+    assert 'class="item video"' in out and 'class="item"' in out
+    assert "16 October 2026 at 12:00" in out  # generated shown in Pakistan time
     assert "|24" in out
     assert "new since" in out
 
 
 def test_render_rejects_missing_sections():
     from render import render
+
     try:
         render({"generated": "2026-10-16T07:00:00+00:00"}, "")
     except ValueError as e:
         assert "sections" in str(e)
     else:
         raise AssertionError("expected ValueError")
+
+
+def test_render_drops_non_http_urls():
+    import copy
+    from render import render
+
+    t = copy.deepcopy(TODAY)
+    t["sections"][0]["items"][0]["url"] = "javascript:alert(1)"
+    t["sections"][0]["items"][1]["thumbnail"] = "javascript:alert(2)"
+    out = render(t, "$sections")
+    assert "javascript:" not in out
+    assert "A &lt;video&gt;" not in out  # item with a bad link is skipped
+    assert "Old one" in out
+
+
+def test_render_tolerates_sloppy_today_json():
+    import copy
+    from render import render
+
+    t = copy.deepcopy(TODAY)
+    t["previous_generated"] = "2026-10-15T07:00:00"  # no timezone
+    t["sections"][0]["items"][0]["published"] = None  # missing date
+    t["sections"][0]["items"][1]["published"] = "2026-10-14T01:00:00"
+    out = render(t, "$sections")
+    assert (
+        "Fireship ·" not in out.split("Old one")[0].split("A &lt;video&gt;")[1]
+    )  # no age shown
+    assert "Fireship · 2d" in out
+
+
+def test_render_rejects_digest_string():
+    import copy
+    from render import render
+
+    t = copy.deepcopy(TODAY)
+    t["digest"] = "one long string"
+    try:
+        render(t, "")
+    except ValueError as e:
+        assert "digest" in str(e)
+    else:
+        raise AssertionError("expected ValueError")
+
+
+def test_render_computes_date_label():
+    import copy
+    from render import render
+
+    t = copy.deepcopy(TODAY)
+    del t["date_label"]
+    assert render(t, "$date_label") == "Friday 16 October 2026"
+
+
+def test_atom_prefers_alternate_link_and_prune_drops_empty_urls():
+    from build import parse_feed, prune
+
+    feed = YT.replace(
+        '<link rel="alternate"',
+        '<link rel="replies" href="https://x/replies"/>\n  <link rel="alternate"',
+    )
+    (it,) = parse_feed(feed, "watch", "u")
+    assert it["url"] == "https://www.youtube.com/watch?v=QZVzuq28eFw"
+    nolink = parse_feed(
+        YT.replace(
+            '<link rel="alternate" href="https://www.youtube.com/watch?v=QZVzuq28eFw"/>',
+            "",
+        ),
+        "watch",
+        "u",
+    )
+    assert prune(nolink, NOW) == []
+
+
+def test_load_sources_skips_short_and_indented_lines():
+    import os, tempfile
+    from build import load_sources
+
+    path = os.path.join(tempfile.mkdtemp(), "s.txt")
+    open(path, "w", encoding="utf-8").write(
+        "watch\n   # indented comment\nmodels https://b\n"
+    )
+    assert load_sources(path) == [("models", "https://b", None)]
 
 
 def run():
