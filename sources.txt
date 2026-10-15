@@ -1,0 +1,31 @@
+# section url   (sections: watch, models, tools, reading; text after the URL is ignored)
+
+# Watch: weekly recaps and explainers
+watch https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA   Fireship
+watch https://www.youtube.com/feeds/videos.xml?channel_id=UChpleBmo18P08aKCIgti38g   Matt Wolfe
+watch https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw   AI Explained
+watch https://www.youtube.com/feeds/videos.xml?channel_id=UCHhYXsLBEVVnbvsq57n1MTQ   The AI Advantage
+watch https://www.youtube.com/feeds/videos.xml?channel_id=UCawZsQWqfGSbCI5yjkdVkTA   Matthew Berman
+watch https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA   Anthropic
+watch https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A   OpenAI
+
+# New models and tools: lab and vendor news
+models https://openai.com/news/rss.xml
+models https://blog.google/technology/ai/rss/
+models https://deepmind.google/blog/rss.xml
+models https://ai.meta.com/blog/rss/
+models https://blogs.microsoft.com/ai/feed/
+models https://github.com/anthropics/claude-code/releases.atom   Claude Code releases
+
+# Tools and skills you can use
+tools https://github.com/trending?since=daily
+tools https://github.com/trending/python?since=daily
+tools https://github.com/trending/typescript?since=daily
+tools https://github.com/anthropics/skills/commits/main.atom   Anthropic skills repo
+tools https://github.com/punkpeye/awesome-mcp-servers/commits/main.atom
+
+# Worth reading
+reading https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=60
+reading https://www.reddit.com/r/ClaudeAI/top/.rss?t=week
+reading https://www.reddit.com/r/ClaudeCode/top/.rss?t=week
+reading https://www.reddit.com/r/ChatGPTPro/top/.rss?t=week

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thursday 15 October 2026 · Intellia AI Watchlist</title>
+<meta name="description" content="Daily AI briefing for the Intellia consulting team: digest, videos, lab news, discussions and repos.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#edf1e8">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151c17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cstyle%3Erect{fill:%23edf1e8}path{fill:%232a4590}@media(prefers-color-scheme:dark){rect{fill:%23151c17}path{fill:%23aabff2}}%3C/style%3E%3Crect width='16' height='16' rx='3'/%3E%3Cpath d='M7 3h2v10H7z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=Public+Sans:wght@400;500&display=swap">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #edf1e8;      /* ledger-green paper */
+  --fg: #1a221d;      /* green-black ink */
+  --accent: #2a4590;  /* blue-black pen ink, links only */
+  --muted: color-mix(in oklab, var(--fg) 62%, var(--bg));
+  --rule: color-mix(in oklab, var(--fg) 10%, var(--bg));
+  --serif: Literata, Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151c17; --fg: #e2e8df; --accent: #aabff2; }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: color-mix(in oklab, var(--fg) 25%, var(--bg)) var(--bg);
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 1rem/1.5 var(--serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: color-mix(in oklab, var(--accent) 20%, transparent);
+  min-height: 100dvh;
+}
+.page {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: 2.5rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left));
+}
+
+::selection { background: color-mix(in oklab, var(--accent) 22%, var(--bg)); }
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  text-decoration-color: color-mix(in oklab, var(--accent) 40%, var(--bg));
+}
+@media (hover: hover) {
+  a:hover { text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+  .item:hover .thumb img { filter: none; }
+}
+h3 a:visited { color: var(--muted); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+/* masthead */
+.site { font: 500 .85rem/1.2 var(--sans); margin: 0 0 1.25rem; }
+h1 {
+  font: 500 1.75rem/1.15 var(--serif);
+  letter-spacing: -.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+.standfirst {
+  font: 1.125rem/1.5 var(--serif);
+  color: var(--muted);
+  margin: .6rem 0 0;
+  max-width: 34em;
+  text-wrap: pretty;
+}
+
+/* sections */
+section { margin-top: 3rem; }
+h2 {
+  font: 500 .85rem/1.2 var(--sans);
+  color: var(--muted);
+  margin: 0 0 1rem;
+  padding-bottom: .45rem;
+  border-bottom: 1px solid var(--rule);
+}
+.digest { font: 1.125rem/1.6 var(--serif); max-width: 62ch; text-wrap: pretty; }
+.digest p { margin: 0; }
+.digest p + p { margin-top: .8em; }
+.digest a { color: var(--accent); }
+
+/* items */
+.items { list-style: none; margin: 0; padding: 0; }
+.item { padding: .75rem 0; }
+.item h3 {
+  font: 500 1.0625rem/1.3 var(--serif);
+  margin: 0 0 .3rem;
+  text-wrap: balance;
+}
+.item p { margin: 0; text-wrap: pretty; }
+.meta {
+  font: .84rem/1.4 var(--sans);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin-top: .35rem;
+}
+
+/* video items: thumbnail trails the text */
+.video {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 144px;
+  grid-template-areas: "h t" "p t" "m t";
+  column-gap: 1.25rem;
+  align-items: start;
+}
+.video h3 { grid-area: h; }
+.video p { grid-area: p; }
+.video .meta { grid-area: m; }
+.thumb { grid-area: t; display: block; text-decoration: none; }
+.thumb img {
+  display: block;
+  width: 144px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 3px;
+  background: var(--rule);
+  filter: saturate(.7);
+}
+@media (max-width: 40rem) {
+  .video { grid-template-columns: 1fr; grid-template-areas: "h" "t" "p" "m"; }
+  .thumb { margin: .15rem 0 .5rem; }
+  .thumb img { width: 160px; }
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font: .84rem/1.5 var(--sans);
+  color: var(--muted);
+}
+footer p { margin: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  a { transition: text-decoration-color 130ms ease-out; }
+  .thumb img { transition: filter 150ms ease; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="site" translate="no">Intellia AI Watchlist</p>
+  <h1>Thursday 15 October 2026</h1>
+  <p class="standfirst">Gemini 4 Argon’s pricing, scheduled agents out of preview in Claude Code, and a breach that OpenAI is describing very carefully.</p>
+</header>
+
+<main>
+
+<section id="digest" aria-labelledby="digest-h">
+  <h2 id="digest-h">Today’s digest</h2>
+  <div class="digest">
+    <p>What changed today is price, not benchmarks: Google’s Gemini 4 Argon went general at 06:00, and the Flash tier is listed at half of what Gemini 3.5 cost per million output tokens, with a two-million-token context on every plan. For the engagements where we have been recommending a single-vendor stack, that number alone reopens the conversation.</p>
+    <p>Anthropic’s answer, quietly, was in Claude Code. <a href="https://docs.anthropic.com/claude-code">Scheduled routines</a> left research preview overnight, so a repository can now run an agent on a cron, open a pull request and post the diff to Slack with nobody at the keyboard. Two of our clients asked for exactly this in September. The catch is in the docs: a routine runs with the permissions of whoever created it, which makes it a governance question before it is a tooling one.</p>
+    <p>The security story is getting worse in a specific way. Three labs co-signed a letter warning that the pace of releases makes a serious model-weights breach inevitable within eighteen months, and OpenAI confirmed that the insider Fireship covers below had access to training infrastructure. Expect clients to ask about data residency and weight custody this week; the honest answer is that nobody buying an API has either.</p>
+    <p>In open source, the repo to watch is <a href="https://github.com/trending">dossier-rs</a>, a small Rust tool that reconstructs a client-side app’s source from shipped bundles and source maps well enough to run it. Fireship calls it “every app is now open source”, which overstates it, but it is the first of these that works on obfuscated React Native builds.</p>
+    <p>Nothing from Meta AI or Mistral earned a paragraph; both are in lab news below, and the Llama 5 licence thread on Hacker News is the one to read before any procurement call.</p>
+  </div>
+</section>
+
+<section id="videos" aria-labelledby="videos-h">
+  <h2 id="videos-h">Videos</h2>
+  <ul class="items">
+    <li class="item video">
+      <h3><a href="https://www.youtube.com/watch?v=QZVzuq28eFw">OpenAI’s lead engineer was secretly a spy…</a></h3>
+        <p>Four minutes on the insider breach, lighter than the story deserves, but the timeline graphic is the clearest one anyone has published so far.</p>
+        <p class="meta">Fireship · 13h</p>
+      <a class="thumb" href="https://www.youtube.com/watch?v=QZVzuq28eFw" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/QZVzuq28eFw/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a>
+    </li>
+    <li class="item video">
+      <h3><a href="https://www.youtube.com/watch?v=XEl4ZQKKxig">This Robot Is Unlike Any Other On The Market</a></h3>
+        <p>A hands-on with a home robot running an on-device vision-language-action model; the useful minute is the failure cases, not the demo.</p>
+        <p class="meta">Matt Wolfe · 16h</p>
+      <a class="thumb" href="https://www.youtube.com/watch?v=XEl4ZQKKxig" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/XEl4ZQKKxig/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a>
+    </li>
+    <li class="item video">
+      <h3><a href="https://www.youtube.com/watch?v=eBszYxzE2dk">Google Just Caught Up (Gemini-4 Argon)</a></h3>
+        <p>Enthusiastic, but the pricing table at the eight-minute mark is the one slide to screenshot for a client deck.</p>
+        <p class="meta">Matt Wolfe · 1d</p>
+      <a class="thumb" href="https://www.youtube.com/watch?v=eBszYxzE2dk" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/eBszYxzE2dk/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a>
+    </li>
+    <li class="item video">
+      <h3><a href="https://www.youtube.com/watch?v=wajoP_5Cpw8">Every app on Earth is now open source… whether it likes it or not</a></h3>
+        <p>A demo of Dossier rebuilding a shipped app from its bundle; watch it before a client asks whether their front end is now public.</p>
+        <p class="meta">Fireship · 2d</p>
+      <a class="thumb" href="https://www.youtube.com/watch?v=wajoP_5Cpw8" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/wajoP_5Cpw8/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a>
+    </li>
+    <li class="item video">
+      <h3><a href="https://www.youtube.com/watch?v=C4Sq3Rot8FU">AI Labs Warn Race Makes Breach ‘Inevitable’</a></h3>
+        <p>A careful reading of the joint letter, including the paragraph on export controls that most of the press coverage skipped.</p>
+        <p class="meta">AI Explained · 2d</p>
+      <a class="thumb" href="https://www.youtube.com/watch?v=C4Sq3Rot8FU" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/C4Sq3Rot8FU/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a>
+    </li>
+    <li class="item video">
+      <h3><a href="https://www.youtube.com/watch?v=_rtp1XzaP6Q">OpenAI Security: Controlling Models is Now ‘Hell’</a></h3>
+        <p>Two weeks old, but it is the background to this week’s breach: internal controls were described as failing before the insider was found.</p>
+        <p class="meta">AI Explained · 2w</p>
+      <a class="thumb" href="https://www.youtube.com/watch?v=_rtp1XzaP6Q" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/_rtp1XzaP6Q/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a>
+    </li>
+  </ul>
+</section>
+
+<section id="labs" aria-labelledby="labs-h">
+  <h2 id="labs-h">Lab news</h2>
+  <ul class="items">
+    <li class="item">
+      <h3><a href="https://www.anthropic.com/news">Claude Code scheduled routines leave research preview</a></h3>
+      <p>Routines run with their creator’s permissions, so a departed engineer’s cron jobs keep running until someone revokes the account.</p>
+      <p class="meta">Anthropic · 6h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://deepmind.google/">Gemini 4 Argon goes GA with 2M context on all tiers</a></h3>
+      <p>Flash output pricing halves against Gemini 3.5, undercutting Anthropic and OpenAI on the long-document work our clients buy most.</p>
+      <p class="meta">Google DeepMind · 9h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://openai.com/news/">OpenAI confirms insider breach, rotates all internal signing keys</a></h3>
+      <p>The statement says no customer data was reached. It does not say the same about model weights, and the omission is doing a lot of work.</p>
+      <p class="meta">OpenAI · 14h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://ai.meta.com/blog/">Meta AI releases Llama 5 weights under a new non-commercial licence</a></h3>
+      <p>The licence bars companies above fifty million monthly users, which quietly reverses the open-weights promise Meta has traded on since 2023.</p>
+      <p class="meta">Meta AI · 1d</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://mistral.ai/news">Mistral ships Codestral 3 as a sparse mixture of experts</a></h3>
+      <p>It runs on two H200s after quantisation, which puts a credible self-hosted coding model inside what a mid-sized client can procure.</p>
+      <p class="meta">Mistral · 1d</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://www.anthropic.com/news">Anthropic and three labs publish a model-weights custody standard</a></h3>
+      <p>It reads as pre-regulation: hardware-backed attestation, two-person rules for exports, and audit trails a bank would recognise.</p>
+      <p class="meta">Anthropic · 2d</p>
+    </li>
+  </ul>
+</section>
+
+<section id="discussions" aria-labelledby="discussions-h">
+  <h2 id="discussions-h">Discussions</h2>
+  <ul class="items">
+    <li class="item">
+      <h3><a href="https://news.ycombinator.com/">Ask HN: who is running agents on a schedule in production?</a></h3>
+      <p>The consistent thread is that review load moved from writing code to reading pull requests nobody asked for, and teams are still deciding whether that is a win.</p>
+      <p class="meta">Hacker News · 3h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://news.ycombinator.com/">Llama 5’s licence is not open source, and Meta knows it</a></h3>
+      <p>The OSI’s director turns up in the thread; the practical point is that procurement teams need a new clause for “open-weight” vendors.</p>
+      <p class="meta">Hacker News · 5h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://www.reddit.com/r/ExperiencedDevs/">I replaced our Jira triage with a Claude Code routine</a></h3>
+      <p>A useful postmortem on prompt drift: the routine’s judgement degraded over six weeks as ticket style changed, and nobody noticed until it closed a P1.</p>
+      <p class="meta">r/ExperiencedDevs · 7h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://news.ycombinator.com/">Show HN: Dossier rebuilds any web app’s source from its bundle</a></h3>
+      <p>The comments are a legal seminar; the one to read is a former Google counsel explaining why source maps in production are a licence decision.</p>
+      <p class="meta">Hacker News · 11h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/">Gemini 4 Argon vs Claude on a 400-page contract, side by side</a></h3>
+      <p>Argon missed fewer clauses but invented two definitions, which is the failure a lawyer will not forgive and a benchmark does not count.</p>
+      <p class="meta">r/LocalLLaMA · 16h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://news.ycombinator.com/">OpenAI’s security post is a masterclass in saying nothing</a></h3>
+      <p>Worth it for the sentence-by-sentence parsing; the consensus is that weights left the building and the lawyers chose every word.</p>
+      <p class="meta">Hacker News · 1d</p>
+    </li>
+  </ul>
+</section>
+
+<section id="repos" aria-labelledby="repos-h">
+  <h2 id="repos-h">Repos</h2>
+  <ul class="items">
+    <li class="item">
+      <h3><a href="https://github.com/trending/rust">dossier-rs: rebuild runnable source from production JavaScript bundles</a></h3>
+      <p>Works on obfuscated React Native builds, which is the part that will worry clients who assumed minification was protection.</p>
+      <p class="meta">GitHub trending · 3h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://github.com/trending">claude-routines-kit: tested templates for scheduled Claude Code agents</a></h3>
+      <p>Ships the permission scoping Anthropic’s docs leave to you, including a reviewer gate that blocks merges touching auth or billing.</p>
+      <p class="meta">GitHub trending · 8h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://github.com/trending/python">argon-eval: an open harness for Gemini 4 long-context retrieval</a></h3>
+      <p>Independent numbers land tomorrow; the harness already shows recall falling off past 1.4M tokens on every model it has tried.</p>
+      <p class="meta">GitHub trending · 12h</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://github.com/trending/go">weightwatch: tamper-evident logging for model weight exports</a></h3>
+      <p>A reference implementation of the custody standard two days after the standard, which tells you they were written in parallel.</p>
+      <p class="meta">GitHub trending · 1d</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://github.com/trending/python">codestral3-serve: one-command vLLM deployment for Codestral 3</a></h3>
+      <p>The README’s two-H200 quantisation recipe is the first self-hosted coding setup we could put in a procurement document.</p>
+      <p class="meta">GitHub trending · 1d</p>
+    </li>
+    <li class="item">
+      <h3><a href="https://github.com/trending/typescript">llama5-license-check: a CI action that fails builds using restricted weights</a></h3>
+      <p>Blunt but useful: it scans model cards for the new Meta licence string and fails the build above the user threshold.</p>
+      <p class="meta">GitHub trending · 2d</p>
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>Updated at 06:40 UTC on Thursday 15 October 2026 from 23 feeds; the next edition is tomorrow at the same time.</p>
+</footer>
+
+</div>
+</body>
+</html>

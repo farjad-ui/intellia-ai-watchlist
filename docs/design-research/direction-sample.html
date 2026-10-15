@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intellia AI Watchlist, 15 October 2026</title>
+<meta name="description" content="Daily AI briefing for the Intellia consulting team: digest, videos, lab news, discussions and trending repositories.">
+<meta name="theme-color" content="#f2f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151a18" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cstyle%3Ecircle%7Bfill:%230f5f69%7D@media(prefers-color-scheme:dark)%7Bcircle%7Bfill:%237cc7cd%7D%7D%3C/style%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400&display=swap">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f2f3ef;
+  --fg: #1d231f;
+  --accent: #0f5f69;
+  --muted: color-mix(in oklab, var(--fg) 58%, var(--bg));
+  --rule: color-mix(in oklab, var(--fg) 10%, var(--bg));
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151a18; --fg: #e3e6e0; --accent: #7cc7cd; }
+}
+
+html { -webkit-text-size-adjust: 100%; scrollbar-color: var(--rule) var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+main {
+  max-width: 40rem; margin-inline: auto;
+  padding: 2.5rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left));
+}
+::selection { background: color-mix(in oklab, var(--accent) 25%, var(--bg)); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+a {
+  color: inherit; text-decoration: underline;
+  text-decoration-color: var(--rule); text-decoration-thickness: 1px; text-underline-offset: .18em;
+}
+a:visited { color: var(--muted); }
+@media (hover: hover) { a:hover { text-decoration-color: var(--fg); } }
+@media (prefers-reduced-motion: no-preference) { a { transition: text-decoration-color 130ms ease-out; } }
+
+.skip { position: absolute; left: -999px; top: 1rem; background: var(--bg); padding: .5rem .75rem; }
+.skip:focus { left: 1rem; }
+
+header .site { margin: 0; font-size: .85rem; font-weight: 500; color: var(--muted); }
+h1 { margin: .35rem 0 .5rem; font: 600 1.75rem/1.15 var(--sans); letter-spacing: -.01em; text-wrap: balance; }
+header .issue { margin: 0; font-size: .9rem; color: var(--muted); }
+
+.digest { margin-top: 2.5rem; }
+.digest ul { margin: 0; padding-left: 1.1rem; max-width: 62ch; font: 18px/1.6 var(--serif); text-wrap: pretty; }
+.digest li { padding: 0; display: list-item; }
+.digest li + li { margin-top: .7em; }
+.digest li::marker { color: var(--muted); }
+code { font: .88em ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace; }
+
+section { margin-top: 3rem; }
+h2 {
+  margin: 0 0 .5rem; padding-bottom: .4rem;
+  font: 500 .85rem/1.2 var(--sans); color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+}
+ul { list-style: none; margin: 0; padding: 0; }
+li { padding: .6rem 0; display: flex; flex-wrap: wrap; column-gap: .75rem; row-gap: .1rem; align-items: baseline; }
+li a { flex: 1 1 22rem; min-width: 0; }
+.meta { color: var(--muted); font-size: .82rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.fresh { color: var(--accent); font-weight: 500; }
+
+footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .85rem; color: var(--muted); }
+footer p { margin: 0; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  .digest ul { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#digest">Skip to digest</a>
+<main>
+  <header>
+    <p class="site" translate="no">Intellia AI Watchlist</p>
+    <h1>Thursday 15 October 2026</h1>
+    <p class="issue">Issue 212. <span class="fresh">Ages in teal</span> are newer than yesterday's issue.</p>
+  </header>
+
+  <section class="digest" id="digest" aria-labelledby="digest-h">
+    <h2 id="digest-h">Today's digest</h2>
+    <ul>
+      <li>Anthropic shipped Claude Sonnet 5 this morning: 1M‑token context by default, and the company says it beats Opus 4.5 on SWE‑bench Verified at a third of the price. Pricing holds at $3 in, $15 out per million tokens.</li>
+      <li>Claude Code 2.4 adds background agents that keep running after you close the terminal, and a <code>/review</code> command that posts findings as inline PR comments. Worth trying on the HEC data pipeline this week.</li>
+      <li>OpenAI published the GPT‑5.5 system card. The notable change is a 400k context window and a per‑request reasoning budget exposed in the API, which makes cost modelling for clients easier.</li>
+      <li>Google DeepMind open‑sourced Gemma 4 at 2B, 9B and 27B under Apache 2.0. The 27B weights run on a single 24 GB card at 4‑bit; llama.cpp merged support within six hours.</li>
+      <li>A Hacker News post arguing that MCP servers are becoming the new npm, supply‑chain problems included, passed 900 points. The thread is a good source of the questions clients will ask next month.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="videos-h">
+    <h2 id="videos-h">Videos</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=sonnet5in100s">Claude Sonnet 5 in 100 seconds</a><span class="meta">Fireship · <span class="fresh">3h ago</span></span></li>
+      <li><a href="https://www.youtube.com/watch?v=gemma4on4090">I ran Gemma 4 27B on a 4090 so you don't have to</a><span class="meta">Alex Ziskind · <span class="fresh">5h ago</span></span></li>
+      <li><a href="https://www.youtube.com/watch?v=gpt55card">GPT‑5.5 system card, read line by line (41 min)</a><span class="meta">AI Explained · <span class="fresh">9h ago</span></span></li>
+      <li><a href="https://www.youtube.com/watch?v=ccbgagents">Building a research agent with Claude Code background agents</a><span class="meta">Matt Pocock · 14h ago</span></li>
+      <li><a href="https://www.youtube.com/watch?v=mcpregistry">Why MCP needs a package registry</a><span class="meta">Theo · 19h ago</span></li>
+      <li><a href="https://www.youtube.com/watch?v=evalsmistral">How Mistral evaluates Codestral 3 before release (1h 12 min)</a><span class="meta">Latent Space · 22h ago</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="labs-h">
+    <h2 id="labs-h">Lab news</h2>
+    <ul>
+      <li><a href="https://www.anthropic.com/news/claude-sonnet-5">Introducing Claude Sonnet 5</a><span class="meta">Anthropic · <span class="fresh">4h ago</span></span></li>
+      <li><a href="https://www.anthropic.com/news/claude-code-2-4">Claude Code 2.4: background agents and /review</a><span class="meta">Anthropic · <span class="fresh">6h ago</span></span></li>
+      <li><a href="https://openai.com/index/gpt-5-5-system-card">GPT‑5.5 system card</a><span class="meta">OpenAI · <span class="fresh">11h ago</span></span></li>
+      <li><a href="https://deepmind.google/discover/blog/gemma-4">Gemma 4: open weights at three sizes</a><span class="meta">Google DeepMind · 16h ago</span></li>
+      <li><a href="https://ai.meta.com/blog/llama-5-preview-tokenizer">Llama 5 preview: what changed in the tokenizer</a><span class="meta">Meta AI · 1d ago</span></li>
+      <li><a href="https://mistral.ai/news/codestral-3">Codestral 3 and the Mistral Agents API</a><span class="meta">Mistral · 2d ago</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="disc-h">
+    <h2 id="disc-h">Discussions</h2>
+    <ul>
+      <li><a href="https://news.ycombinator.com/item?id=45812001">Claude Sonnet 5 (614 comments)</a><span class="meta">Hacker News · <span class="fresh">3h ago</span></span></li>
+      <li><a href="https://www.reddit.com/r/LocalLLaMA/comments/gemma4q4">Gemma 4 27B Q4 benchmarks on a single 3090 (188 comments)</a><span class="meta">r/LocalLLaMA · <span class="fresh">7h ago</span></span></li>
+      <li><a href="https://news.ycombinator.com/item?id=45810330">MCP servers are the new npm, with the same supply‑chain problem (402 comments)</a><span class="meta">Hacker News · <span class="fresh">8h ago</span></span></li>
+      <li><a href="https://news.ycombinator.com/item?id=45809112">Show HN: I replaced our RAG pipeline with a 1M‑context prompt and it got cheaper (231 comments)</a><span class="meta">Hacker News · 12h ago</span></li>
+      <li><a href="https://www.reddit.com/r/ClaudeAI/comments/sixmonths">Six months of Claude Code in a 40‑person consultancy: what we'd do differently (96 comments)</a><span class="meta">r/ClaudeAI · 15h ago</span></li>
+      <li><a href="https://news.ycombinator.com/item?id=45801977">Ask HN: Who is still fine‑tuning in 2026? (173 comments)</a><span class="meta">Hacker News · 1d ago</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="repos-h">
+    <h2 id="repos-h">Repos</h2>
+    <ul>
+      <li><a href="https://github.com/ggml-org/llama.cpp">ggml-org/llama.cpp (+2,140 stars today)</a><span class="meta">C++ · <span class="fresh">2h ago</span></span></li>
+      <li><a href="https://github.com/google-deepmind/gemma">google-deepmind/gemma (+1,870 stars today)</a><span class="meta">Python · <span class="fresh">5h ago</span></span></li>
+      <li><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry (+960 stars today)</a><span class="meta">Go · <span class="fresh">8h ago</span></span></li>
+      <li><a href="https://github.com/anthropics/claude-code">anthropics/claude-code (+740 stars today)</a><span class="meta">TypeScript · 13h ago</span></li>
+      <li><a href="https://github.com/unslothai/unsloth">unslothai/unsloth (+510 stars today)</a><span class="meta">Python · 20h ago</span></li>
+      <li><a href="https://github.com/browser-use/browser-use">browser-use/browser-use (+430 stars today)</a><span class="meta">Python · 1d ago</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Last updated 15 October 2026 at 06:40 PKT, from 41 feeds. Feeds are read every morning at 06:30; the next issue is tomorrow at the same time.</p>
+  </footer>
+</main>
+</body>
+</html>
