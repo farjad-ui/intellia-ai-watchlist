@@ -14,13 +14,14 @@ A static daily AI learning page for the Intellia consulting team, curated by Cla
 - `daily.ps1` verified end to end twice against a throwaway local remote: pull, build, curate, render, commit, push, `ok` logged; second issue showed "new since last issue" markers.
 
 ## In progress
-- Deployment is the user's: no GitHub remote, no Pages, no scheduled task yet.
+- Repo https://github.com/farjad-ui/intellia-ai-watchlist created and pushed; Pages live at https://farjad-ui.github.io/intellia-ai-watchlist/ (checked 200 and rendered).
+- Not yet done by the user: one manual `daily.ps1` run with real GitHub credentials, Task Scheduler registration.
 - Leftover throwaway remote at `D:/tmp-intellia-remote.git`; the user should delete it (safety check blocked removal).
 
 ## Next steps
-1. User creates the public repo `intellia-ai-watchlist` and pushes (`gh repo create intellia-ai-watchlist --public --source . --remote origin --push`).
-2. Enable Pages from `main` / root; confirm https://farjad-ui.github.io/intellia-ai-watchlist/.
-3. Run `daily.ps1` by hand once; then register the Task Scheduler job (commands in the plan, Task 5 step 5).
+1. Run `daily.ps1` by hand once and confirm `ok` in `logs/daily.log`.
+2. Register the Task Scheduler job (commands in the plan, Task 5 step 5) and test it with `Start-ScheduledTask`.
+3. If the user's own terminal says `gh` is not logged in, it is running elevated or under another profile; `gh auth login` there fixes it. git pushes use Git Credential Manager, not gh.
 
 ## Decisions (and why)
 - 2026-10-15: Laptop is primary (user's call), noon daily, `-StartWhenAvailable` so a missed noon runs at next login. Cloud routine is the fallback.
