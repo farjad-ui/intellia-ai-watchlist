@@ -4,7 +4,7 @@ $ErrorActionPreference = "Continue"  # native tools write progress to stderr; ex
 $OutputEncoding = [Text.UTF8Encoding]::new($false)  # PowerShell 5.1 pipes ASCII to native programs by default
 Set-Location $PSScriptRoot
 New-Item -ItemType Directory -Force logs | Out-Null
-$log = "logs\daily.log"
+$log = Join-Path $PSScriptRoot "logs\daily.log"  # absolute: the claude step runs from a scratch folder
 function Log($m) { Add-Content $log "$(Get-Date -Format s) $m" -Encoding utf8; Write-Host $m }
 function Step($name, [scriptblock]$cmd) {
   & $cmd 2>&1 | ForEach-Object { "$_" } | Add-Content $log -Encoding utf8
