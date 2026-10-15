@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$date_label · Intellia AI Watchlist</title>
 <meta name="description" content="Daily AI learning hub for the Intellia consulting team: what is new, what to watch, tools you can use.">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#edf1e8">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151c17">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cstyle%3Erect{fill:%23edf1e8}path{fill:%232a4590}@media(prefers-color-scheme:dark){rect{fill:%23151c17}path{fill:%23aabff2}}%3C/style%3E%3Crect width='16' height='16' rx='3'/%3E%3Cpath d='M7 3h2v10H7z'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#edf1e8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cstyle%3Erect{fill:%23edf1e8}path{fill:%232a4590}%3C/style%3E%3Crect width='16' height='16' rx='3'/%3E%3Cpath d='M7 3h2v10H7z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=Public+Sans:wght@400;500&display=swap">
 <style>
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --bg: #edf1e8;      /* ledger-green paper */
   --fg: #1a221d;      /* green-black ink */
   --accent: #2a4590;  /* blue-black pen ink: links and new-item ages */
@@ -21,9 +20,6 @@
   --rule: color-mix(in oklab, var(--fg) 10%, var(--bg));
   --serif: Literata, Georgia, "Times New Roman", serif;
   --sans: "Public Sans", system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #151c17; --fg: #e2e8df; --accent: #aabff2; }
 }
 html { -webkit-text-size-adjust: 100%; scrollbar-color: color-mix(in oklab, var(--fg) 25%, var(--bg)) var(--bg); }
 body {
@@ -33,7 +29,7 @@ body {
   -webkit-tap-highlight-color: color-mix(in oklab, var(--accent) 20%, transparent);
   min-height: 100dvh;
 }
-.page { max-width: 40rem; margin-inline: auto; padding: 2.5rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left)); }
+.page { max-width: 40rem; margin-inline: auto; padding: 2rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left)); }
 ::selection { background: color-mix(in oklab, var(--accent) 22%, var(--bg)); }
 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em;
     text-decoration-color: color-mix(in oklab, var(--accent) 40%, var(--bg)); }
@@ -49,7 +45,7 @@ h3 a:visited { color: var(--muted); }
 h1 { font: 500 1.75rem/1.15 var(--serif); letter-spacing: -.01em; margin: 0; text-wrap: balance; }
 .standfirst { font: 1.125rem/1.5 var(--serif); color: var(--muted); margin: .6rem 0 0; max-width: 34em; text-wrap: pretty; }
 .legend { font: .84rem/1.4 var(--sans); color: var(--muted); margin: .6rem 0 0; }
-section { margin-top: 3rem; scroll-margin-top: 1.5rem; }
+section { margin-top: 2.25rem; scroll-margin-top: 1.5rem; }
 h2 { font: 500 .85rem/1.2 var(--sans); color: var(--muted); margin: 0 0 1rem; padding-bottom: .45rem; border-bottom: 1px solid var(--rule); }
 .digest { font: 1.125rem/1.6 var(--serif); max-width: 62ch; text-wrap: pretty; }
 .digest p { margin: 0; }
@@ -71,8 +67,17 @@ h2 { font: 500 .85rem/1.2 var(--sans); color: var(--muted); margin: 0 0 1rem; pa
   .thumb { margin: .15rem 0 .5rem; }
   .thumb img { width: 160px; }
 }
-footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); font: .84rem/1.5 var(--sans); color: var(--muted); }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font: .84rem/1.5 var(--sans); color: var(--muted); }
 footer p { margin: 0; }
+/* wide screens: two columns instead of one narrow strip */
+@media (min-width: 70rem) {
+  .page { max-width: 76rem; padding-inline: 2.5rem; }
+  .standfirst { max-width: 46em; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 3.5rem; align-items: start; }
+  #digest { grid-column: 1 / -1; }
+  .digest { max-width: none; column-count: 2; column-gap: 3.5rem; }
+  .digest p { break-inside: avoid; }
+}
 @media (prefers-reduced-motion: no-preference) {
   a { transition: text-decoration-color 130ms ease-out; }
   .thumb img { transition: filter 150ms ease; }
