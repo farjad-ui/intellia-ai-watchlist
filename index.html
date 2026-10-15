@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thursday 15 October 2026 · Intellia AI Watchlist</title>
+<meta name="description" content="Daily AI learning hub for the Intellia consulting team: what is new, what to watch, tools you can use.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#edf1e8">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151c17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cstyle%3Erect{fill:%23edf1e8}path{fill:%232a4590}@media(prefers-color-scheme:dark){rect{fill:%23151c17}path{fill:%23aabff2}}%3C/style%3E%3Crect width='16' height='16' rx='3'/%3E%3Cpath d='M7 3h2v10H7z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=Public+Sans:wght@400;500&display=swap">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #edf1e8;      /* ledger-green paper */
+  --fg: #1a221d;      /* green-black ink */
+  --accent: #2a4590;  /* blue-black pen ink: links and new-item ages */
+  --muted: color-mix(in oklab, var(--fg) 62%, var(--bg));
+  --rule: color-mix(in oklab, var(--fg) 10%, var(--bg));
+  --serif: Literata, Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151c17; --fg: #e2e8df; --accent: #aabff2; }
+}
+html { -webkit-text-size-adjust: 100%; scrollbar-color: color-mix(in oklab, var(--fg) 25%, var(--bg)) var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 1rem/1.5 var(--serif);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: color-mix(in oklab, var(--accent) 20%, transparent);
+  min-height: 100dvh;
+}
+.page { max-width: 40rem; margin-inline: auto; padding: 2.5rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left)); }
+::selection { background: color-mix(in oklab, var(--accent) 22%, var(--bg)); }
+a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em;
+    text-decoration-color: color-mix(in oklab, var(--accent) 40%, var(--bg)); }
+@media (hover: hover) {
+  a:hover { text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+  .item:hover .thumb img { filter: none; }
+}
+h3 a:visited { color: var(--muted); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--bg); padding: .5rem; }
+.site { font: 500 .85rem/1.2 var(--sans); margin: 0 0 1.25rem; }
+h1 { font: 500 1.75rem/1.15 var(--serif); letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.standfirst { font: 1.125rem/1.5 var(--serif); color: var(--muted); margin: .6rem 0 0; max-width: 34em; text-wrap: pretty; }
+.legend { font: .84rem/1.4 var(--sans); color: var(--muted); margin: .6rem 0 0; }
+section { margin-top: 3rem; scroll-margin-top: 1.5rem; }
+h2 { font: 500 .85rem/1.2 var(--sans); color: var(--muted); margin: 0 0 1rem; padding-bottom: .45rem; border-bottom: 1px solid var(--rule); }
+.digest { font: 1.125rem/1.6 var(--serif); max-width: 62ch; text-wrap: pretty; }
+.digest p { margin: 0; }
+.digest p + p { margin-top: .8em; }
+.items { list-style: none; margin: 0; padding: 0; }
+.item { padding: .75rem 0; }
+.item h3 { font: 500 1.0625rem/1.3 var(--serif); margin: 0 0 .3rem; text-wrap: balance; }
+.item p { margin: 0; text-wrap: pretty; }
+.meta { font: .84rem/1.4 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; margin-top: .35rem; }
+.new { color: var(--accent); font-weight: 500; }
+.video { display: grid; grid-template-columns: minmax(0, 1fr) 144px; grid-template-areas: "h t" "p t" "m t"; column-gap: 1.25rem; align-items: start; }
+.video h3 { grid-area: h; }
+.video p { grid-area: p; }
+.video .meta { grid-area: m; }
+.thumb { grid-area: t; display: block; text-decoration: none; }
+.thumb img { display: block; width: 144px; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 3px; background: var(--rule); filter: saturate(.7); }
+@media (max-width: 40rem) {
+  .video { grid-template-columns: 1fr; grid-template-areas: "h" "t" "p" "m"; }
+  .thumb { margin: .15rem 0 .5rem; }
+  .thumb img { width: 160px; }
+}
+footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); font: .84rem/1.5 var(--sans); color: var(--muted); }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  a { transition: text-decoration-color 130ms ease-out; }
+  .thumb img { transition: filter 150ms ease; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#digest">Skip to content</a>
+<div class="page">
+<header>
+  <p class="site" translate="no">Intellia AI Watchlist</p>
+  <h1>Thursday 15 October 2026</h1>
+  <p class="standfirst">Google&#x27;s Gemini 4 Argon is the headline this week, alongside new Claude and ChatGPT features you can demo and some useful numbers on keeping AI costs under control.</p>
+  
+</header>
+<main>
+<section id="digest" aria-labelledby="digest-h">
+  <h2 id="digest-h">This week in AI</h2>
+  <div class="digest">
+<p>Google released Gemini 4 Argon on 13 October, and it is the release clients are most likely to ask about. Early hands-on tests describe it as catching up with Claude and ChatGPT rather than clearly leading, so expect questions about whether to switch, and have a view ready.</p>
+<p>Several features are easy to try this week. Claude Motion, now in beta on Team and Enterprise plans, turns complex information into animations. ChatGPT added Space for team work and Intelligent UI, which answers with interactive screens. Claude Code now compacts long idle conversations before the cache expires, so returning to a big session is less wasteful.</p>
+<p>Cost came up repeatedly. Asana and LegalOn both reported large savings from choosing models carefully, and Max subscribers are reported to get monthly API credits. One user also ran up $2,500 in an overnight job because no model was specified. When a client wants to automate something, ask who sets the model and the spending limit.</p>
+  </div>
+</section>
+<section id="watch" aria-labelledby="watch-h"><h2 id="watch-h">Watch</h2><ul class="items">
+<li class="item video"><h3><a href="https://www.youtube.com/watch?v=qZqZ02AsYiA">Claude Motion turns complex information into animations</a></h3><p>Shows Claude Motion on a practical example, how to edit it, and 500+ sample animations. Currently beta on Team and Enterprise plans.</p><p class="meta">The AI Advantage · 22h</p><a class="thumb" href="https://www.youtube.com/watch?v=qZqZ02AsYiA" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/qZqZ02AsYiA/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+<li class="item video"><h3><a href="https://www.youtube.com/watch?v=eBszYxzE2dk">Gemini 4 Argon tested hands-on against Claude and ChatGPT</a></h3><p>Matt Wolfe runs Gemini 4 Argon through coding and 3D printing tests, then says what worked, what got stuck and how it compares.</p><p class="meta">Matt Wolfe · 1d</p><a class="thumb" href="https://www.youtube.com/watch?v=eBszYxzE2dk" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/eBszYxzE2dk/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+<li class="item video"><h3><a href="https://www.youtube.com/watch?v=G-9Y2xNiDKQ">ChatGPT Space gives teams a shared place to work</a></h3><p>OpenAI demo of Space, which keeps conversations, context and collaborative work together so a team and ChatGPT share one place.</p><p class="meta">OpenAI · 1d</p><a class="thumb" href="https://www.youtube.com/watch?v=G-9Y2xNiDKQ" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/G-9Y2xNiDKQ/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+<li class="item video"><h3><a href="https://www.youtube.com/watch?v=IZXv6a78NDw">Codex pulls code review into one place</a></h3><p>Shows how Codex gathers pull requests and review feedback across repositories and drafts comments. GitHub review is generally available, GitLab in preview.</p><p class="meta">OpenAI · 2d</p><a class="thumb" href="https://www.youtube.com/watch?v=IZXv6a78NDw" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/IZXv6a78NDw/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+<li class="item video"><h3><a href="https://www.youtube.com/watch?v=yWL93gjFNd8">ChatGPT and Claude updates worth your attention</a></h3><p>Covers GPT-6&#x27;s Intelligent UI, ChatGPT Meetings and audio uploads, plus Claude changes, and sorts the useful updates from the noise.</p><p class="meta">The AI Advantage · 5d</p><a class="thumb" href="https://www.youtube.com/watch?v=yWL93gjFNd8" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/yWL93gjFNd8/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+<li class="item video"><h3><a href="https://www.youtube.com/watch?v=NUizyuGj-kE">Weekly AI news recap: Haiku 5.5, visual ChatGPT and Grok</a></h3><p>Matt Wolfe&#x27;s roundup of the week&#x27;s releases, including Claude Haiku 5.5 and a more visual ChatGPT. Good for catching up in one sitting.</p><p class="meta">Matt Wolfe · 5d</p><a class="thumb" href="https://www.youtube.com/watch?v=NUizyuGj-kE" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/NUizyuGj-kE/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+<li class="item video"><h3><a href="https://www.youtube.com/shorts/OgjMGn4T6Ok">GPT-6 Intelligent UI answers questions with interactive visuals</a></h3><p>Answers come as interactive screens, and ChatGPT can build a quick tool for your task. Available globally on Plus, Pro, Business and Enterprise.</p><p class="meta">OpenAI · 6d</p><a class="thumb" href="https://www.youtube.com/shorts/OgjMGn4T6Ok" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/OgjMGn4T6Ok/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+<li class="item video"><h3><a href="https://www.youtube.com/shorts/Rs5qLAnkNcI">Oracle builds a hiring research tool with ChatGPT Work</a></h3><p>Oracle&#x27;s tool starts from a job description, researches comparable roles, benchmarks pay and assesses talent pools by location. A concrete use case to show clients.</p><p class="meta">OpenAI · 6d</p><a class="thumb" href="https://www.youtube.com/shorts/Rs5qLAnkNcI" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/Rs5qLAnkNcI/mqdefault.jpg" width="320" height="180" alt="" loading="lazy"></a></li>
+</ul></section>
+<section id="models" aria-labelledby="models-h"><h2 id="models-h">New models and tools</h2><ul class="items">
+<li class="item"><h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">Gemini 4 Argon is Google&#x27;s new frontier model</a></h3><p>Google opens Gemini 4 Argon to developers, enterprises, scientists and consumers. Worth knowing before a client asks how it compares with Claude and ChatGPT.</p><p class="meta">Google · 1d</p></li>
+<li class="item"><h3><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.300">Claude Code 2.1.300 adds new options for building mods</a></h3><p>Adds prompt decoration text for mods and splits cache write counts by lifetime in OpenTelemetry data. Mostly of interest to anyone customising Claude Code.</p><p class="meta">Claude Code releases · 17h</p></li>
+<li class="item"><h3><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.299">Claude Code 2.1.299 compacts idle long conversations automatically</a></h3><p>A 200K+ token chat left idle about 54 minutes is compacted before the cache expires, so your next message avoids reprocessing everything.</p><p class="meta">Claude Code releases · 1d</p></li>
+<li class="item"><h3><a href="https://openai.com/index/asana-browser-agent">Asana&#x27;s browser agent runs 76x cheaper with GPT-6 Astra</a></h3><p>In Asana&#x27;s tests the browser agent became 76x cheaper and 5x faster. A useful number when clients ask whether model choice changes the bill.</p><p class="meta">OpenAI · 6d</p></li>
+<li class="item"><h3><a href="https://openai.com/index/legalon-halves-codex-costs">LegalOn cuts daily Codex costs by 65% without slowing down</a></h3><p>LegalOn matched Astra, Sol and Luna models to different tasks and managed budgets deliberately. A practical pattern for keeping AI spend in check.</p><p class="meta">OpenAI · 6d</p></li>
+</ul></section>
+<section id="tools" aria-labelledby="tools-h"><h2 id="tools-h">Tools and skills you can use</h2><ul class="items">
+<li class="item"><h3><a href="https://github.com/anthropics/claude-plugins-official">Anthropic&#x27;s official directory of Claude Code plugins</a></h3><p>Anthropic manages it, so it is a sensible first stop when looking for plugins to add to Claude Code.</p><p class="meta">GitHub trending · 1m</p></li>
+<li class="item"><h3><a href="https://github.com/punkpeye/awesome-mcp-servers/commit/00f22b0d447997f659f9c92d093add1513f9f282">Askone MCP server adds live audience Q&amp;A and polls</a></h3><p>Lets an assistant run live Q&amp;A and polls for an audience, handy for workshops and client sessions. Newly added to the awesome-mcp-servers list.</p><p class="meta">Awesome MCP servers list · 5h</p></li>
+<li class="item"><h3><a href="https://github.com/punkpeye/awesome-mcp-servers/commit/b19d41d237b0b9027e5ffe85ebdd17a768646a17">A1-x-Tech adds a Google Chat MCP server</a></h3><p>Connects an AI assistant to Google Chat through MCP. Try it if your team lives in Chat, and check the README for setup.</p><p class="meta">Awesome MCP servers list · 5h</p></li>
+<li class="item"><h3><a href="https://github.com/JuliusBrussee/caveman">Caveman skill claims 65% fewer tokens from coding agents</a></h3><p>Makes the agent reply in terse caveman speech to save tokens, which the project says cuts 65%. Gimmicky, but relevant if usage limits bite.</p><p class="meta">GitHub trending · 1m</p></li>
+<li class="item"><h3><a href="https://github.com/vercel-labs/skills">Vercel&#x27;s npx skills installs agent skills with one command</a></h3><p>An open tool for adding agent skills to coding assistants from the command line. Needs a terminal, but no coding.</p><p class="meta">GitHub trending · 1m</p></li>
+<li class="item"><h3><a href="https://github.com/OpenCut-app/OpenCut">OpenCut is an open-source alternative to CapCut</a></h3><p>A free video editor you can try for short client or social clips without a subscription. Install it and test with a sample video.</p><p class="meta">GitHub trending · 1m</p></li>
+</ul></section>
+<section id="reading" aria-labelledby="reading-h"><h2 id="reading-h">Worth reading</h2><ul class="items">
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1x5he2c/anthropic_is_merging_30000_code_changes_per_day/">Anthropic&#x27;s engineers stay vital by telling Claude no</a></h3><p>Anthropic reports merging 30,000 code changes a day using Claude, with engineers mainly blocking agents that break core system constraints.</p><p class="meta">r/ClaudeCode · 1d</p></li>
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1x31yts/claude_max_20x_now_get_200_in_free_api_credits/">Claude Max subscribers now get monthly API credits</a></h3><p>Max 20x gets $200 a month and Max 5x gets $100, claimed by linking a Console organization. A Reddit post, so confirm with Anthropic.</p><p class="meta">r/ClaudeCode · 4d</p></li>
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1x132yy/is_haiku_55_good_enough_to_be_your_main_coding/">Haiku 5.5 tested as a main coding agent against Sonnet and GPT-6</a></h3><p>Small controlled test on a real mixed-language codebase covering bug fixes, code review and spec-driven builds. Useful for judging when cheaper models suffice.</p><p class="meta">r/ClaudeCode · 6d</p></li>
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1x56wuh/gemini_4_argon_vs_claude_opus_55_same_prompt_tiny/">Gemini 4 Argon versus Claude Opus 5.5 on the same prompt</a></h3><p>One user gives both models the same ThreeJS planet prompt and finds Gemini not bad, but not good enough.</p><p class="meta">r/ClaudeCode · 1d</p></li>
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1x53e74/apparently_anyone_can_make_applestyle_ads_now/">Making an Apple-style launch film with Opus 5.5 and no design background</a></h3><p>It took three days, used up the Claude session limits and needed scene-by-scene iteration, which is a realistic picture of the effort.</p><p class="meta">r/ClaudeCode · 1d</p></li>
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeAI/comments/1x1oxol/i_gave_claude_a_batch_job_overnight_woke_up_to_96/">Overnight Claude batch job ran up $2,500 in video spend</a></h3><p>The user never specified a model, and the run produced 96 clips and $2,500 in spend. Worth reading before letting clients automate anything.</p><p class="meta">r/ClaudeAI · 5d</p></li>
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeAI/comments/1x4s9hp/someone_used_claude_to_get_a_yearsold_pothole/">Claude helped get a years-old pothole fixed in two days</a></h3><p>Six photos became a 3D rebuild and a simulated 30 km/h hit, sent to city hall. A neat example of persuasion with evidence.</p><p class="meta">r/ClaudeAI · 2d</p></li>
+<li class="item"><h3><a href="https://www.reddit.com/r/ClaudeAI/comments/1x0uhhr/what_are_claude_code_power_users_doing_with/">What do Claude Code power users do that others don&#x27;t?</a></h3><p>A senior developer asks which setups and habits make Claude Code a real force multiplier. Skim the replies for ideas to borrow.</p><p class="meta">r/ClaudeAI · 6d</p></li>
+</ul></section>
+</main>
+<footer>
+  <p>Updated Thursday 15 October 2026 at 16:38 Pakistan time from 21 feeds. Curated for the Intellia team.</p>
+</footer>
+</div>
+</body>
+</html>
