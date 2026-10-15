@@ -1,4 +1,5 @@
-# section url   (sections: watch, models, tools, reading; text after the URL is ignored)
+# section url [display name]   sections: watch, models, tools, reading
+# Meta AI and Mistral publish no RSS; Anthropic's feed is a community mirror (github.com/Olshansk/rss-feeds).
 
 # Watch: weekly recaps and explainers
 watch https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA   Fireship
@@ -10,19 +11,18 @@ watch https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBD
 watch https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A   OpenAI
 
 # New models and tools: lab and vendor news
-models https://openai.com/news/rss.xml
-models https://blog.google/technology/ai/rss/
-models https://deepmind.google/blog/rss.xml
-models https://ai.meta.com/blog/rss/
-models https://blogs.microsoft.com/ai/feed/
+models https://openai.com/news/rss.xml   OpenAI
+models https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml   Anthropic
 models https://github.com/anthropics/claude-code/releases.atom   Claude Code releases
+models https://blog.google/technology/ai/rss/   Google
+models https://deepmind.google/blog/rss.xml   Google DeepMind
 
 # Tools and skills you can use
-tools https://github.com/trending?since=daily
-tools https://github.com/trending/python?since=daily
-tools https://github.com/trending/typescript?since=daily
+tools https://github.com/trending?since=daily   GitHub trending
+tools https://github.com/trending/python?since=daily   GitHub trending
+tools https://github.com/trending/typescript?since=daily   GitHub trending
 tools https://github.com/anthropics/skills/commits/main.atom   Anthropic skills repo
-tools https://github.com/punkpeye/awesome-mcp-servers/commits/main.atom
+tools https://github.com/punkpeye/awesome-mcp-servers/commits/main.atom   Awesome MCP servers list
 
 # Worth reading
 reading https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=60
