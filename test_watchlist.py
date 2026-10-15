@@ -114,6 +114,46 @@ def test_load_sources_reads_optional_name():
         ("models", "https://b", None),
     ]
 
+TODAY = {
+    "generated": "2026-10-16T07:00:00+00:00",
+    "previous_generated": "2026-10-15T07:00:00+00:00",
+    "date_label": "Friday 16 October 2026",
+    "standfirst": "What is new this week.",
+    "digest": ["First paragraph.", "Second <b>paragraph</b>."],
+    "sections": [{"key": "watch", "title": "Watch", "items": [
+        {"title": "A <video>", "url": "https://youtube.com/watch?v=1", "source": "Fireship",
+         "published": "2026-10-16T01:00:00+00:00", "summary": "Why it matters.",
+         "thumbnail": "https://i.ytimg.com/vi/1/mqdefault.jpg"},
+        {"title": "Old one", "url": "https://youtube.com/watch?v=2", "source": "Fireship",
+         "published": "2026-10-14T01:00:00+00:00", "summary": "Older.", "thumbnail": None},
+    ]}],
+}
+
+
+def test_render_fills_template_and_escapes():
+    from render import render
+    out = render(TODAY, "$date_label|$digest|$sections|$legend|$updated|$feed_count", feed_count=24)
+    assert "Friday 16 October 2026" in out
+    assert "Second &lt;b&gt;paragraph&lt;/b&gt;" in out
+    assert "A &lt;video&gt;" in out
+    assert 'src="https://i.ytimg.com/vi/1/mqdefault.jpg"' in out
+    assert '<span class="new">6h</span>' in out       # newer than previous issue
+    assert "Fireship · 2d" in out                     # older item, plain age
+    assert "class=\"item video\"" in out and "class=\"item\"" in out
+    assert "16 October 2026 at 12:00" in out          # generated shown in Pakistan time
+    assert "|24" in out
+    assert "new since" in out
+
+
+def test_render_rejects_missing_sections():
+    from render import render
+    try:
+        render({"generated": "2026-10-16T07:00:00+00:00"}, "")
+    except ValueError as e:
+        assert "sections" in str(e)
+    else:
+        raise AssertionError("expected ValueError")
+
 
 def run():
     tests = [v for k, v in globals().items() if k.startswith("test_")]

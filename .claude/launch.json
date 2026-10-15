@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "scratch",
+      "name": "site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "C:/Users/farjad.imtiaz/AppData/Local/Temp/claude/D--OneDrive---Higher-Education-Commission-Personal-Data-AI-Intellia-AI-Watchlist/b09b482e-8fc8-4c3a-a376-a97cb74c42f0/scratchpad"],
-      "port": 8765
+      "runtimeArgs": ["-m", "http.server", "8766"],
+      "port": 8766
     }
   ]
 }
