@@ -64,7 +64,7 @@ today.json + template.html -> render.py -> index.html -> git push -> GitHub Page
 
 1. `git pull --ff-only`.
 2. `python build.py`. Stop if it exits non-zero.
-3. `claude -p` with the contents of `prompt.md`, `--allowedTools "Read,Write"`, `--permission-mode acceptEdits`. The prompt tells Claude to read `editorial.md`, `pool.json` and the existing `today.json`, and write a new `today.json` following the schema in section 6: 5-8 items per section against the brief, preferring items not in yesterday's issue, with the digest and one summary per item in the brief's voice. Stop if `today.json` did not change.
+3. `claude -p` with `prompt.md` piped on stdin, `--allowedTools "Read,Write"`, `--permission-mode acceptEdits`. The prompt tells Claude to read `editorial.md`, `pool.json` and the existing `today.json`, and write a new `today.json` following the schema in section 6: 5-8 items per section against the brief, preferring items not in yesterday's issue, with the digest and one summary per item in the brief's voice. Stop if `today.json` did not change.
 4. `python render.py`. Stop if it exits non-zero.
 5. `git add today.json index.html`, commit `daily: YYYY-MM-DD`, `git push`.
 6. Append one line per run to `logs/daily.log` (gitignored) so a silent failure can be found.

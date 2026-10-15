@@ -780,10 +780,10 @@ python build.py
 then
 
 ```bash
-claude -p "$(cat prompt.md)" --allowedTools "Read,Write" --permission-mode acceptEdits
+cat prompt.md | claude -p --allowedTools "Read,Write" --permission-mode acceptEdits
 ```
 
-(PowerShell: `claude -p (Get-Content prompt.md -Raw) --allowedTools "Read,Write" --permission-mode acceptEdits`.)
+(PowerShell: `Get-Content prompt.md -Raw | claude -p --allowedTools "Read,Write" --permission-mode acceptEdits`. Pass the prompt on stdin: PowerShell 5.1 cuts native arguments at the first double quote.)
 Expected: one line of counts, and `today.json` rewritten.
 
 - [ ] **Step 4: Validate and render**
@@ -851,7 +851,7 @@ try {
   python build.py
   if ($LASTEXITCODE) { throw "build.py failed" }
   $before = (Get-FileHash today.json).Hash
-  claude -p (Get-Content prompt.md -Raw) --allowedTools "Read,Write" --permission-mode acceptEdits
+  Get-Content prompt.md -Raw | claude -p --allowedTools "Read,Write" --permission-mode acceptEdits
   if ($LASTEXITCODE) { throw "claude failed" }
   if ((Get-FileHash today.json).Hash -eq $before) { throw "today.json unchanged" }
   python render.py
