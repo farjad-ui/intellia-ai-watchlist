@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-15T11:38:16.449569+00:00",
-  "date_label": "Thursday 15 October 2026",
-  "standfirst": "Google's Gemini 4 Argon is the headline this week, alongside new Claude and ChatGPT features you can demo and some useful numbers on keeping AI costs under control.",
+  "generated": "2026-10-15T11:48:20.244850+00:00",
+  "previous_generated": "2026-10-15T11:38:16.449569+00:00",
+  "standfirst": "This issue covers short demos of Claude and ChatGPT features, customer stories with hard numbers, and cautionary tales about unattended AI jobs.",
   "digest": [
-    "Google released Gemini 4 Argon on 13 October, and it is the release clients are most likely to ask about. Early hands-on tests describe it as catching up with Claude and ChatGPT rather than clearly leading, so expect questions about whether to switch, and have a view ready.",
-    "Several features are easy to try this week. Claude Motion, now in beta on Team and Enterprise plans, turns complex information into animations. ChatGPT added Space for team work and Intelligent UI, which answers with interactive screens. Claude Code now compacts long idle conversations before the cache expires, so returning to a big session is less wasteful.",
-    "Cost came up repeatedly. Asana and LegalOn both reported large savings from choosing models carefully, and Max subscribers are reported to get monthly API credits. One user also ran up $2,500 in an overnight job because no model was specified. When a client wants to automate something, ask who sets the model and the spending limit."
+    "The week's releases are settling into features you can show a client. Claude Motion has several short demos out, and ChatGPT now has document scanning, a Meetings plugin and dots on mobile. Claude for Google Workspace also has a quick demo, which matters if a client lives in Docs, Sheets and Gmail.",
+    "OpenAI published several customer stories with specific results. Sophos says its average response time fell from 38 minutes to 89 seconds, and Oracle describes business users asking for reports and apps in plain language. These are useful proof points, but they are vendor stories, so ask clients what they would measure before quoting them.",
+    "Two Reddit posts are worth reading before a client automates anything. One user's overnight run opened 13,000 browser windows, and another posted about a password manager built by someone with no coding background. Both come back to the same question: who reviews what the AI builds, and who sets the limits."
   ],
   "sections": [
     {
@@ -13,68 +13,60 @@
       "title": "Watch",
       "items": [
         {
-          "title": "Claude Motion turns complex information into animations",
-          "url": "https://www.youtube.com/watch?v=qZqZ02AsYiA",
+          "title": "Claude Motion builds an unrolling timeline video",
+          "url": "https://www.youtube.com/shorts/gyTcoQlibdk",
           "source": "The AI Advantage",
-          "published": "2026-10-14T13:35:19+00:00",
-          "summary": "Shows Claude Motion on a practical example, how to edit it, and 500+ sample animations. Currently beta on Team and Enterprise plans.",
-          "thumbnail": "https://i.ytimg.com/vi/qZqZ02AsYiA/mqdefault.jpg"
+          "published": "2026-10-14T15:43:05+00:00",
+          "summary": "A short walkthrough of making an unrolling timeline animation with Claude Motion, the beta feature on Team and Enterprise plans.",
+          "thumbnail": "https://i.ytimg.com/vi/gyTcoQlibdk/mqdefault.jpg"
         },
         {
-          "title": "Gemini 4 Argon tested hands-on against Claude and ChatGPT",
-          "url": "https://www.youtube.com/watch?v=eBszYxzE2dk",
-          "source": "Matt Wolfe",
-          "published": "2026-10-13T16:47:07+00:00",
-          "summary": "Matt Wolfe runs Gemini 4 Argon through coding and 3D printing tests, then says what worked, what got stuck and how it compares.",
-          "thumbnail": "https://i.ytimg.com/vi/eBszYxzE2dk/mqdefault.jpg"
-        },
-        {
-          "title": "ChatGPT Space gives teams a shared place to work",
-          "url": "https://www.youtube.com/watch?v=G-9Y2xNiDKQ",
-          "source": "OpenAI",
-          "published": "2026-10-13T21:01:10+00:00",
-          "summary": "OpenAI demo of Space, which keeps conversations, context and collaborative work together so a team and ChatGPT share one place.",
-          "thumbnail": "https://i.ytimg.com/vi/G-9Y2xNiDKQ/mqdefault.jpg"
-        },
-        {
-          "title": "Codex pulls code review into one place",
-          "url": "https://www.youtube.com/watch?v=IZXv6a78NDw",
-          "source": "OpenAI",
-          "published": "2026-10-12T16:00:08+00:00",
-          "summary": "Shows how Codex gathers pull requests and review feedback across repositories and drafts comments. GitHub review is generally available, GitLab in preview.",
-          "thumbnail": "https://i.ytimg.com/vi/IZXv6a78NDw/mqdefault.jpg"
-        },
-        {
-          "title": "ChatGPT and Claude updates worth your attention",
-          "url": "https://www.youtube.com/watch?v=yWL93gjFNd8",
+          "title": "Claude Motion explained in a short clip",
+          "url": "https://www.youtube.com/shorts/I9ja4gEbBiI",
           "source": "The AI Advantage",
-          "published": "2026-10-09T12:30:49+00:00",
-          "summary": "Covers GPT-6's Intelligent UI, ChatGPT Meetings and audio uploads, plus Claude changes, and sorts the useful updates from the noise.",
-          "thumbnail": "https://i.ytimg.com/vi/yWL93gjFNd8/mqdefault.jpg"
+          "published": "2026-10-14T15:40:55+00:00",
+          "summary": "A quick answer to how Claude Motion works. Pair it with yesterday's longer demo if you want to try it on your own material.",
+          "thumbnail": "https://i.ytimg.com/vi/I9ja4gEbBiI/mqdefault.jpg"
         },
         {
-          "title": "Weekly AI news recap: Haiku 5.5, visual ChatGPT and Grok",
-          "url": "https://www.youtube.com/watch?v=NUizyuGj-kE",
-          "source": "Matt Wolfe",
-          "published": "2026-10-09T15:00:01+00:00",
-          "summary": "Matt Wolfe's roundup of the week's releases, including Claude Haiku 5.5 and a more visual ChatGPT. Good for catching up in one sitting.",
-          "thumbnail": "https://i.ytimg.com/vi/NUizyuGj-kE/mqdefault.jpg"
-        },
-        {
-          "title": "GPT-6 Intelligent UI answers questions with interactive visuals",
-          "url": "https://www.youtube.com/shorts/OgjMGn4T6Ok",
+          "title": "Oracle uses Codex so business users can ask data questions",
+          "url": "https://www.youtube.com/shorts/DTcK95TAZ-k",
           "source": "OpenAI",
-          "published": "2026-10-08T17:46:54+00:00",
-          "summary": "Answers come as interactive screens, and ChatGPT can build a quick tool for your task. Available globally on Plus, Pro, Business and Enterprise.",
-          "thumbnail": "https://i.ytimg.com/vi/OgjMGn4T6Ok/mqdefault.jpg"
+          "published": "2026-10-14T09:35:27+00:00",
+          "summary": "Oracle's applications lab describes users asking for an analysis, report or app while Codex gathers the data from internal systems. A concrete client story.",
+          "thumbnail": "https://i.ytimg.com/vi/DTcK95TAZ-k/mqdefault.jpg"
         },
         {
-          "title": "Oracle builds a hiring research tool with ChatGPT Work",
-          "url": "https://www.youtube.com/shorts/Rs5qLAnkNcI",
+          "title": "ChatGPT's Meetings plugin shown in a short demo",
+          "url": "https://www.youtube.com/shorts/A6nf3vplEPY",
+          "source": "The AI Advantage",
+          "published": "2026-10-12T04:24:36+00:00",
+          "summary": "A short look at the Meetings plugin in ChatGPT, also covered in the longer update video from 9 October. Good to know before clients ask about meeting notes.",
+          "thumbnail": "https://i.ytimg.com/vi/A6nf3vplEPY/mqdefault.jpg"
+        },
+        {
+          "title": "Setting up a dot in the ChatGPT mobile app",
+          "url": "https://www.youtube.com/watch?v=p5KxBTUncoE",
           "source": "OpenAI",
-          "published": "2026-10-08T17:43:05+00:00",
-          "summary": "Oracle's tool starts from a job description, researches comparable roles, benchmarks pay and assesses talent pools by location. A concrete use case to show clients.",
-          "thumbnail": "https://i.ytimg.com/vi/Rs5qLAnkNcI/mqdefault.jpg"
+          "published": "2026-10-09T19:13:03+00:00",
+          "summary": "Walks through creating a dot, editing its name and avatar, and making it the first conversation you see when the app opens. Quick to try on a phone.",
+          "thumbnail": "https://i.ytimg.com/vi/p5KxBTUncoE/mqdefault.jpg"
+        },
+        {
+          "title": "ChatGPT's new document scanning shown in a short clip",
+          "url": "https://www.youtube.com/shorts/eeI_FSN35XE",
+          "source": "The AI Advantage",
+          "published": "2026-10-09T18:33:58+00:00",
+          "summary": "A short clip showing ChatGPT scanning documents. Worth a look if clients still work with paper, and easy to test yourself.",
+          "thumbnail": "https://i.ytimg.com/vi/eeI_FSN35XE/mqdefault.jpg"
+        },
+        {
+          "title": "Claude for Google Workspace shown in a short demo",
+          "url": "https://www.youtube.com/shorts/rAKVvImQcEQ",
+          "source": "The AI Advantage",
+          "published": "2026-10-09T12:38:23+00:00",
+          "summary": "A short demo of Claude working with Google Workspace. Worth a minute if your clients run on Docs, Sheets and Gmail.",
+          "thumbnail": "https://i.ytimg.com/vi/rAKVvImQcEQ/mqdefault.jpg"
         }
       ]
     },
@@ -83,43 +75,51 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "Gemini 4 Argon is Google's new frontier model",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-          "source": "Google",
-          "published": "2026-10-13T16:00:00+00:00",
-          "summary": "Google opens Gemini 4 Argon to developers, enterprises, scientists and consumers. Worth knowing before a client asks how it compares with Claude and ChatGPT.",
+          "title": "Higgsfield stretches AI video from one minute to over ten",
+          "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+          "source": "OpenAI",
+          "published": "2026-10-13T12:00:00+00:00",
+          "summary": "Built on GPT-6 Astra, with GPT-Image-2.5 for precise visuals and GPT-Live for voice. A real example of creative tools riding model upgrades.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code 2.1.300 adds new options for building mods",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
-          "source": "Claude Code releases",
-          "published": "2026-10-14T18:24:25+00:00",
-          "summary": "Adds prompt decoration text for mods and splits cache write counts by lifetime in OpenTelemetry data. Mostly of interest to anyone customising Claude Code.",
+          "title": "Amp builds agents for work beyond code on OpenAI models",
+          "url": "https://openai.com/index/amp-beyond-coding",
+          "source": "OpenAI",
+          "published": "2026-10-14T12:00:00+00:00",
+          "summary": "OpenAI's case study of Amp using GPT-6 Astra, Ultrafast, GPT-Live-1 and Sign in with ChatGPT. Skim it to see how agent products are put together.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code 2.1.299 compacts idle long conversations automatically",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
-          "source": "Claude Code releases",
-          "published": "2026-10-14T02:49:42+00:00",
-          "summary": "A 200K+ token chat left idle about 54 minutes is compacted before the cache expires, so your next message avoids reprocessing everything.",
+          "title": "Oracle turns days of work into minutes with ChatGPT and Codex",
+          "url": "https://openai.com/index/oracle",
+          "source": "OpenAI",
+          "published": "2026-10-08T16:00:00+00:00",
+          "summary": "Covers recruiting, engineering and operations workflows built on ChatGPT Work and Codex. The written story behind the Oracle videos in the Watch section.",
           "thumbnail": null
         },
         {
-          "title": "Asana's browser agent runs 76x cheaper with GPT-6 Astra",
-          "url": "https://openai.com/index/asana-browser-agent",
+          "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+          "url": "https://openai.com/index/sophos",
           "source": "OpenAI",
           "published": "2026-10-09T07:00:00+00:00",
-          "summary": "In Asana's tests the browser agent became 76x cheaper and 5x faster. A useful number when clients ask whether model choice changes the bill.",
+          "summary": "Response time fell from 38 minutes to 89 seconds on cases using its agents, with people still making the calls. A strong number for security clients.",
           "thumbnail": null
         },
         {
-          "title": "LegalOn cuts daily Codex costs by 65% without slowing down",
-          "url": "https://openai.com/index/legalon-halves-codex-costs",
-          "source": "OpenAI",
-          "published": "2026-10-08T12:00:00+00:00",
-          "summary": "LegalOn matched Astra, Sol and Luna models to different tasks and managed budgets deliberately. A practical pattern for keeping AI spend in check.",
+          "title": "Claude Code 2.1.296 adds gateway policies and earlier subagent compaction",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
+          "source": "Claude Code releases",
+          "published": "2026-10-09T19:28:59+00:00",
+          "summary": "Adds a code key to the Claude apps gateway's managed policies and an autoCompactWindow setting for subagents. Of interest to admins rather than everyday users.",
+          "thumbnail": null
+        },
+        {
+          "title": "Claude Code 2.1.295 can block actions when a hook fails",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+          "source": "Claude Code releases",
+          "published": "2026-10-08T19:48:38+00:00",
+          "summary": "Hooks can now stop an action if they fail to start or time out, and some terminals can show whether Claude is working or waiting.",
           "thumbnail": null
         }
       ]
@@ -129,51 +129,59 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "Anthropic's official directory of Claude Code plugins",
-          "url": "https://github.com/anthropics/claude-plugins-official",
+          "title": "VoiceStudio offers local voice cloning, dubbing and transcription",
+          "url": "https://github.com/debpalash/VoiceStudio",
           "source": "GitHub trending",
-          "published": "2026-10-15T11:38:16.449569+00:00",
-          "summary": "Anthropic manages it, so it is a sensible first stop when looking for plugins to add to Claude Code.",
+          "published": "2026-10-15T11:48:20.244850+00:00",
+          "summary": "An open-source alternative to ElevenLabs that runs on your own machine, covering dictation, video dubbing and audiobooks. Check hardware needs before promising a demo.",
           "thumbnail": null
         },
         {
-          "title": "Askone MCP server adds live audience Q&A and polls",
-          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/00f22b0d447997f659f9c92d093add1513f9f282",
+          "title": "HeyGen's Hyperframes turns HTML into rendered video",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "source": "GitHub trending",
+          "published": "2026-10-15T11:48:20.244850+00:00",
+          "summary": "You write HTML and it renders video, built to be driven by an agent. Expect a little setup before it makes templated clips.",
+          "thumbnail": null
+        },
+        {
+          "title": "Superpowers is a ready-made skills framework for coding agents",
+          "url": "https://github.com/obra/superpowers",
+          "source": "GitHub trending",
+          "published": "2026-10-15T11:48:20.244850+00:00",
+          "summary": "A popular skills framework and development method that is trending today. Aimed at developers, so ask whether a client's engineers already use it.",
+          "thumbnail": null
+        },
+        {
+          "title": "Paperclip is an open-source app for managing agents at work",
+          "url": "https://github.com/paperclipai/paperclip",
+          "source": "GitHub trending",
+          "published": "2026-10-15T11:48:20.244850+00:00",
+          "summary": "Describes itself as the app everyone uses to manage agents, and it gained 584 stars today. Read the README to judge setup effort first.",
+          "thumbnail": null
+        },
+        {
+          "title": "wshobson/agents is a plugin marketplace for Claude Code and others",
+          "url": "https://github.com/wshobson/agents",
+          "source": "GitHub trending",
+          "published": "2026-10-15T11:48:20.244850+00:00",
+          "summary": "One marketplace of plugins that also works with Codex, Cursor and GitHub Copilot. Browse it for ideas, but Anthropic's official directory is the safer first stop.",
+          "thumbnail": null
+        },
+        {
+          "title": "A Google Tag Manager MCP server joins the awesome list",
+          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/532121fbec85e0c141e5d52363300a54a5e7e0e1",
           "source": "Awesome MCP servers list",
-          "published": "2026-10-15T06:12:46+00:00",
-          "summary": "Lets an assistant run live Q&A and polls for an audience, handy for workshops and client sessions. Newly added to the awesome-mcp-servers list.",
+          "published": "2026-10-15T05:17:26+00:00",
+          "summary": "Lets an assistant work with Google Tag Manager through MCP, handy for marketing and analytics clients. Check the README for setup and permissions.",
           "thumbnail": null
         },
         {
-          "title": "A1-x-Tech adds a Google Chat MCP server",
-          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/b19d41d237b0b9027e5ffe85ebdd17a768646a17",
-          "source": "Awesome MCP servers list",
-          "published": "2026-10-15T06:32:07+00:00",
-          "summary": "Connects an AI assistant to Google Chat through MCP. Try it if your team lives in Chat, and check the README for setup.",
-          "thumbnail": null
-        },
-        {
-          "title": "Caveman skill claims 65% fewer tokens from coding agents",
-          "url": "https://github.com/JuliusBrussee/caveman",
-          "source": "GitHub trending",
-          "published": "2026-10-15T11:38:16.449569+00:00",
-          "summary": "Makes the agent reply in terse caveman speech to save tokens, which the project says cuts 65%. Gimmicky, but relevant if usage limits bite.",
-          "thumbnail": null
-        },
-        {
-          "title": "Vercel's npx skills installs agent skills with one command",
-          "url": "https://github.com/vercel-labs/skills",
-          "source": "GitHub trending",
-          "published": "2026-10-15T11:38:16.449569+00:00",
-          "summary": "An open tool for adding agent skills to coding assistants from the command line. Needs a terminal, but no coding.",
-          "thumbnail": null
-        },
-        {
-          "title": "OpenCut is an open-source alternative to CapCut",
-          "url": "https://github.com/OpenCut-app/OpenCut",
-          "source": "GitHub trending",
-          "published": "2026-10-15T11:38:16.449569+00:00",
-          "summary": "A free video editor you can try for short client or social clips without a subscription. Install it and test with a sample video.",
+          "title": "Anthropic's claude-api skill now treats Haiku 5.5 as current",
+          "url": "https://github.com/anthropics/skills/commit/9d630808e4add0a7146de4af9384155d5dee350a",
+          "source": "Anthropic skills repo",
+          "published": "2026-10-09T10:06:51+00:00",
+          "summary": "The skill for building with the Claude API now names Haiku 5.5 as the current Haiku, with Managed Agents fixes. Only relevant if you build with the API.",
           "thumbnail": null
         }
       ]
@@ -183,67 +191,51 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Anthropic's engineers stay vital by telling Claude no",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5he2c/anthropic_is_merging_30000_code_changes_per_day/",
+          "title": "People with no coding background are shipping password managers",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x68om1/weve_reached_the_point_where_people_with/",
           "source": "r/ClaudeCode",
-          "published": "2026-10-14T03:54:35+00:00",
-          "summary": "Anthropic reports merging 30,000 code changes a day using Claude, with engineers mainly blocking agents that break core system constraints.",
+          "published": "2026-10-15T01:19:08+00:00",
+          "summary": "A poster points to an open-source password manager, built by a non-coder, now distributed publicly. A useful prompt for client talks about review and security.",
           "thumbnail": null
         },
         {
-          "title": "Claude Max subscribers now get monthly API credits",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x31yts/claude_max_20x_now_get_200_in_free_api_credits/",
+          "title": "An overnight Claude run opened 13,000 browser windows",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x1esxn/attention_heavy_ai_users/",
           "source": "r/ClaudeCode",
-          "published": "2026-10-11T07:32:51+00:00",
-          "summary": "Max 20x gets $200 a month and Max 5x gets $100, claimed by linking a Console organization. A Reddit post, so confirm with Anthropic.",
+          "published": "2026-10-09T07:16:28+00:00",
+          "summary": "The user told Claude to assume unlimited resources, and Opus 5.5 ran dozens of parallel agents until the PC kept crashing. A caution for unattended jobs.",
           "thumbnail": null
         },
         {
-          "title": "Haiku 5.5 tested as a main coding agent against Sonnet and GPT-6",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x132yy/is_haiku_55_good_enough_to_be_your_main_coding/",
+          "title": "Posts point to a Claude usage policy change on 12 November",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x0ybl2/no_more_abusing_claude_from_nov_12th_onwards/",
           "source": "r/ClaudeCode",
-          "published": "2026-10-08T21:16:51+00:00",
-          "summary": "Small controlled test on a real mixed-language codebase covering bug fixes, code review and spec-driven builds. Useful for judging when cheaper models suffice.",
+          "published": "2026-10-08T18:15:37+00:00",
+          "summary": "Posters say abusing Claude could mean a ban from that date. This comes from Reddit, so check Anthropic's own notice before telling clients.",
           "thumbnail": null
         },
         {
-          "title": "Gemini 4 Argon versus Claude Opus 5.5 on the same prompt",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x56wuh/gemini_4_argon_vs_claude_opus_55_same_prompt_tiny/",
+          "title": "Max subscriber stuck on Pro limits after a downgrade bug",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x62sro/max_subscription_but_only_pro_usage/",
           "source": "r/ClaudeCode",
-          "published": "2026-10-13T19:54:12+00:00",
-          "summary": "One user gives both models the same ThreeJS planet prompt and finds Gemini not bad, but not good enough.",
+          "published": "2026-10-14T20:53:42+00:00",
+          "summary": "Anthropic confirmed a bug dropped them to Pro usage a week early, and they say no refund followed. One anecdote, but worth knowing about billing.",
           "thumbnail": null
         },
         {
-          "title": "Making an Apple-style launch film with Opus 5.5 and no design background",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x53e74/apparently_anyone_can_make_applestyle_ads_now/",
+          "title": "Rebuilding a PDF editor with Claude Code exposed the limits",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x37jfk/rebuilding_a_pdf_editor_with_claude_code_made_me/",
           "source": "r/ClaudeCode",
-          "published": "2026-10-13T17:44:05+00:00",
-          "summary": "It took three days, used up the Claude session limits and needed scene-by-scene iteration, which is a realistic picture of the effort.",
+          "published": "2026-10-11T12:56:21+00:00",
+          "summary": "An experienced Android developer's plan passed 3,000 lines and Claude kept asking for architecture decisions they struggled to judge. A candid view of where people get stuck.",
           "thumbnail": null
         },
         {
-          "title": "Overnight Claude batch job ran up $2,500 in video spend",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x1oxol/i_gave_claude_a_batch_job_overnight_woke_up_to_96/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-09T15:51:20+00:00",
-          "summary": "The user never specified a model, and the run produced 96 clips and $2,500 in spend. Worth reading before letting clients automate anything.",
-          "thumbnail": null
-        },
-        {
-          "title": "Claude helped get a years-old pothole fixed in two days",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x4s9hp/someone_used_claude_to_get_a_yearsold_pothole/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-13T09:41:02+00:00",
-          "summary": "Six photos became a 3D rebuild and a simulated 30 km/h hit, sent to city hall. A neat example of persuasion with evidence.",
-          "thumbnail": null
-        },
-        {
-          "title": "What do Claude Code power users do that others don't?",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x0uhhr/what_are_claude_code_power_users_doing_with/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-08T15:49:35+00:00",
-          "summary": "A senior developer asks which setups and habits make Claude Code a real force multiplier. Skim the replies for ideas to borrow.",
+          "title": "A Claude Code mod expands replies only where you want detail",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x688sx/turning_a_crazy_idea_from_1967_into_a_claude_code/",
+          "source": "r/ClaudeCode",
+          "published": "2026-10-15T00:57:25+00:00",
+          "summary": "Based on a 1967 idea of text that grows and shrinks on demand, the poster says they read 83% fewer words. More for tinkerers than newcomers.",
           "thumbnail": null
         }
       ]
