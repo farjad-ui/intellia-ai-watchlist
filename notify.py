@@ -61,17 +61,17 @@ def slack_message(today, site=SITE):
             blocks += [{"type": "divider"}, md(text)]
     blocks += [
         {"type": "divider"},
-        {
-            "type": "context",
-            "elements": [
-                {
-                    "type": "mrkdwn",
-                    "text": f"<{site}|Read the full issue> for the whole week's digest and every pick.",
-                }
-            ],
-        },
+        md(
+            f"*<{site}|Read the full issue>* for the whole week's digest and every pick."
+        ),
     ]
-    return {"text": f"{title}: {today['standfirst']}", "blocks": blocks}
+    # no preview cards: one per YouTube link would bury the text
+    return {
+        "text": f"{title}: {today['standfirst']}",
+        "blocks": blocks,
+        "unfurl_links": False,
+        "unfurl_media": False,
+    }
 
 
 if __name__ == "__main__":

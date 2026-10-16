@@ -284,6 +284,10 @@ def test_slack_message():
     assert "<https://youtube.com/watch?v=1|A &lt;video&gt;>" in flat
     assert "Why it matters. _Fireship_" in flat
     assert "<https://example.github.io/w/|Read the full issue>" in flat
+    assert (
+        msg["unfurl_links"] is False and msg["unfurl_media"] is False
+    )  # no preview cards
+    assert all(b["type"] != "context" for b in msg["blocks"])  # no small footnote text
 
     t = copy.deepcopy(TODAY)
     items = t["sections"][0]["items"]
