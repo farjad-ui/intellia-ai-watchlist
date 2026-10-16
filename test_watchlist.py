@@ -264,13 +264,34 @@ def test_load_sources_skips_short_and_indented_lines():
 def test_slack_message():
     from notify import slack_message
 
+    import copy, json
+
     msg = slack_message(TODAY, "https://example.github.io/w/")
-    text = msg["text"]
-    assert text.startswith("*Intellia AI Watchlist · Friday 16 October*")
-    assert "What is new this week." in text
-    assert "<https://example.github.io/w/|Read today's issue>" in text
-    t = dict(TODAY, standfirst="Q&A <b> tips")
-    assert "Q&amp;A &lt;b&gt; tips" in slack_message(t, "u")["text"]
+    assert (
+        msg["text"]
+        == "Intellia AI Watchlist · Friday 16 October: What is new this week."
+    )
+    assert msg["blocks"][0] == {
+        "type": "header",
+        "text": {
+            "type": "plain_text",
+            "text": "Intellia AI Watchlist · Friday 16 October",
+        },
+    }
+    flat = json.dumps(msg["blocks"], ensure_ascii=False)
+    assert "First paragraph." in flat  # opening digest paragraph
+    assert "*Watch*" in flat
+    assert "<https://youtube.com/watch?v=1|A &lt;video&gt;>" in flat
+    assert "Why it matters. _Fireship_" in flat
+    assert "<https://example.github.io/w/|Read the full issue>" in flat
+
+    t = copy.deepcopy(TODAY)
+    items = t["sections"][0]["items"]
+    items[1]["url"] = "javascript:alert(1)"
+    items += [dict(items[0], url=f"https://e.com/{n}") for n in range(4)]
+    flat = json.dumps(slack_message(t, "u")["blocks"])
+    assert "javascript:" not in flat
+    assert flat.count("\\u2022") == 3  # three items per section at most
 
 
 def run():
