@@ -38,7 +38,12 @@ try {
   Step "git push" { git push }
   Log "ok"
   if (Test-Path slack-webhook.txt) {
-    Start-Sleep 90  # let GitHub Pages publish before people click the link
+    # Post at 12:15, or 90 seconds after the push if the run started late,
+    # so GitHub Pages has published before people click the link.
+    $postAt = (Get-Date).Date.AddHours(12).AddMinutes(15)
+    $wait = [Math]::Max(90, ($postAt - (Get-Date)).TotalSeconds)
+    Log "slack posts at $((Get-Date).AddSeconds($wait).ToString('HH:mm'))"
+    Start-Sleep -Seconds $wait
     try { Step "slack" { python notify.py }; Log "slack ok" } catch { Log "slack FAIL $_" }  # the page is live either way
   }
 } catch {
