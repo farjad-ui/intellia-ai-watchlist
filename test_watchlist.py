@@ -261,6 +261,18 @@ def test_load_sources_skips_short_and_indented_lines():
     assert load_sources(path) == [("models", "https://b", None)]
 
 
+def test_slack_message():
+    from notify import slack_message
+
+    msg = slack_message(TODAY, "https://example.github.io/w/")
+    text = msg["text"]
+    assert text.startswith("*Intellia AI Watchlist · Friday 16 October*")
+    assert "What is new this week." in text
+    assert "<https://example.github.io/w/|Read today's issue>" in text
+    t = dict(TODAY, standfirst="Q&A <b> tips")
+    assert "Q&amp;A &lt;b&gt; tips" in slack_message(t, "u")["text"]
+
+
 def run():
     tests = [v for k, v in globals().items() if k.startswith("test_")]
     for t in tests:

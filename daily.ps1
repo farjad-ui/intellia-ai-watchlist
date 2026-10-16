@@ -37,6 +37,10 @@ try {
   Step "git commit" { git commit -m "daily: $(Get-Date -Format yyyy-MM-dd)" }
   Step "git push" { git push }
   Log "ok"
+  if (Test-Path slack-webhook.txt) {
+    Start-Sleep 90  # let GitHub Pages publish before people click the link
+    try { Step "slack" { python notify.py }; Log "slack ok" } catch { Log "slack FAIL $_" }  # the page is live either way
+  }
 } catch {
   git checkout -- today.json index.html 2>&1 | Out-Null  # keep yesterday's issue as the base for tomorrow
   Log "FAIL $_"

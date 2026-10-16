@@ -1,3 +1,4 @@
 pool.json
 logs/
 __pycache__/
+slack-webhook.txt
