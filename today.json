@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-16T07:00:04.167605+00:00",
-  "previous_generated": "2026-10-15T12:18:57.204749+00:00",
-  "standfirst": "This issue covers OpenAI's new voices and Codex features, a handful of tools worth an afternoon, and honest stories about working with Claude.",
+  "generated": "2026-10-17T13:31:20.938270+00:00",
+  "previous_generated": "2026-10-16T07:00:04.167605+00:00",
+  "standfirst": "This issue covers Google's Gemini 4 Argon, new ChatGPT features for teams, and a few plugins and stories worth an afternoon.",
   "digest": [
-    "OpenAI had the busiest day. GPT-Live-1.1 brings new voices and better accents to ChatGPT and Codex, Codex can keep team sites updated on a schedule, and short demos covered a ChatGPT Meetings plugin and document scanning.",
-    "For a consultant, the useful thread is everyday work. Oracle's business users getting answers through Codex and a restaurant's catering deck show non-engineers getting results. Claude Code 2.1.301 is a small release, while Krea 3 and Higgsfield matter mainly to clients in marketing and creative work.",
-    "The reading list is about the human side of fast tools. Anthropic says engineers earn their place by telling Claude no, one developer cannot fill a workday, and a non-coder shipped a password manager. Expect clients to ask about oversight and security, and verify the reported usage limits and Max credits before quoting them."
+    "Google's Gemini 4 Argon is the model clients are most likely to ask about, and two creators have already run hands-on tests against Claude and ChatGPT. On the Claude side, Claude Code 2.1.302 is a small release, and Claude Motion for animations is in beta on Team and Enterprise plans.",
+    "For a consultant, the practical items are about shared work. ChatGPT now has team tasks that run recurring work in the cloud, plus a Space for working together, and both are worth testing before a client asks. On the tools side, Anthropic's official plugin directory is the easiest place to start browsing.",
+    "The reading list is about real use. The Claude Code team describes how it does code review, and users share what they built and how they handle usage limits. Check the limit reports before promising a client a budget, since they come from individual users."
   ],
   "sections": [
     {
@@ -13,68 +13,68 @@
       "title": "Watch",
       "items": [
         {
-          "title": "GPT-Live-1.1 adds new voices and better accents in ChatGPT",
-          "url": "https://www.youtube.com/watch?v=GyO8Ao7yKJc",
+          "title": "An OpenAI engineer triages a 3am incident from his phone",
+          "url": "https://www.youtube.com/watch?v=GBOZIRK1ujw",
           "source": "OpenAI",
-          "published": "2026-10-15T18:24:44+00:00",
-          "summary": "Voice in ChatGPT and Codex gets new French, German, Hindi, Korean, Japanese and Mexican Spanish voices. Rolling out to all users today; API later.",
-          "thumbnail": "https://i.ytimg.com/vi/GyO8Ao7yKJc/mqdefault.jpg"
+          "published": "2026-10-16T21:43:48+00:00",
+          "summary": "His dot investigated the on-call issue and started a Codex thread he steered from the ChatGPT app. A concrete picture of agents handling after-hours work.",
+          "thumbnail": "https://i.ytimg.com/vi/GBOZIRK1ujw/mqdefault.jpg"
         },
         {
-          "title": "Codex can keep team sites fresh and personal to each visitor",
-          "url": "https://www.youtube.com/watch?v=KJ_7KPKlO_Q",
+          "title": "ChatGPT team tasks run recurring work for a whole team",
+          "url": "https://www.youtube.com/watch?v=OMxEUdIgsQc",
           "source": "OpenAI",
-          "published": "2026-10-15T20:48:59+00:00",
-          "summary": "Scheduled tasks refresh site data automatically, and visitors can connect their own plugins for a personalized view. Just ask Codex to set it up.",
-          "thumbnail": "https://i.ytimg.com/vi/KJ_7KPKlO_Q/mqdefault.jpg"
+          "published": "2026-10-16T18:00:49+00:00",
+          "summary": "A legal team's daily intake runs in the cloud while teammates review and refine the instructions. Enterprise plans only, so check the client's tier.",
+          "thumbnail": "https://i.ytimg.com/vi/OMxEUdIgsQc/mqdefault.jpg"
         },
         {
-          "title": "Oracle uses Codex to let business users get answers from company data",
-          "url": "https://www.youtube.com/shorts/DTcK95TAZ-k",
-          "source": "OpenAI",
-          "published": "2026-10-14T09:35:27+00:00",
-          "summary": "Users describe the outcome they want and Codex pulls from internal systems to produce an analysis, report or app. Useful for clients with scattered data.",
-          "thumbnail": "https://i.ytimg.com/vi/DTcK95TAZ-k/mqdefault.jpg"
-        },
-        {
-          "title": "ChatGPT helps a Toronto restaurant build a catering deck and outreach",
-          "url": "https://www.youtube.com/shorts/PZxbaIp8PzE",
-          "source": "OpenAI",
-          "published": "2026-10-14T17:47:37+00:00",
-          "summary": "A short demo of ChatGPT drafting a catering pitch deck and automated outreach for a restaurant owner. A realistic small-business example to borrow.",
-          "thumbnail": "https://i.ytimg.com/vi/PZxbaIp8PzE/mqdefault.jpg"
-        },
-        {
-          "title": "ChatGPT adds a Meetings plugin, shown in a short demo",
-          "url": "https://www.youtube.com/shorts/A6nf3vplEPY",
+          "title": "ChatGPT's Chrome integration summarises across your open tabs",
+          "url": "https://www.youtube.com/watch?v=KwvpDtUFS-s",
           "source": "The AI Advantage",
-          "published": "2026-10-12T04:24:36+00:00",
-          "summary": "A quick look at the Meetings plugin inside ChatGPT. Short enough to watch before a client asks whether it replaces their note-taking tool.",
-          "thumbnail": "https://i.ytimg.com/vi/A6nf3vplEPY/mqdefault.jpg"
+          "published": "2026-10-16T16:45:54+00:00",
+          "summary": "Shows ChatGPT analysing several open tabs at once and pulling out the useful points. Quick to try if you already use Chrome and ChatGPT.",
+          "thumbnail": "https://i.ytimg.com/vi/KwvpDtUFS-s/mqdefault.jpg"
         },
         {
-          "title": "Claude for Google Workspace gets a short walkthrough",
-          "url": "https://www.youtube.com/shorts/rAKVvImQcEQ",
+          "title": "Matt Wolfe's weekly roundup covers six new models and Krea 3",
+          "url": "https://www.youtube.com/watch?v=KGcuuhqmPhI",
+          "source": "Matt Wolfe",
+          "published": "2026-10-16T16:20:28+00:00",
+          "summary": "A catch-up on Krea 3 image editing, tests of Gemini 4 Argon and Meta's Muse Wonder, Grok Voice 3.0 and the latest OpenAI updates.",
+          "thumbnail": "https://i.ytimg.com/vi/KGcuuhqmPhI/mqdefault.jpg"
+        },
+        {
+          "title": "Claude Motion turns complex information into editable animations",
+          "url": "https://www.youtube.com/watch?v=qZqZ02AsYiA",
           "source": "The AI Advantage",
-          "published": "2026-10-09T12:38:23+00:00",
-          "summary": "A short look at using Claude with Google Workspace. Relevant for clients who already live in Docs, Sheets and Gmail.",
-          "thumbnail": "https://i.ytimg.com/vi/rAKVvImQcEQ/mqdefault.jpg"
+          "published": "2026-10-14T13:35:19+00:00",
+          "summary": "A practical example, how to edit the result, and 500 sample animations to browse. In beta on Team and Enterprise plans only.",
+          "thumbnail": "https://i.ytimg.com/vi/qZqZ02AsYiA/mqdefault.jpg"
         },
         {
-          "title": "ChatGPT can now scan documents, shown in a short demo",
-          "url": "https://www.youtube.com/shorts/eeI_FSN35XE",
-          "source": "The AI Advantage",
-          "published": "2026-10-09T18:33:58+00:00",
-          "summary": "A short demo of document scanning in ChatGPT. Handy for consultants who handle paper forms and printed contracts; quick to test.",
-          "thumbnail": "https://i.ytimg.com/vi/eeI_FSN35XE/mqdefault.jpg"
-        },
-        {
-          "title": "ChatGPT mobile lets you set up a dot as your first chat",
-          "url": "https://www.youtube.com/watch?v=p5KxBTUncoE",
+          "title": "Codex brings pull request review into one place",
+          "url": "https://www.youtube.com/watch?v=IZXv6a78NDw",
           "source": "OpenAI",
-          "published": "2026-10-09T19:13:03+00:00",
-          "summary": "You can create a dot from the mobile app, name it, pick an avatar and make it the first conversation you see.",
-          "thumbnail": "https://i.ytimg.com/vi/p5KxBTUncoE/mqdefault.jpg"
+          "published": "2026-10-12T16:00:08+00:00",
+          "summary": "GitHub code review is generally available and GitLab is in preview. Mostly relevant for engineering clients whose reviews have become the bottleneck.",
+          "thumbnail": "https://i.ytimg.com/vi/IZXv6a78NDw/mqdefault.jpg"
+        },
+        {
+          "title": "ChatGPT Space gives teams a shared place to work with the model",
+          "url": "https://www.youtube.com/watch?v=G-9Y2xNiDKQ",
+          "source": "OpenAI",
+          "published": "2026-10-13T21:01:10+00:00",
+          "summary": "A short look at Space, which keeps conversations, context and collaborative work together. Useful when clients ask how teams can share AI work.",
+          "thumbnail": "https://i.ytimg.com/vi/G-9Y2xNiDKQ/mqdefault.jpg"
+        },
+        {
+          "title": "Matt Wolfe tests Gemini 4 Argon against Claude and ChatGPT",
+          "url": "https://www.youtube.com/watch?v=eBszYxzE2dk",
+          "source": "Matt Wolfe",
+          "published": "2026-10-13T16:47:07+00:00",
+          "summary": "Hands-on tests from coding games to 3D printing, with what impressed and where it got stuck. A fair first look before clients ask.",
+          "thumbnail": "https://i.ytimg.com/vi/eBszYxzE2dk/mqdefault.jpg"
         }
       ]
     },
@@ -83,43 +83,43 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "Claude Code 2.1.301 adds a cap on waiting at usage limits",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
+          "title": "Google releases Gemini 4 Argon, its latest frontier model",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "source": "Google",
+          "published": "2026-10-13T16:00:00+00:00",
+          "summary": "Google says developers, enterprises, scientists and consumers can use it now. It is the model clients are most likely to ask about this week.",
+          "thumbnail": null
+        },
+        {
+          "title": "Claude Code 2.1.302 lets you choose the model for auto mode checks",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
           "source": "Claude Code releases",
-          "published": "2026-10-15T19:22:06+00:00",
-          "summary": "Unattended retry mode can now give up when a usage limit resets too far away, and the claude-api skill gains tracing guidance. For heavy users.",
+          "published": "2026-10-16T20:53:06+00:00",
+          "summary": "Adds a setting for the model behind the client-side auto mode classifier, and a toggle for idle compaction in /config. Minor for most users.",
           "thumbnail": null
         },
         {
-          "title": "Krea 3 is an image model built for editing at scale",
-          "url": "https://www.krea.ai/krea-3",
+          "title": "Claude Code 2.1.299 compacts long conversations left idle",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
+          "source": "Claude Code releases",
+          "published": "2026-10-14T02:49:42+00:00",
+          "summary": "A conversation over 200K tokens idle for about 54 minutes is compacted before the cache expires, so your next message costs less. You can turn it off.",
+          "thumbnail": null
+        },
+        {
+          "title": "DeepSeek lists v4.1 Flash on OpenRouter",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
           "source": "Hacker News",
-          "published": "2026-10-15T16:04:05+00:00",
-          "summary": "Krea's new image model targets bulk edits rather than one-off pictures. Worth a look for marketing teams; read the page for pricing and access.",
+          "published": "2026-10-17T08:37:46+00:00",
+          "summary": "Another model release drawing heavy discussion on Hacker News. Our feed has no details, so check the model page before telling a client anything.",
           "thumbnail": null
         },
         {
-          "title": "Higgsfield stretches AI video from one minute to over ten",
-          "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-          "source": "OpenAI",
-          "published": "2026-10-13T12:00:00+00:00",
-          "summary": "Built on OpenAI's GPT-6 Astra, it also adds sharper visuals with GPT-Image-2.5. A vendor claim, but it shows where creator tools are heading.",
-          "thumbnail": null
-        },
-        {
-          "title": "Sullivan & Cromwell builds an agreement analyzer with OpenAI",
-          "url": "https://openai.com/index/sullivan-cromwell",
-          "source": "OpenAI",
-          "published": "2026-10-15T00:00:00+00:00",
-          "summary": "The law firm's Agreement Analyzer flags issues in draft contracts. A useful example when clients ask what a firm-specific AI tool looks like.",
-          "thumbnail": null
-        },
-        {
-          "title": "Meta publishes Muse Spark Open on its research blog",
-          "url": "https://research.meta.ai/blog/muse-spark-open",
+          "title": "FLUX 3 Image Klein is Black Forest Labs' new image model",
+          "url": "https://bfl.ai/blog/flux-3-image-klein",
           "source": "Hacker News",
-          "published": "2026-10-15T17:47:39+00:00",
-          "summary": "The post drew heavy discussion on Hacker News. Details are thin in our feed, so read it before telling a client anything.",
+          "published": "2026-10-16T19:47:13+00:00",
+          "summary": "Announced on the company blog and well discussed on Hacker News. Our feed has no details, so read the post for pricing and access.",
           "thumbnail": null
         }
       ]
@@ -129,59 +129,51 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "VoiceStudio runs voice cloning and dictation fully on your machine",
-          "url": "https://github.com/debpalash/VoiceStudio",
+          "title": "Anthropic keeps an official directory of Claude Code plugins",
+          "url": "https://github.com/anthropics/claude-plugins-official",
           "source": "GitHub trending",
-          "published": "2026-10-16T07:00:04.167605+00:00",
-          "summary": "An open-source, local alternative to ElevenLabs for voice cloning, dubbing, transcription and audiobooks. Handy for demos; installing it may need some help.",
+          "published": "2026-10-17T13:31:20.938270+00:00",
+          "summary": "An Anthropic-managed list of quality plugins for Claude Code. The safest place to start browsing for add-ons, though installing happens in the terminal.",
           "thumbnail": null
         },
         {
-          "title": "HyperFrames turns plain HTML into rendered video for agents",
-          "url": "https://github.com/heygen-com/hyperframes",
+          "title": "A Claude Code framework evaluates jobs and tailors your CV",
+          "url": "https://github.com/MadsLorentzen/ai-job-search",
           "source": "GitHub trending",
-          "published": "2026-10-16T07:00:04.167605+00:00",
-          "summary": "From HeyGen: write HTML and it renders video, built for AI agents. Suits explainer clips, but setup needs a developer.",
+          "published": "2026-10-17T13:31:20.938270+00:00",
+          "summary": "It scores postings, tailors CVs, drafts cover letters and preps interviews on your own machine. Fork it to try; needs Claude Code set up first.",
           "thumbnail": null
         },
         {
-          "title": "iFixAi audits whether an AI agent does what it should",
-          "url": "https://github.com/ifixai-ai/iFixAi",
+          "title": "Social media research skills mine comments and competitor ads",
+          "url": "https://github.com/ScrapeCreators/social-media-research-skills",
           "source": "GitHub trending",
-          "published": "2026-10-16T07:00:04.167605+00:00",
-          "summary": "Checks an agent's behaviour in under two minutes, run by a person or the agent. Useful when clients ask about assurance.",
+          "published": "2026-10-17T13:31:20.938270+00:00",
+          "summary": "Finds outlier posts, mines comments and tears down competitors across TikTok, Instagram, YouTube and more. Works with Claude Code and relies on the ScrapeCreators service.",
           "thumbnail": null
         },
         {
-          "title": "Paperclip is an open-source app for managing agents at work",
-          "url": "https://github.com/paperclipai/paperclip",
-          "source": "GitHub trending",
-          "published": "2026-10-16T07:00:04.167605+00:00",
-          "summary": "An app for keeping track of the AI agents your team runs. Trending today, but check how mature it is before recommending it.",
-          "thumbnail": null
-        },
-        {
-          "title": "A Google Tag Manager MCP server joins the awesome list",
-          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/532121fbec85e0c141e5d52363300a54a5e7e0e1",
+          "title": "askone is an MCP server for live audience Q&A and polls",
+          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/00f22b0d447997f659f9c92d093add1513f9f282",
           "source": "Awesome MCP servers list",
-          "published": "2026-10-15T05:17:26+00:00",
-          "summary": "Lets an assistant work with Google Tag Manager, which suits marketing and analytics engagements. Needs account access, so ask the client's admin first.",
+          "published": "2026-10-15T06:12:46+00:00",
+          "summary": "Lets an assistant run live questions and polls, which could suit workshops. Just added to the MCP list, so test it before using it with a client.",
           "thumbnail": null
         },
         {
-          "title": "HeliosGen offers a self-hosted generative AI desktop app",
-          "url": "https://github.com/SegFault42/HeliosGen",
+          "title": "An MCP server connects assistants to Google Chat",
+          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/b19d41d237b0b9027e5ffe85ebdd17a768646a17",
+          "source": "Awesome MCP servers list",
+          "published": "2026-10-15T06:32:07+00:00",
+          "summary": "A1-x-Tech's mcp-google-chat was added to the MCP list this week. Likely useful for Google Workspace clients; ask their admin before connecting it.",
+          "thumbnail": null
+        },
+        {
+          "title": "Cal.com's cal.diy scheduling project is trending on GitHub",
+          "url": "https://github.com/calcom/cal.diy",
           "source": "GitHub trending",
-          "published": "2026-10-16T07:00:04.167605+00:00",
-          "summary": "Pitched as a free alternative to Higgsfield, OpenArt and Freepik, running on your own machine. Check licensing before using output for clients.",
-          "thumbnail": null
-        },
-        {
-          "title": "The claude-api skill adds dynamic workflow quickstarts",
-          "url": "https://github.com/anthropics/skills/commit/dbd4588f9e1033efb41dad4bef2f7947c8993d44",
-          "source": "Anthropic skills repo",
-          "published": "2026-10-09T18:45:49+00:00",
-          "summary": "Anthropic's skills repo now includes four workflow quickstart templates for Managed Agents. Mostly for engineers, but good to know it exists.",
+          "published": "2026-10-17T13:31:20.938270+00:00",
+          "summary": "Described as scheduling infrastructure for everyone, but the description is thin. Read the README for what it does and how hard setup is.",
           "thumbnail": null
         }
       ]
@@ -191,51 +183,59 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Anthropic merges 30,000 code changes a day, with engineers saying no",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5he2c/anthropic_is_merging_30000_code_changes_per_day/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-14T03:54:35+00:00",
-          "summary": "Engineers stay vital by telling Claude no when agents break system rules. A concrete picture of human oversight to share with clients.",
+          "title": "How the Claude Code team does code review",
+          "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+          "source": "Hacker News",
+          "published": "2026-10-16T19:04:47+00:00",
+          "summary": "A look at review practice inside Anthropic, with a busy Hacker News thread. Useful when clients ask how to keep humans in the loop.",
           "thumbnail": null
         },
         {
-          "title": "A developer says Opus 5.5 clears their assigned tickets in under two hours",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x70zze/how_do_you_guys_fill_an_entire_workweek_these/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-15T23:34:50+00:00",
-          "summary": "They now struggle to fill a workday and worry about leadership noticing. Read the replies for how teams are handling the productivity gap.",
+          "title": "A game built almost entirely with Opus fits in 20 MB",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x8602z/procedural_generation_with_opus_is_insane_this/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-17T09:32:05+00:00",
+          "summary": "The creator of Mecha Royale says about 99% of the code and content came from Opus over four months. Read for how loops were used.",
           "thumbnail": null
         },
         {
-          "title": "A non-designer made an Apple-style launch film with Opus 5.5",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x53e74/apparently_anyone_can_make_applestyle_ads_now/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-13T17:44:05+00:00",
-          "summary": "It took three days and all of their Claude session limits, working scene by scene. A fair view of what polished output actually costs.",
+          "title": "Someone used Claude to get a years-old pothole fixed in two days",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x4s9hp/someone_used_claude_to_get_a_yearsold_pothole/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-13T09:41:02+00:00",
+          "summary": "Claude rebuilt the hole in 3D from six photos and simulated a hit at 30 km/h; the video went to city hall. A neat example of AI as persuasion.",
           "thumbnail": null
         },
         {
-          "title": "Someone with no coding background ships a password manager built with AI",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x68om1/weve_reached_the_point_where_people_with/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-15T01:19:08+00:00",
-          "summary": "A Reddit thread on KAPEVault, a public password app. A reminder to raise security review with clients who want staff to build their own tools.",
+          "title": "Users trade AI lifehacks for building and stretching tokens",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x5or3q/what_is_an_ai_lifehack_that_people_dont_seem_to/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-14T11:29:37+00:00",
+          "summary": "A thread asking for lesser-known tips on building and saving tokens. Skim the replies for habits you can borrow in your own Claude sessions.",
           "thumbnail": null
         },
         {
-          "title": "Claude Max 20x users report $200 in free monthly API credits",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x31yts/claude_max_20x_now_get_200_in_free_api_credits/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-11T07:32:51+00:00",
-          "summary": "Max 5x reportedly gets $100, claimed by linking a Console organization; credits refresh monthly and do not roll over. Reported by a user, so verify.",
+          "title": "A Team 5x user says the 5 hour limit looked like 24 hours",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x4bv39/5hr_limit_now_bumped_to_24hr/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-12T19:45:29+00:00",
+          "summary": "The limit later dropped back to three hours. A single report, but worth knowing about before promising a client an exact usage budget.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code users say session limits are running out faster",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x6p448/anyone_else_feel_like_their_session_limits_are/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-15T15:42:49+00:00",
-          "summary": "One user on the 20x plan noticed it over the past 48 hours. Worth watching before you promise clients a usage budget.",
+          "title": "An energy professional builds the tycoon game they imagined a decade ago",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x6hef5/claude_let_me_build_something_i_wanted_for_almost/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-15T09:47:20+00:00",
+          "summary": "A non-developer uses Claude and their industry background to finally make an energy simulation game. Shows what domain knowledge adds to AI-built software.",
+          "thumbnail": null
+        },
+        {
+          "title": "A realistic ocean scene fits in one 61 KB HTML file",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x7v7gj/this_is_61_kb_html_file/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-16T23:24:42+00:00",
+          "summary": "Built with Claude Code from a single prompt, it renders a sunset ocean in the browser with WebGPU. Open it to see what one prompt can do.",
           "thumbnail": null
         }
       ]
