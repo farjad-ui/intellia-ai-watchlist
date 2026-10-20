@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-19T07:00:05.093039+00:00",
-  "previous_generated": "2026-10-18T07:00:05.261404+00:00",
-  "standfirst": "This issue covers Gemini 4 Argon, ChatGPT's new team features and voice, and practical notes on reviewing AI-written code.",
+  "generated": "2026-10-20T07:00:04.927882+00:00",
+  "previous_generated": "2026-10-19T07:00:05.093039+00:00",
+  "standfirst": "This issue covers new Codex and ChatGPT voice features, three Claude upgrades, and practical ways people are using AI at work.",
   "digest": [
-    "The main news this week is Google's Gemini 4 Argon, which several reviewers are testing against Claude and ChatGPT. OpenAI also showed ChatGPT Voice running on GPT Live, and Claude Code shipped two small releases, 2.1.302 and 2.1.303.",
-    "For a consultant, the most useful items are OpenAI's demos of team work: recurring tasks that run in the cloud, shared Spaces and a Chrome integration for reading open tabs. Check which plan each one needs before suggesting it to a client, since team tasks are Enterprise only.",
-    "In the reading section, the Claude Code team's account of how it reviews AI-written code and a user's story of a deleted repo give you two concrete answers when clients ask about oversight and safeguards. The tools are mostly for tinkerers, so try them before recommending."
+    "OpenAI's Codex got most of the attention this week. Cloud environments keep tasks running after you close your laptop, the CLI gained voice input, and GPT-Live-1.1 brought new voices and better accents to ChatGPT, Codex and dots. On the Claude side, Matt Wolfe highlights Motion, Dashboards and Haiku 5.5, and Claude Code shipped release 2.1.304.",
+    "For a consultant, the useful items are the worked examples. Oracle, Thomson Reuters, Sullivan & Cromwell and a Toronto restaurant each show a concrete job AI is doing, and each is easy to retell to a client. Check which plan a feature needs before you suggest it.",
+    "Two stories may prompt client questions. The US has banned DeepSeek from federal civilian agencies, and a write-up found hidden instructions aimed at AI assistants on WhatsApp's help pages. Both are good prompts for a conversation about which models staff use and how far to trust web content an AI reads."
   ],
   "sections": [
     {
@@ -13,68 +13,68 @@
       "title": "Watch",
       "items": [
         {
-          "title": "ChatGPT Voice now runs on GPT Live",
-          "url": "https://www.youtube.com/watch?v=mEulEkuxCnM",
+          "title": "Cooking with Codex episode 1 covers cloud tasks and CLI features",
+          "url": "https://www.youtube.com/watch?v=DQHtmW9ZlIs",
           "source": "OpenAI",
-          "published": "2026-10-19T05:30:13+00:00",
-          "summary": "OpenAI's short clip shows the new ChatGPT Voice running on GPT Live. Watch with sound on; nothing to set up.",
-          "thumbnail": "https://i.ytimg.com/vi/mEulEkuxCnM/mqdefault.jpg"
+          "published": "2026-10-19T22:55:26+00:00",
+          "summary": "A ramen-planning demo in ChatGPT Space, then Codex cloud environments that keep running with the laptop closed, plus new CLI voice input and forked worktrees.",
+          "thumbnail": "https://i.ytimg.com/vi/DQHtmW9ZlIs/mqdefault.jpg"
         },
         {
-          "title": "An OpenAI engineer triages a 3am incident with his dot",
-          "url": "https://www.youtube.com/watch?v=GBOZIRK1ujw",
-          "source": "OpenAI",
-          "published": "2026-10-16T21:43:48+00:00",
-          "summary": "The dot investigated the incident and opened a Codex thread, which he steered from the ChatGPT phone app. Shows agents working while you are away.",
-          "thumbnail": "https://i.ytimg.com/vi/GBOZIRK1ujw/mqdefault.jpg"
-        },
-        {
-          "title": "ChatGPT team tasks run recurring work in the cloud",
-          "url": "https://www.youtube.com/watch?v=OMxEUdIgsQc",
-          "source": "OpenAI",
-          "published": "2026-10-16T18:00:49+00:00",
-          "summary": "A legal team's daily intake workflow runs on a schedule and the whole team can review and refine it. Enterprise plans only.",
-          "thumbnail": "https://i.ytimg.com/vi/OMxEUdIgsQc/mqdefault.jpg"
-        },
-        {
-          "title": "ChatGPT's Chrome integration summarises your open tabs",
-          "url": "https://www.youtube.com/watch?v=KwvpDtUFS-s",
-          "source": "The AI Advantage",
-          "published": "2026-10-16T16:45:54+00:00",
-          "summary": "Walks through using ChatGPT to compare several open tabs and pull out the useful points. Handy for research; check the client's browser policy first.",
-          "thumbnail": "https://i.ytimg.com/vi/KwvpDtUFS-s/mqdefault.jpg"
-        },
-        {
-          "title": "Matt Wolfe's weekly roundup covers Krea 3, Argon and Muse Wonder",
-          "url": "https://www.youtube.com/watch?v=KGcuuhqmPhI",
+          "title": "Matt Wolfe shows three new Claude upgrades in one short",
+          "url": "https://www.youtube.com/shorts/aIrrq3CLSKM",
           "source": "Matt Wolfe",
-          "published": "2026-10-16T16:20:28+00:00",
-          "summary": "A recap of the week's releases, including Krea 3 image editing, Grok Voice 3.0 and OpenAI updates. A fast way to catch up.",
-          "thumbnail": "https://i.ytimg.com/vi/KGcuuhqmPhI/mqdefault.jpg"
+          "published": "2026-10-19T12:43:39+00:00",
+          "summary": "Covers Motion for turning reports into animated explainers, Dashboards for live business data, and Haiku 5.5 for cheaper everyday tasks. Quick to watch.",
+          "thumbnail": "https://i.ytimg.com/vi/aIrrq3CLSKM/mqdefault.jpg"
         },
         {
-          "title": "ChatGPT Space gives teams a shared place to work with ChatGPT",
-          "url": "https://www.youtube.com/watch?v=G-9Y2xNiDKQ",
+          "title": "GPT-Live-1.1 adds new voices and better accents",
+          "url": "https://www.youtube.com/watch?v=GyO8Ao7yKJc",
           "source": "OpenAI",
-          "published": "2026-10-13T21:01:10+00:00",
-          "summary": "Shows a shared workspace that keeps team conversations, context and collaborative work together with ChatGPT. Worth a look for client teams already on ChatGPT.",
-          "thumbnail": "https://i.ytimg.com/vi/G-9Y2xNiDKQ/mqdefault.jpg"
+          "published": "2026-10-15T18:24:44+00:00",
+          "summary": "Rolling out to all users in ChatGPT, Codex and dots, with new voices in French, German, Hindi, Mexican Spanish, Korean and Japanese. API support is coming.",
+          "thumbnail": "https://i.ytimg.com/vi/GyO8Ao7yKJc/mqdefault.jpg"
         },
         {
-          "title": "Claude Motion turns complex information into animations",
-          "url": "https://www.youtube.com/watch?v=qZqZ02AsYiA",
-          "source": "The AI Advantage",
-          "published": "2026-10-14T13:35:19+00:00",
-          "summary": "Shows a practical example, how to edit it, and where to find 500+ example animations. Still in beta on Team and Enterprise plans.",
-          "thumbnail": "https://i.ytimg.com/vi/qZqZ02AsYiA/mqdefault.jpg"
+          "title": "Codex can build personal sites that refresh themselves",
+          "url": "https://www.youtube.com/watch?v=KJ_7KPKlO_Q",
+          "source": "OpenAI",
+          "published": "2026-10-15T20:48:59+00:00",
+          "summary": "Scheduled tasks update a team's site data automatically, and visitors can connect their own plugins for a personal view. To try it, ask Codex.",
+          "thumbnail": "https://i.ytimg.com/vi/KJ_7KPKlO_Q/mqdefault.jpg"
         },
         {
-          "title": "Matt Wolfe tests Gemini 4 Argon against Claude and ChatGPT",
-          "url": "https://www.youtube.com/watch?v=eBszYxzE2dk",
-          "source": "Matt Wolfe",
-          "published": "2026-10-13T16:47:07+00:00",
-          "summary": "Hands-on tests from coding games to 3D printing, with notes on what impressed and what got stuck. Useful for a fair comparison.",
-          "thumbnail": "https://i.ytimg.com/vi/eBszYxzE2dk/mqdefault.jpg"
+          "title": "Thomson Reuters explains how lawyers can trust AI output",
+          "url": "https://www.youtube.com/watch?v=ExVDpMeaWp0",
+          "source": "OpenAI",
+          "published": "2026-10-19T15:07:35+00:00",
+          "summary": "Covers bringing HighQ and CoCounsel Legal into ChatGPT Enterprise, with output lawyers can verify and cite. A useful reference for legal clients.",
+          "thumbnail": "https://i.ytimg.com/vi/ExVDpMeaWp0/mqdefault.jpg"
+        },
+        {
+          "title": "Oracle uses Codex to answer business users' data questions",
+          "url": "https://www.youtube.com/shorts/DTcK95TAZ-k",
+          "source": "OpenAI",
+          "published": "2026-10-14T09:35:27+00:00",
+          "summary": "Users describe the outcome they want and Codex pulls from internal systems to produce an analysis, report or app. A good example of AI beyond coding.",
+          "thumbnail": "https://i.ytimg.com/vi/DTcK95TAZ-k/mqdefault.jpg"
+        },
+        {
+          "title": "A Toronto restaurant uses ChatGPT for a catering deck and outreach",
+          "url": "https://www.youtube.com/shorts/PZxbaIp8PzE",
+          "source": "OpenAI",
+          "published": "2026-10-14T17:47:37+00:00",
+          "summary": "OpenAI helps a dumpling shop build a catering deck and automate outreach to prospects. A small-business story that needs no technical setup.",
+          "thumbnail": "https://i.ytimg.com/vi/PZxbaIp8PzE/mqdefault.jpg"
+        },
+        {
+          "title": "Gemini 4 Argon builds an Excel clone in 20 minutes",
+          "url": "https://www.youtube.com/shorts/YMulO01LMBE",
+          "source": "Matthew Berman",
+          "published": "2026-10-17T05:41:17+00:00",
+          "summary": "One quick data point on what Google's new model can build. It is a short demo, not a full comparison with Claude or ChatGPT.",
+          "thumbnail": "https://i.ytimg.com/vi/YMulO01LMBE/mqdefault.jpg"
         }
       ]
     },
@@ -83,51 +83,51 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "Gemini 4 Argon is Google's new frontier model",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-          "source": "Google",
-          "published": "2026-10-13T16:00:00+00:00",
-          "summary": "Available now to developers, enterprises, scientists and consumers. Worth knowing for client conversations about how Google compares with Claude and ChatGPT.",
-          "thumbnail": null
-        },
-        {
-          "title": "Claude Code 2.1.302 adds an idle compaction toggle in /config",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
+          "title": "Claude Code 2.1.304 adds more controls for mods and hooks",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
           "source": "Claude Code releases",
-          "published": "2026-10-16T20:53:06+00:00",
-          "summary": "Adds a setting to turn idle compaction off and an environment variable to pick the auto mode classifier model. Minor for non-engineers.",
+          "published": "2026-10-19T21:34:39+00:00",
+          "summary": "Adds a transcript note when a plugin skips a mod's hooks and a stricter approval setting for permission checks. Mostly for people building mods.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code 2.1.303 is a bug fix release",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.303",
-          "source": "Claude Code releases",
-          "published": "2026-10-18T22:26:54+00:00",
-          "summary": "Release notes list only bug fixes and reliability improvements, with no new features to explain to anyone. Update when convenient.",
+          "title": "MiniMax releases M3.1 Flash, a new model",
+          "url": "https://www.minimax.io/blog/minimax-m31f",
+          "source": "Hacker News",
+          "published": "2026-10-19T16:39:09+00:00",
+          "summary": "The launch post drew 438 points on Hacker News. Check pricing and data terms before suggesting it to a client as an alternative to Claude or ChatGPT.",
           "thumbnail": null
         },
         {
-          "title": "Benefit Street Partners answers questions faster with Codex",
-          "url": "https://openai.com/index/benefit-street-partners",
+          "title": "OpenAI is improving ChatGPT for COBOL and other rare languages",
+          "url": "https://openai.com/index/low-resource-programming-languages",
+          "source": "OpenAI",
+          "published": "2026-10-19T12:00:00+00:00",
+          "summary": "New evaluations cover software engineering, SQLite and COBOL migration. Relevant for clients with legacy systems; read only, nothing to set up.",
+          "thumbnail": null
+        },
+        {
+          "title": "Sullivan & Cromwell built Agreement Analyzer with OpenAI",
+          "url": "https://openai.com/index/sullivan-cromwell",
+          "source": "OpenAI",
+          "published": "2026-10-15T00:00:00+00:00",
+          "summary": "A law firm tool that flags issues in draft agreements. A concrete example of a professional services firm building on OpenAI.",
+          "thumbnail": null
+        },
+        {
+          "title": "Stack Overflow for Agents shipped a ChatGPT plugin using Codex",
+          "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
           "source": "OpenAI",
           "published": "2026-10-16T00:00:00+00:00",
-          "summary": "One employee builds tools to compare loan valuations and analyze credit agreements. A finance example for clients asking what Codex does beyond code.",
+          "summary": "Two engineers built it in a few weeks, and the plugin helped drive up to 10x growth in agent creation. A small-team case study.",
           "thumbnail": null
         },
         {
-          "title": "Higgsfield stretches AI video from 1 minute to over 10",
-          "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+          "title": "Itaú is rolling out generative AI to its whole customer base",
+          "url": "https://openai.com/index/itau-generative-ai",
           "source": "OpenAI",
-          "published": "2026-10-13T12:00:00+00:00",
-          "summary": "Uses GPT-6 Astra for longer clips and GPT-Image-2.5 for sharper visuals, with voice filmmaking next. Useful for marketing clients curious about video.",
-          "thumbnail": null
-        },
-        {
-          "title": "Amp puts AI agents to work beyond code with OpenAI models",
-          "url": "https://openai.com/index/amp-beyond-coding",
-          "source": "OpenAI",
-          "published": "2026-10-14T12:00:00+00:00",
-          "summary": "Shows what agents built on GPT-6 Astra and Sign in with ChatGPT can do outside software development. A case study you can read in minutes.",
+          "published": "2026-10-16T19:00:00+00:00",
+          "summary": "Pairs a customer chat interface with a governance platform, in one of Brazil's most regulated sectors. Useful for clients in regulated industries.",
           "thumbnail": null
         }
       ]
@@ -137,51 +137,59 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "Anthropic keeps an official directory of Claude Code plugins",
-          "url": "https://github.com/anthropics/claude-plugins-official",
+          "title": "Academic Research Skills adds a research-to-publish workflow to Claude Code",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
           "source": "GitHub trending",
-          "published": "2026-10-19T07:00:05.093039+00:00",
-          "summary": "Anthropic-managed list of high quality plugins you can browse for Claude Code. A safer starting point than random repos. Needs Claude Code.",
+          "published": "2026-10-20T07:00:04.927882+00:00",
+          "summary": "Claude Code skills that walk through research, writing, review, revision and finalising. Handy for report-style work; needs Claude Code installed.",
           "thumbnail": null
         },
         {
-          "title": "Graphify turns a codebase and its documents into a queryable graph",
-          "url": "https://github.com/Graphify-Labs/graphify",
+          "title": "A free skill turns Rieseberg's \"deeper, not bigger\" prompt into a reusable step",
+          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1x86z59/deeper_not_bigger_i_turned_felix_riesebergs_depth/",
+          "source": "r/ChatGPTPro",
+          "published": "2026-10-17T10:32:15+00:00",
+          "summary": "Asks the model what a top professional would do that you did not ask for, before it rewrites the task. Easy to copy and try.",
+          "thumbnail": null
+        },
+        {
+          "title": "ai-memory gives coding agents long-term memory across vendors",
+          "url": "https://github.com/akitaonrails/ai-memory",
           "source": "GitHub trending",
-          "published": "2026-10-19T07:00:05.093039+00:00",
-          "summary": "A /graphify skill for Claude Code and similar tools that maps code, docs, schemas and PDFs so you can ask questions. Some terminal comfort helps.",
+          "published": "2026-10-20T07:00:04.927882+00:00",
+          "summary": "Shared memory for command-line coding agents that also eases handoff between them. Needs terminal comfort, so pass it to a technical colleague.",
           "thumbnail": null
         },
         {
-          "title": "ai-job-search is a Claude Code framework for job applications",
-          "url": "https://github.com/MadsLorentzen/ai-job-search",
+          "title": "itsaplan is a self-hosted Linear alternative for people and agents",
+          "url": "https://github.com/croffasia/itsaplan",
           "source": "GitHub trending",
-          "published": "2026-10-19T07:00:05.093039+00:00",
-          "summary": "Evaluates postings, tailors CVs, writes cover letters and preps interviews, all running on your machine. Fork it first, so expect some setup.",
+          "published": "2026-10-20T07:00:04.927882+00:00",
+          "summary": "Open-source project tracking where teams and AI agents share one board. Self-hosting needs a colleague, so check it before offering it to clients.",
           "thumbnail": null
         },
         {
-          "title": "Twenty is an open-source CRM pitched as a Salesforce alternative",
-          "url": "https://github.com/twentyhq/twenty",
+          "title": "Comp AI CRM is an open-source CRM built for AI agents",
+          "url": "https://github.com/trycompai/crm",
           "source": "GitHub trending",
-          "published": "2026-10-19T07:00:05.093039+00:00",
-          "summary": "Positioned as an open alternative to Salesforce, designed for AI. Interesting if a client wants a CRM they control; check hosting before promising anything.",
+          "published": "2026-10-20T07:00:04.927882+00:00",
+          "summary": "An agent-first CRM you can host yourself, interesting for clients who want to control their sales data. Check how mature it is first.",
           "thumbnail": null
         },
         {
-          "title": "A WhatsApp MCP server runs free on Cloudflare",
-          "url": "https://github.com/finereli/whatsapp-mcp",
-          "source": "Hacker News",
-          "published": "2026-10-18T21:36:10+00:00",
-          "summary": "Lets an AI assistant work with WhatsApp messages from a free Cloudflare setup. Needs a colleague to deploy it; check privacy before connecting client chats.",
+          "title": "Opencode is an open-source coding agent gaining fast",
+          "url": "https://github.com/anomalyco/opencode",
+          "source": "GitHub trending",
+          "published": "2026-10-20T07:00:04.927882+00:00",
+          "summary": "Trending strongly today. Mainly for engineers, but worth knowing about when a client asks for open-source options.",
           "thumbnail": null
         },
         {
-          "title": "A Claude Code mod shortens replies with expandable stretchtext",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x688sx/turning_a_crazy_idea_from_1967_into_a_claude_code/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-15T00:57:25+00:00",
-          "summary": "The poster says it cuts words read in replies by 83%, expanding detail only where you ask. One person's claim.",
+          "title": "World Monitor is a live AI news and risk dashboard",
+          "url": "https://github.com/koala73/worldmonitor",
+          "source": "GitHub trending",
+          "published": "2026-10-20T07:00:04.927882+00:00",
+          "summary": "Pulls news, geopolitical events and infrastructure status onto one screen. Could feed client briefings; check its sources before relying on it.",
           "thumbnail": null
         }
       ]
@@ -191,43 +199,59 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Claude Code's team explains how it reviews code Claude writes",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x7palj/claude_writes_about_90_of_claude_codes_own_code/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-16T19:17:43+00:00",
-          "summary": "A Claude reviewer checks every pull request; PRs with real review comments rose from 16% to 54%. Useful when clients ask who checks AI code.",
+          "title": "Ask HN debates how to ship AI-written code you do not understand",
+          "url": "https://news.ycombinator.com/item?id=50151036",
+          "source": "Hacker News",
+          "published": "2026-10-19T11:24:34+00:00",
+          "summary": "More than 500 comments on how teams cope with code nobody fully understands. Good raw material when clients ask about oversight.",
           "thumbnail": null
         },
         {
-          "title": "A user urges people to follow Anthropic's Claude Code best practices",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x966ii/why_does_everyone_disregard_anthropics_best/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-18T15:36:05+00:00",
-          "summary": "Says the docs are updated constantly and the model will not default to them, and that applying them improved their output. A free checklist.",
+          "title": "A user analyses their electricity bill in ChatGPT from a meter export",
+          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1x9tk3l/used_chatgpt_to_dig_into_my_electricity_usage/",
+          "source": "r/ChatGPTPro",
+          "published": "2026-10-19T10:46:24+00:00",
+          "summary": "A meter CSV and a supplier screenshot produced a 90-day usage, tariff and cost breakdown. The same pattern works on any spreadsheet.",
           "thumbnail": null
         },
         {
-          "title": "Anthropic says engineers still matter because they tell Claude no",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5he2c/anthropic_is_merging_30000_code_changes_per_day/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-14T03:54:35+00:00",
-          "summary": "On 30,000 merged changes a day, engineers often refuse agent shortcuts that break core rules. A useful framing for human oversight.",
+          "title": "A ChatGPT Pro user describes a personal operating system for projects",
+          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1x8zd68/i_built_a_chatgpt_operating_system/",
+          "source": "r/ChatGPTPro",
+          "published": "2026-10-18T09:55:39+00:00",
+          "summary": "Links several ChatGPT features so context carries between chats and unfinished work gets tracked. One person's setup, but a pattern worth borrowing.",
           "thumbnail": null
         },
         {
-          "title": "Claude deleted a user's repo while tidying, despite CLAUDE.md rules",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x4b1ue/it_finally_happened_to_meclaude_accidentally/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-12T19:14:59+00:00",
-          "summary": "The poster's lesson is that written rules get ignored, so use settings.json permissions and hooks as real gates. Worth passing to engineers at clients.",
+          "title": "Claude Code spots a cryptominer while building a Mac monitor app",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x9smgq/claude_caught_a_cryptominer_on_my_mac_whilst/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-19T09:50:49+00:00",
+          "summary": "Odd sensor readings led Claude to check CPU use and find a miner at about 1175%. An anecdote, but a nice case for checking output.",
           "thumbnail": null
         },
         {
-          "title": "A non-designer makes an Apple-style launch film with Opus 5.5",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x53e74/apparently_anyone_can_make_applestyle_ads_now/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-13T17:44:05+00:00",
-          "summary": "Took three days and all their session limits, with each scene worked through step by step. A realistic look at AI motion design.",
+          "title": "DeepSeek is banned from US federal civilian agencies",
+          "url": "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
+          "source": "Hacker News",
+          "published": "2026-10-19T16:16:46+00:00",
+          "summary": "A new DHS order covers civilian agency systems. Clients in government or its supply chain may ask which models their staff are allowed to use.",
+          "thumbnail": null
+        },
+        {
+          "title": "WhatsApp's help pages hid instructions aimed at AI assistants",
+          "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+          "source": "Hacker News",
+          "published": "2026-10-19T23:22:18+00:00",
+          "summary": "The write-up says the pages told LLMs not to recommend a regulator. A reminder to treat web content an AI reads as untrusted.",
+          "thumbnail": null
+        },
+        {
+          "title": "A Claude 3D simulation got a Dutch pothole fixed in two days",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x4s9hp/someone_used_claude_to_get_a_yearsold_pothole/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-13T09:41:02+00:00",
+          "summary": "Six photos became a 3D model and a simulated 30 km/h hit, and the video went to city hall. A memorable example of persuasive evidence.",
           "thumbnail": null
         }
       ]
