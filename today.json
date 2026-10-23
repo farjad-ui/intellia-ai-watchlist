@@ -1,12 +1,12 @@
 {
-  "generated": "2026-10-22T07:00:03.789568+00:00",
-  "previous_generated": "2026-10-21T10:34:41.905978+00:00",
-  "standfirst": "This issue covers OpenAI's move onto Google Cloud, new ChatGPT voices, a compromised AI library and a few tools you can try.",
+  "generated": "2026-10-23T07:00:08.131409+00:00",
+  "previous_generated": "2026-10-22T07:00:03.789568+00:00",
+  "standfirst": "This issue covers Uber's company-wide ChatGPT Work rollout, a new OpenAI Decisions API, Agent Skills moving to a foundation and a few tools you can try.",
   "digest": [
-    "Claude Code shipped 2.1.307 and 2.1.308. The first adds a command that moves Claude API code to the 2026-10-21 version and a new telemetry event for tool calls that were stopped or prompted. OpenAI also made its models and Codex available through Google Cloud's Model Garden, and ChatGPT Ads expanded to 26 more countries.",
-    "For a consultant, the Google Cloud news matters most in client conversations: a team tied to one cloud no longer has to move to reach OpenAI models. On the video side, ChatGPT Voice now runs on GPT Live, and version 1.1 adds new voices in six languages. V7 and Thomson Reuters are short, concrete examples of AI in deal screening and legal work.",
-    "If you want something to try this week, claude-howto is the easiest start for non-engineers learning Claude Code. Twenty is worth a look if a client is weighing CRM options, though self-hosting needs technical help.",
-    "One story may prompt client questions. LiteLLM version 1.107.0 on PyPI was compromised and installs a credential stealer and backdoor. Ask clients whether their teams use LiteLLM and whether anyone installed that version. A Reddit post also claims Anthropic released Claude Duet, a proactive assistant, but it has no detail yet, so check Anthropic's site first."
+    "Uber is rolling ChatGPT Work out to more than 30,000 employees after a 1,000-person pilot, and OpenAI announced a Decisions API for fast, low-cost decisions inside apps. Anthropic donated the Agent Skills standard to the Agentic AI Foundation, and Claude Code 2.1.309 fixed several sandbox gaps.",
+    "For a consultant, the Uber story is the useful reference this week: a named company moving past engineering to company-wide use, which is the question clients ask when they plan a rollout. The Agent Skills news means skills built for one tool are less likely to be locked in, since more than 70 platforms support the standard.",
+    "If you want to try something, Matt Wolfe's short video on Claude's Motion and Dashboards features shows two things you can do from a prompt. Genoffice is a free office suite that lets Claude Code create real Word, Excel and PowerPoint files. Both are afternoon-sized.",
+    "Expect questions about ChatGPT ads. OpenAI published how its ad stack keeps ads separate from answers, which is the point retail and marketing clients will press on."
   ],
   "sections": [
     {
@@ -14,52 +14,60 @@
       "title": "Watch",
       "items": [
         {
-          "title": "V7 cuts costs 78% and lifts accuracy using OpenAI models",
-          "url": "https://www.youtube.com/watch?v=20IRGgQwPkc",
+          "title": "Uber rolls out ChatGPT Work to 30,000+ employees",
+          "url": "https://www.youtube.com/watch?v=l16Gw7oVLNQ",
           "source": "OpenAI",
-          "published": "2026-10-21T22:05:10+00:00",
-          "summary": "V7 Go organises company files into a graph that agents query to screen deals and support insurance underwriting. A concrete professional services use case.",
-          "thumbnail": "https://i.ytimg.com/vi/20IRGgQwPkc/mqdefault.jpg"
+          "published": "2026-10-22T18:00:13+00:00",
+          "summary": "Uber's CTO and OpenAI's Greg Brockman discuss moving from a 1,000-person pilot to a company-wide rollout beyond engineering. Useful for rollout questions.",
+          "thumbnail": "https://i.ytimg.com/vi/l16Gw7oVLNQ/mqdefault.jpg"
         },
         {
-          "title": "Cooking with Codex episode 1 covers cloud tasks and new CLI features",
-          "url": "https://www.youtube.com/watch?v=DQHtmW9ZlIs",
-          "source": "OpenAI",
-          "published": "2026-10-19T22:55:26+00:00",
-          "summary": "Shows Codex cloud environments that keep tasks running after you close your laptop, plus voice input and agent management in the CLI.",
-          "thumbnail": "https://i.ytimg.com/vi/DQHtmW9ZlIs/mqdefault.jpg"
+          "title": "Three new Claude features to try: Motion, Dashboards and Haiku 5.5",
+          "url": "https://www.youtube.com/shorts/aIrrq3CLSKM",
+          "source": "Matt Wolfe",
+          "published": "2026-10-19T12:43:39+00:00",
+          "summary": "A short walkthrough of turning reports into animated explainers, building live dashboards from business data with a prompt, and using the cheaper Haiku 5.5 model.",
+          "thumbnail": "https://i.ytimg.com/vi/aIrrq3CLSKM/mqdefault.jpg"
         },
         {
-          "title": "ChatGPT Voice now runs on GPT Live",
-          "url": "https://www.youtube.com/watch?v=mEulEkuxCnM",
+          "title": "Team tasks in ChatGPT run recurring work in the cloud",
+          "url": "https://www.youtube.com/watch?v=OMxEUdIgsQc",
           "source": "OpenAI",
-          "published": "2026-10-19T05:30:13+00:00",
-          "summary": "OpenAI's short launch video for the new ChatGPT Voice. Turn the sound on. Quick to try in the app if you want to hear it.",
-          "thumbnail": "https://i.ytimg.com/vi/mEulEkuxCnM/mqdefault.jpg"
+          "published": "2026-10-16T18:00:49+00:00",
+          "summary": "A legal team's daily intake review set up as a shared recurring task that teammates can check and refine. Enterprise plans only.",
+          "thumbnail": "https://i.ytimg.com/vi/OMxEUdIgsQc/mqdefault.jpg"
         },
         {
-          "title": "GPT-Live-1.1 adds new voices and better accents to ChatGPT",
-          "url": "https://www.youtube.com/watch?v=GyO8Ao7yKJc",
-          "source": "OpenAI",
-          "published": "2026-10-15T18:24:44+00:00",
-          "summary": "New voices in French, German, Hindi, Mexican Spanish, Korean and Japanese, now rolling out to all users. API access is listed as coming soon.",
-          "thumbnail": "https://i.ytimg.com/vi/GyO8Ao7yKJc/mqdefault.jpg"
+          "title": "ChatGPT's Chrome integration analyses multiple open tabs at once",
+          "url": "https://www.youtube.com/watch?v=KwvpDtUFS-s",
+          "source": "The AI Advantage",
+          "published": "2026-10-16T16:45:54+00:00",
+          "summary": "A hands-on demo of asking ChatGPT to compare several open tabs and pull out the useful points. Easy to try if you use Chrome.",
+          "thumbnail": "https://i.ytimg.com/vi/KwvpDtUFS-s/mqdefault.jpg"
         },
         {
-          "title": "Thomson Reuters on building trust in legal AI",
-          "url": "https://www.youtube.com/watch?v=ExVDpMeaWp0",
+          "title": "OpenAI shopping agent demo turns a room photo into an order",
+          "url": "https://www.youtube.com/watch?v=8n-SXxRIrm8",
           "source": "OpenAI",
-          "published": "2026-10-19T15:07:35+00:00",
-          "summary": "Camillo Speroni on putting HighQ and CoCounsel Legal into ChatGPT Enterprise, with output lawyers can verify and cite. Useful for legal clients.",
-          "thumbnail": "https://i.ytimg.com/vi/ExVDpMeaWp0/mqdefault.jpg"
+          "published": "2026-10-20T22:57:52+00:00",
+          "summary": "A fictional retailer's agent takes voice and photos, recommends products, previews the room and adjusts picks to a $250 budget. Good for retail client ideas.",
+          "thumbnail": "https://i.ytimg.com/vi/8n-SXxRIrm8/mqdefault.jpg"
         },
         {
-          "title": "Codex can keep a team site fresh with scheduled tasks",
-          "url": "https://www.youtube.com/watch?v=KJ_7KPKlO_Q",
-          "source": "OpenAI",
-          "published": "2026-10-15T20:48:59+00:00",
-          "summary": "Connect scheduled tasks to refresh site data automatically and let visitors link their plugins for a personal view. You just ask Codex.",
-          "thumbnail": "https://i.ytimg.com/vi/KJ_7KPKlO_Q/mqdefault.jpg"
+          "title": "Matt Wolfe's weekly recap covers six new models and Krea 3",
+          "url": "https://www.youtube.com/watch?v=KGcuuhqmPhI",
+          "source": "Matt Wolfe",
+          "published": "2026-10-16T16:20:28+00:00",
+          "summary": "A weekly roundup on Krea 3 image editing, Gemini 4 Argon and Meta's Muse Wonder tests, new open-weight models and OpenAI updates. Good catch-up.",
+          "thumbnail": "https://i.ytimg.com/vi/KGcuuhqmPhI/mqdefault.jpg"
+        },
+        {
+          "title": "Five prompts tested on Google's new Gemini 4 Argon model",
+          "url": "https://www.youtube.com/shorts/S2srfNCa50A",
+          "source": "Matt Wolfe",
+          "published": "2026-10-21T12:53:28+00:00",
+          "summary": "A short hands-on test of five different uses of Google's new model. Save it for ideas you can copy into your own prompts.",
+          "thumbnail": "https://i.ytimg.com/vi/S2srfNCa50A/mqdefault.jpg"
         }
       ]
     },
@@ -68,51 +76,51 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "OpenAI models and Codex workflows come to Google Cloud",
-          "url": "https://openai.com/index/openai-models-google-cloud",
+          "title": "OpenAI's Decisions API targets fast, low-cost application decisions",
+          "url": "https://openai.com/index/decisions-api",
           "source": "OpenAI",
-          "published": "2026-10-21T12:00:00+00:00",
-          "summary": "Clients on Google Cloud can reach OpenAI models and Codex through Model Garden, which helps when a client is tied to one cloud.",
+          "published": "2026-10-22T19:00:00+00:00",
+          "summary": "A new OpenAI API for quick, focused, low-cost decisions inside apps. The listing gives little detail, so check before promising it to a client.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code 2.1.307 adds an API version migration command and a safety event",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
+          "title": "Anthropic donates Agent Skills to the Agentic AI Foundation",
+          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+          "source": "Anthropic",
+          "published": "2026-10-22T00:00:00+00:00",
+          "summary": "The standard for packaging know-how for agents is used by over 70 platforms, including ChatGPT and Copilot, so skills are not tied to Claude.",
+          "thumbnail": null
+        },
+        {
+          "title": "Claude Code 2.1.309 closes sandbox gaps on macOS and Linux",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
           "source": "Claude Code releases",
-          "published": "2026-10-21T22:17:02+00:00",
-          "summary": "A /claude-api command moves Claude API code to the 2026-10-21 version, and a new telemetry event records each tool call that was stopped or prompted.",
+          "published": "2026-10-22T22:18:57+00:00",
+          "summary": "Fixes sandboxed commands running shell startup files outside the sandbox and being able to change the MCP config. Update if your team relies on the sandbox.",
           "thumbnail": null
         },
         {
-          "title": "ChatGPT Ads expands to 26 more countries",
-          "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+          "title": "A restaurant franchisee cuts cash reconciliation time 94% with ChatGPT Work",
+          "url": "https://openai.com/index/ted-taylor-restaurant",
           "source": "OpenAI",
-          "published": "2026-10-21T13:00:00+00:00",
-          "summary": "More than 100,000 advertisers have used the platform so far. Expect clients in retail and marketing to ask how ads are kept separate from answers.",
+          "published": "2026-10-20T10:00:00+00:00",
+          "summary": "An independent Schlotzsky's and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
           "thumbnail": null
         },
         {
-          "title": "AT&T rethinks in-house legal intake with OpenAI",
-          "url": "https://openai.com/index/att-legal",
+          "title": "Terminal X grades AI outputs against a 54-criterion rubric with GPT-6.1",
+          "url": "https://openai.com/index/terminal-x",
           "source": "OpenAI",
-          "published": "2026-10-21T17:00:00+00:00",
-          "summary": "AT&T's LegalEdge team uses OpenAI to make legal knowledge easier to find and rethink how requests are taken in. A useful case for in-house teams.",
+          "published": "2026-10-20T07:00:00+00:00",
+          "summary": "An evaluation agent that checks outputs against a fund's mandate and catches 25% more deviations. A pattern for any client needing automated quality checks.",
           "thumbnail": null
         },
         {
-          "title": "Stack Overflow for Agents triples signups with a ChatGPT plugin",
-          "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+          "title": "Itaú is building generative AI for its entire customer base",
+          "url": "https://openai.com/index/itau-generative-ai",
           "source": "OpenAI",
-          "published": "2026-10-16T00:00:00+00:00",
-          "summary": "Two engineers built it in a few weeks using Codex, and the plugin drove up to ten times more agent creation. A fast-build example.",
-          "thumbnail": null
-        },
-        {
-          "title": "Claude Code 2.1.308 ships bug fixes and reliability improvements",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
-          "source": "Claude Code releases",
-          "published": "2026-10-22T04:34:55+00:00",
-          "summary": "A small maintenance release with no new features listed. Update when convenient; nothing here changes how you work.",
+          "published": "2026-10-16T19:00:00+00:00",
+          "summary": "The Brazilian bank pairs a conversational interface called ia.i with a governance platform, IARA, in a heavily regulated sector. Useful for financial services clients.",
           "thumbnail": null
         }
       ]
@@ -122,43 +130,43 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "claude-howto is a visual guide to Claude Code with copy-paste templates",
-          "url": "https://github.com/luongnv89/claude-howto",
+          "title": "Anthropic's knowledge-work plugins add ready-made helpers to Claude Cowork",
+          "url": "https://github.com/anthropics/knowledge-work-plugins",
           "source": "GitHub trending",
-          "published": "2026-10-22T07:00:03.789568+00:00",
-          "summary": "Walks from basic concepts to agents with examples and templates you can paste in. A good starting point for non-engineers learning Claude Code.",
+          "published": "2026-10-23T07:00:08.131409+00:00",
+          "summary": "An open-source set of plugins aimed at knowledge workers using Claude Cowork. Check the README for what each covers before recommending it.",
           "thumbnail": null
         },
         {
-          "title": "Twenty is an open-source CRM pitched as a Salesforce alternative",
-          "url": "https://github.com/twentyhq/twenty",
+          "title": "Genoffice is a free AI office suite for Docs, Sheets and Slides",
+          "url": "https://github.com/genspark-ai/genoffice",
           "source": "GitHub trending",
-          "published": "2026-10-22T07:00:03.789568+00:00",
-          "summary": "Designed with AI in mind, so a useful comparison for clients weighing CRM options. Self-hosting needs an engineer, so check for a hosted version first.",
+          "published": "2026-10-23T07:00:08.131409+00:00",
+          "summary": "Open-source editors with a built-in agent, plus a skill so Claude Code can create real .docx, .xlsx and .pptx files. Bring your own API key.",
           "thumbnail": null
         },
         {
-          "title": "Agent-Reach lets an AI agent read Twitter, Reddit, YouTube and GitHub",
-          "url": "https://github.com/Panniantong/Agent-Reach",
+          "title": "Onyx is an open-source AI chat platform that works with any model",
+          "url": "https://github.com/onyx-dot-app/onyx",
           "source": "GitHub trending",
-          "published": "2026-10-22T07:00:03.789568+00:00",
-          "summary": "One command-line tool that searches and reads those sites with no API fees, useful for market and competitor research. Needs a terminal.",
+          "published": "2026-10-23T07:00:08.131409+00:00",
+          "summary": "An open-source chat platform that works with any model. Worth a look for clients who do not want one vendor; setup likely needs an engineer.",
           "thumbnail": null
         },
         {
-          "title": "itsaplan is a self-hosted project tracker where AI agents join the team",
-          "url": "https://github.com/croffasia/itsaplan",
+          "title": "Firecrawl feeds web data to AI agents for research tasks",
+          "url": "https://github.com/firecrawl/firecrawl",
           "source": "GitHub trending",
-          "published": "2026-10-22T07:00:03.789568+00:00",
-          "summary": "An open-source alternative to Linear and Plane for planning and issue tracking. Self-hosting needs technical help, so ask a colleague before trying it.",
+          "published": "2026-10-23T07:00:08.131409+00:00",
+          "summary": "A tool that pulls web content into a form agents can use, handy for competitor and market research. Needs some technical setup.",
           "thumbnail": null
         },
         {
-          "title": "Vane offers an AI-powered answering engine for research questions",
-          "url": "https://github.com/ItzCrazyKns/Vane",
+          "title": "CopilotKit's OpenBot gives AI coworkers their own browser, files and tools",
+          "url": "https://github.com/CopilotKit/OpenBot",
           "source": "GitHub trending",
-          "published": "2026-10-22T07:00:03.789568+00:00",
-          "summary": "The listing gives few details, so check what it needs to run and where your data goes before recommending it to a client.",
+          "published": "2026-10-23T07:00:08.131409+00:00",
+          "summary": "Open-source agents that each get their own computer, with every action checked beforehand and recorded afterwards. Shows how oversight can work; running it is technical.",
           "thumbnail": null
         }
       ]
@@ -168,51 +176,27 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Compromised LiteLLM 1.107.0 on PyPI installs a credential stealer and backdoor",
-          "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
-          "source": "Hacker News",
-          "published": "2026-10-21T14:00:26+00:00",
-          "summary": "Version 1.107.0 of the LiteLLM Python package contained a backdoor. Ask clients whether their teams use it and whether anyone installed that version.",
-          "thumbnail": null
-        },
-        {
-          "title": "A Claude Code user replaced a Samsung TV home screen",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xbzlih/i_replaced_my_samsung_tvs_home_screen_with_claude/",
+          "title": "A Claude Code user built a pizzeria its own ordering app",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xcm78x/i_used_claude_code_to_build_a_pizzeria_its_own/",
           "source": "r/ClaudeAI",
-          "published": "2026-10-21T21:11:42+00:00",
-          "summary": "The key trick was faking the TV's few APIs so layout and remote navigation could be tested in a laptop browser. A handy pattern.",
+          "published": "2026-10-22T15:46:42+00:00",
+          "summary": "Claude Code produced the app, backend functions and payments so regulars skip DoorDash's 30% fee, and a first paying customer is live.",
           "thumbnail": null
         },
         {
-          "title": "Asking an LLM for a confidence score is a bad idea",
-          "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
-          "source": "Hacker News",
-          "published": "2026-10-21T04:27:51+00:00",
-          "summary": "Relevant when a client wants AI answers scored automatically before a person reviews them; the author argues the scores can't be trusted.",
+          "title": "How OpenAI built ChatGPT's ad stack to keep ads separate from answers",
+          "url": "https://openai.com/index/building-chatgpt-ad-stack",
+          "source": "OpenAI",
+          "published": "2026-10-21T07:00:00+00:00",
+          "summary": "OpenAI explains how its ad system reads conversational intent and keeps ads apart from answers. Useful background for retail and marketing clients asking about trust.",
           "thumbnail": null
         },
         {
-          "title": "Alter launches access control for multi-user AI agents",
-          "url": "https://alterauth.com/",
-          "source": "Hacker News",
-          "published": "2026-10-21T06:42:12+00:00",
-          "summary": "A Launch HN post from a YC S25 startup on controlling what each user's agent can access. Relevant when clients ask about data permissions.",
-          "thumbnail": null
-        },
-        {
-          "title": "Claude Code spots a cryptominer while building a Mac app",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x9smgq/claude_caught_a_cryptominer_on_my_mac_whilst/",
+          "title": "A designer's AI-built side project earned $130 in its first month",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x9668n/my_side_project_made_130_in_its_first_month_a_few/",
           "source": "r/ClaudeAI",
-          "published": "2026-10-19T09:50:49+00:00",
-          "summary": "While checking odd temperature readings, Claude traced the cause to a miner using about 12 cores. A reminder that agents can also help with diagnosis.",
-          "thumbnail": null
-        },
-        {
-          "title": "Reddit post says Anthropic released Claude Duet, a proactive assistant",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xbwkgf/claude_duet_anthropic_just_casually_dropped_the/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-21T19:17:05+00:00",
-          "summary": "The post is a headline and a link with little detail, so confirm what Duet is on Anthropic's site before telling a client.",
+          "published": "2026-10-18T15:35:45+00:00",
+          "summary": "A UI/UX designer of eight years built an affiliate site with AI; almost all traffic came from Reddit. A realistic picture of early earnings.",
           "thumbnail": null
         }
       ]
