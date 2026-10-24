@@ -1,12 +1,13 @@
 {
-  "generated": "2026-10-23T07:00:08.131409+00:00",
-  "previous_generated": "2026-10-22T07:00:03.789568+00:00",
-  "standfirst": "This issue covers Uber's company-wide ChatGPT Work rollout, a new OpenAI Decisions API, Agent Skills moving to a foundation and a few tools you can try.",
+  "generated": "2026-10-24T10:05:49.458454+00:00",
+  "previous_generated": "2026-10-23T07:00:08.131409+00:00",
+  "standfirst": "This issue covers always-on AI agents from OpenAI and Anthropic, a Claude Code update for cloud users and a few skills you can try.",
   "digest": [
-    "Uber is rolling ChatGPT Work out to more than 30,000 employees after a 1,000-person pilot, and OpenAI announced a Decisions API for fast, low-cost decisions inside apps. Anthropic donated the Agent Skills standard to the Agentic AI Foundation, and Claude Code 2.1.309 fixed several sandbox gaps.",
-    "For a consultant, the Uber story is the useful reference this week: a named company moving past engineering to company-wide use, which is the question clients ask when they plan a rollout. The Agent Skills news means skills built for one tool are less likely to be locked in, since more than 70 platforms support the standard.",
-    "If you want to try something, Matt Wolfe's short video on Claude's Motion and Dashboards features shows two things you can do from a prompt. Genoffice is a free office suite that lets Claude Code create real Word, Excel and PowerPoint files. Both are afternoon-sized.",
-    "Expect questions about ChatGPT ads. OpenAI published how its ad stack keeps ads separate from answers, which is the point retail and marketing clients will press on."
+    "Anthropic introduced Claude Duet, a proactive personal agent, and OpenAI's always-on dots are getting a lot of coverage, so agents that work in the background are this week's theme. Claude Code 2.1.310 brought the Monitor tool to Bedrock, Vertex and Foundry, and OpenAI models are now offered through Google Cloud.",
+    "For a consultant, the useful question is how each assistant is set up to act on your behalf. The AI Advantage and Matt Wolfe both compare dots, Duet, Muse and Grok Bot, which gives you plain-language answers when a client asks which one to try.",
+    "Two short OpenAI customer stories are worth five minutes. Realpage builds internal AI training with ChatGPT Work, and an analyst at Benefit Street Partners built a loan valuation tool with Codex in about a day.",
+    "If you want to try something, book-to-skill turns a PDF into a Claude Code skill, and Claude How-To has copy-paste templates for getting started. Both are afternoon-sized.",
+    "Expect client questions on ChatGPT Ads, now in 26 more countries, and on Kimi K3.1 Pro, which drew heavy attention on Hacker News. A Reddit post also reports that Sweden's government is blocking ChatGPT and Claude on staff computers from Monday."
   ],
   "sections": [
     {
@@ -14,60 +15,68 @@
       "title": "Watch",
       "items": [
         {
-          "title": "Uber rolls out ChatGPT Work to 30,000+ employees",
-          "url": "https://www.youtube.com/watch?v=l16Gw7oVLNQ",
+          "title": "OpenAI engineer uses a ChatGPT dot to track and fix bugs",
+          "url": "https://www.youtube.com/watch?v=6f7ojkd4_Wc",
           "source": "OpenAI",
-          "published": "2026-10-22T18:00:13+00:00",
-          "summary": "Uber's CTO and OpenAI's Greg Brockman discuss moving from a 1,000-person pilot to a company-wide rollout beyond engineering. Useful for rollout questions.",
-          "thumbnail": "https://i.ytimg.com/vi/l16Gw7oVLNQ/mqdefault.jpg"
+          "published": "2026-10-23T22:05:37+00:00",
+          "summary": "A walkthrough of a dot gathering user feedback, keeping a live tracker in a ChatGPT Space and handing fixes to Codex.",
+          "thumbnail": "https://i.ytimg.com/vi/6f7ojkd4_Wc/mqdefault.jpg"
         },
         {
-          "title": "Three new Claude features to try: Motion, Dashboards and Haiku 5.5",
-          "url": "https://www.youtube.com/shorts/aIrrq3CLSKM",
+          "title": "ChatGPT dots can track price drops, travel delays and more",
+          "url": "https://www.youtube.com/shorts/WSHEBdmahHY",
           "source": "Matt Wolfe",
-          "published": "2026-10-19T12:43:39+00:00",
-          "summary": "A short walkthrough of turning reports into animated explainers, building live dashboards from business data with a prompt, and using the cheaper Haiku 5.5 model.",
-          "thumbnail": "https://i.ytimg.com/vi/aIrrq3CLSKM/mqdefault.jpg"
+          "published": "2026-10-23T21:15:47+00:00",
+          "summary": "A short video on dots, ChatGPT's always-on agents, covering price-drop tracking and flight delay monitoring. Easy to copy as a first test.",
+          "thumbnail": "https://i.ytimg.com/vi/WSHEBdmahHY/mqdefault.jpg"
         },
         {
-          "title": "Team tasks in ChatGPT run recurring work in the cloud",
-          "url": "https://www.youtube.com/watch?v=OMxEUdIgsQc",
-          "source": "OpenAI",
-          "published": "2026-10-16T18:00:49+00:00",
-          "summary": "A legal team's daily intake review set up as a shared recurring task that teammates can check and refine. Enterprise plans only.",
-          "thumbnail": "https://i.ytimg.com/vi/OMxEUdIgsQc/mqdefault.jpg"
+          "title": "Matt Wolfe's weekly recap covers 24 AI stories including Claude Duet",
+          "url": "https://www.youtube.com/watch?v=TVRCcMlvR10",
+          "source": "Matt Wolfe",
+          "published": "2026-10-23T17:40:19+00:00",
+          "summary": "A weekly catch-up on Claude Duet, rising AI security worries and a run of OpenAI updates. Good for a five-minute overview.",
+          "thumbnail": "https://i.ytimg.com/vi/TVRCcMlvR10/mqdefault.jpg"
         },
         {
-          "title": "ChatGPT's Chrome integration analyses multiple open tabs at once",
-          "url": "https://www.youtube.com/watch?v=KwvpDtUFS-s",
+          "title": "The AI Advantage compares Muse, Grok Bot, Dots and Duet",
+          "url": "https://www.youtube.com/watch?v=Bd8-geZPwI4",
           "source": "The AI Advantage",
-          "published": "2026-10-16T16:45:54+00:00",
-          "summary": "A hands-on demo of asking ChatGPT to compare several open tabs and pull out the useful points. Easy to try if you use Chrome.",
-          "thumbnail": "https://i.ytimg.com/vi/KwvpDtUFS-s/mqdefault.jpg"
+          "published": "2026-10-23T16:10:03+00:00",
+          "summary": "A creator's view of which always-on agent suits which person, with three favourite uses for them. Helps when clients ask which to try.",
+          "thumbnail": "https://i.ytimg.com/vi/Bd8-geZPwI4/mqdefault.jpg"
         },
         {
-          "title": "OpenAI shopping agent demo turns a room photo into an order",
-          "url": "https://www.youtube.com/watch?v=8n-SXxRIrm8",
+          "title": "Realpage trainer builds AI enablement packages with ChatGPT Work",
+          "url": "https://www.youtube.com/watch?v=hgX1hgyWD4g",
           "source": "OpenAI",
-          "published": "2026-10-20T22:57:52+00:00",
-          "summary": "A fictional retailer's agent takes voice and photos, recommends products, previews the room and adjusts picks to a $250 budget. Good for retail client ideas.",
-          "thumbnail": "https://i.ytimg.com/vi/8n-SXxRIrm8/mqdefault.jpg"
+          "published": "2026-10-23T18:39:14+00:00",
+          "summary": "Austin Braham turns notes and source material into training for different teams, roles and skill levels. A model for client upskilling programmes.",
+          "thumbnail": "https://i.ytimg.com/vi/hgX1hgyWD4g/mqdefault.jpg"
         },
         {
-          "title": "Matt Wolfe's weekly recap covers six new models and Krea 3",
-          "url": "https://www.youtube.com/watch?v=KGcuuhqmPhI",
-          "source": "Matt Wolfe",
-          "published": "2026-10-16T16:20:28+00:00",
-          "summary": "A weekly roundup on Krea 3 image editing, Gemini 4 Argon and Meta's Muse Wonder tests, new open-weight models and OpenAI updates. Good catch-up.",
-          "thumbnail": "https://i.ytimg.com/vi/KGcuuhqmPhI/mqdefault.jpg"
+          "title": "Benefit Street Partners analyst builds a loan valuation tool with Codex",
+          "url": "https://www.youtube.com/watch?v=CTkDi1THc_g",
+          "source": "OpenAI",
+          "published": "2026-10-23T18:20:02+00:00",
+          "summary": "An analyst collected loan valuations from SEC filings into a website with charts, first version in about a day. Proof non-engineers can build.",
+          "thumbnail": "https://i.ytimg.com/vi/CTkDi1THc_g/mqdefault.jpg"
         },
         {
-          "title": "Five prompts tested on Google's new Gemini 4 Argon model",
-          "url": "https://www.youtube.com/shorts/S2srfNCa50A",
-          "source": "Matt Wolfe",
-          "published": "2026-10-21T12:53:28+00:00",
-          "summary": "A short hands-on test of five different uses of Google's new model. Save it for ideas you can copy into your own prompts.",
-          "thumbnail": "https://i.ytimg.com/vi/S2srfNCa50A/mqdefault.jpg"
+          "title": "AT&T's legal team plans natural-language intake with OpenAI",
+          "url": "https://www.youtube.com/watch?v=V39_L7uh66M",
+          "source": "OpenAI",
+          "published": "2026-10-23T18:32:03+00:00",
+          "summary": "Two AT&T leaders describe a planned system that classifies and prioritises legal matters and links them to knowledge. A template for legal clients.",
+          "thumbnail": "https://i.ytimg.com/vi/V39_L7uh66M/mqdefault.jpg"
+        },
+        {
+          "title": "Shield uses OpenAI's Astra agents to resolve everyday IT problems",
+          "url": "https://www.youtube.com/watch?v=m6MlxaFMmPI",
+          "source": "OpenAI",
+          "published": "2026-10-23T18:34:39+00:00",
+          "summary": "An IT services firm lets agents work inside business software to fix log-in and connection problems that once needed a technician.",
+          "thumbnail": "https://i.ytimg.com/vi/m6MlxaFMmPI/mqdefault.jpg"
         }
       ]
     },
@@ -76,51 +85,43 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "OpenAI's Decisions API targets fast, low-cost application decisions",
-          "url": "https://openai.com/index/decisions-api",
-          "source": "OpenAI",
-          "published": "2026-10-22T19:00:00+00:00",
-          "summary": "A new OpenAI API for quick, focused, low-cost decisions inside apps. The listing gives little detail, so check before promising it to a client.",
-          "thumbnail": null
-        },
-        {
-          "title": "Anthropic donates Agent Skills to the Agentic AI Foundation",
-          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
-          "source": "Anthropic",
-          "published": "2026-10-22T00:00:00+00:00",
-          "summary": "The standard for packaging know-how for agents is used by over 70 platforms, including ChatGPT and Copilot, so skills are not tied to Claude.",
-          "thumbnail": null
-        },
-        {
-          "title": "Claude Code 2.1.309 closes sandbox gaps on macOS and Linux",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+          "title": "Claude Code 2.1.310 brings the Monitor tool to Bedrock, Vertex and Foundry",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
           "source": "Claude Code releases",
-          "published": "2026-10-22T22:18:57+00:00",
-          "summary": "Fixes sandboxed commands running shell startup files outside the sandbox and being able to change the MCP config. Update if your team relies on the sandbox.",
+          "published": "2026-10-23T23:39:00+00:00",
+          "summary": "The Monitor tool and plugin monitors now work on cloud-hosted setups, and requests behind some gateways retry instead of failing. Relevant for cloud-run teams.",
           "thumbnail": null
         },
         {
-          "title": "A restaurant franchisee cuts cash reconciliation time 94% with ChatGPT Work",
-          "url": "https://openai.com/index/ted-taylor-restaurant",
-          "source": "OpenAI",
-          "published": "2026-10-20T10:00:00+00:00",
-          "summary": "An independent Schlotzsky's and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
+          "title": "Anthropic launches Claude Duet, a proactive assistant agent",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xbwkgf/claude_duet_anthropic_just_casually_dropped_the/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-21T19:17:05+00:00",
+          "summary": "A Reddit thread on Anthropic's proactive agent, pitched against OpenAI dots, Meta Muse and Grok Bot. Read the comments, then the product page.",
           "thumbnail": null
         },
         {
-          "title": "Terminal X grades AI outputs against a 54-criterion rubric with GPT-6.1",
-          "url": "https://openai.com/index/terminal-x",
-          "source": "OpenAI",
-          "published": "2026-10-20T07:00:00+00:00",
-          "summary": "An evaluation agent that checks outputs against a fund's mandate and catches 25% more deviations. A pattern for any client needing automated quality checks.",
+          "title": "Kimi K3.1 Pro and a faster Highspeed version launch",
+          "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+          "source": "Hacker News",
+          "published": "2026-10-23T16:59:08+00:00",
+          "summary": "The new Kimi release drew 915 points and over 500 comments on Hacker News. Know the name in case clients ask about other options.",
           "thumbnail": null
         },
         {
-          "title": "Itaú is building generative AI for its entire customer base",
-          "url": "https://openai.com/index/itau-generative-ai",
+          "title": "OpenAI models and Codex workflows come to Google Cloud's Model Garden",
+          "url": "https://openai.com/index/openai-models-google-cloud",
           "source": "OpenAI",
-          "published": "2026-10-16T19:00:00+00:00",
-          "summary": "The Brazilian bank pairs a conversational interface called ia.i with a governance platform, IARA, in a heavily regulated sector. Useful for financial services clients.",
+          "published": "2026-10-21T12:00:00+00:00",
+          "summary": "Clients on Google Cloud can reach OpenAI models and Codex workflows through Model Garden and Cloud Marketplace. Useful for clients that standardise on Google.",
+          "thumbnail": null
+        },
+        {
+          "title": "ChatGPT Ads expands to 26 more countries",
+          "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+          "source": "OpenAI",
+          "published": "2026-10-21T13:00:00+00:00",
+          "summary": "More than 100,000 advertisers have used the platform so far. Retail and marketing clients are likely to ask what it means for them.",
           "thumbnail": null
         }
       ]
@@ -130,43 +131,43 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "Anthropic's knowledge-work plugins add ready-made helpers to Claude Cowork",
-          "url": "https://github.com/anthropics/knowledge-work-plugins",
+          "title": "Book-to-skill turns a technical book PDF into a Claude Code skill",
+          "url": "https://github.com/virgiliojr94/book-to-skill",
           "source": "GitHub trending",
-          "published": "2026-10-23T07:00:08.131409+00:00",
-          "summary": "An open-source set of plugins aimed at knowledge workers using Claude Cowork. Check the README for what each covers before recommending it.",
+          "published": "2026-10-24T10:05:49.458454+00:00",
+          "summary": "Feed it a PDF and get a skill Claude can reference while you work. Handy for turning a methodology book into a reusable helper.",
           "thumbnail": null
         },
         {
-          "title": "Genoffice is a free AI office suite for Docs, Sheets and Slides",
-          "url": "https://github.com/genspark-ai/genoffice",
+          "title": "Claude How-To is a visual guide to Claude Code with templates",
+          "url": "https://github.com/luongnv89/claude-howto",
           "source": "GitHub trending",
-          "published": "2026-10-23T07:00:08.131409+00:00",
-          "summary": "Open-source editors with a built-in agent, plus a skill so Claude Code can create real .docx, .xlsx and .pptx files. Bring your own API key.",
+          "published": "2026-10-24T10:05:49.458454+00:00",
+          "summary": "Example-led guide from basics to agents, with copy-paste templates. A low-effort way to get a team started; no engineer needed to read it.",
           "thumbnail": null
         },
         {
-          "title": "Onyx is an open-source AI chat platform that works with any model",
-          "url": "https://github.com/onyx-dot-app/onyx",
+          "title": "Video Shotcraft gives Claude Code recipes for product videos",
+          "url": "https://github.com/Vincentwei1021/video-shotcraft",
           "source": "GitHub trending",
-          "published": "2026-10-23T07:00:08.131409+00:00",
-          "summary": "An open-source chat platform that works with any model. Worth a look for clients who do not want one vendor; setup likely needs an engineer.",
+          "published": "2026-10-24T10:05:49.458454+00:00",
+          "summary": "A skill with 152 shot recipes and a template for making product videos with Remotion. Expect some setup, but it fits an afternoon.",
           "thumbnail": null
         },
         {
-          "title": "Firecrawl feeds web data to AI agents for research tasks",
-          "url": "https://github.com/firecrawl/firecrawl",
+          "title": "Graphify turns a codebase and its documents into a queryable graph",
+          "url": "https://github.com/Graphify-Labs/graphify",
           "source": "GitHub trending",
-          "published": "2026-10-23T07:00:08.131409+00:00",
-          "summary": "A tool that pulls web content into a form agents can use, handy for competitor and market research. Needs some technical setup.",
+          "published": "2026-10-24T10:05:49.458454+00:00",
+          "summary": "A skill for Claude Code, Cursor and others that maps code, docs, schemas and PDFs so you can ask questions of them. Runs locally.",
           "thumbnail": null
         },
         {
-          "title": "CopilotKit's OpenBot gives AI coworkers their own browser, files and tools",
-          "url": "https://github.com/CopilotKit/OpenBot",
+          "title": "Open Duet is a self-hosted take on named AI coworkers",
+          "url": "https://github.com/Anil-matcha/open-duet",
           "source": "GitHub trending",
-          "published": "2026-10-23T07:00:08.131409+00:00",
-          "summary": "Open-source agents that each get their own computer, with every action checked beforehand and recorded afterwards. Shows how oversight can work; running it is technical.",
+          "published": "2026-10-24T10:05:49.458454+00:00",
+          "summary": "Agents with instructions, memory and routines, each on its own isolated computer, acting only after you approve. Self-hosting means an engineer should set it up.",
           "thumbnail": null
         }
       ]
@@ -176,27 +177,43 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "A Claude Code user built a pizzeria its own ordering app",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xcm78x/i_used_claude_code_to_build_a_pizzeria_its_own/",
+          "title": "Newcomer builds a playable game with Claude Code in six weeks",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xdhkzb/no_coding_or_gamedev_background_6_weeks_with_opus/",
           "source": "r/ClaudeAI",
-          "published": "2026-10-22T15:46:42+00:00",
-          "summary": "Claude Code produced the app, backend functions and payments so regulars skip DoorDash's 30% fee, and a first paying customer is live.",
+          "published": "2026-10-23T15:43:39+00:00",
+          "summary": "A solo developer with no coding background turned their own drawings into a game using Opus 5.5, and shares the tricks that helped.",
           "thumbnail": null
         },
         {
-          "title": "How OpenAI built ChatGPT's ad stack to keep ads separate from answers",
-          "url": "https://openai.com/index/building-chatgpt-ad-stack",
-          "source": "OpenAI",
-          "published": "2026-10-21T07:00:00+00:00",
-          "summary": "OpenAI explains how its ad system reads conversational intent and keeps ads apart from answers. Useful background for retail and marketing clients asking about trust.",
+          "title": "One user runs Claude Code like a small team with guardrails",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xbxoza/my_claude_code_setup_it_runs_like_a_small/",
+          "source": "r/ClaudeCode",
+          "published": "2026-10-21T19:59:27+00:00",
+          "summary": "A solo developer's setup aimed at fewer usage-limit surprises and less repeating yourself. Written with Claude's help, so treat it as a starting point.",
           "thumbnail": null
         },
         {
-          "title": "A designer's AI-built side project earned $130 in its first month",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1x9668n/my_side_project_made_130_in_its_first_month_a_few/",
+          "title": "A Claude Code user mined 11 million news articles for patterns",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xaxzqv/i_handed_claude_code_a_database_of_11_million/",
+          "source": "r/ClaudeCode",
+          "published": "2026-10-20T17:12:15+00:00",
+          "summary": "A side project handed Claude Code a database export and a list of questions and let it work. Shows open-ended data analysis in practice.",
+          "thumbnail": null
+        },
+        {
+          "title": "Claude Code's best-practices page is worth applying, one user says",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1x966ii/why_does_everyone_disregard_anthropics_best/",
+          "source": "r/ClaudeCode",
+          "published": "2026-10-18T15:36:05+00:00",
+          "summary": "A user says applying the documented practices noticeably improved their output, because models do not default to them. Worth sharing with new users.",
+          "thumbnail": null
+        },
+        {
+          "title": "Sweden's government blocks ChatGPT and Claude on staff computers",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xdcmm4/swedens_government_is_blocking_chatgpt_and_claude/",
           "source": "r/ClaudeAI",
-          "published": "2026-10-18T15:35:45+00:00",
-          "summary": "A UI/UX designer of eight years built an affiliate site with AI; almost all traffic came from Reddit. A realistic picture of early earnings.",
+          "published": "2026-10-23T12:27:03+00:00",
+          "summary": "Per a Swedish Radio report shared on Reddit, government office staff lose access from Monday. A data point for clients weighing public-sector rules.",
           "thumbnail": null
         }
       ]
