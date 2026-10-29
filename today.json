@@ -1,13 +1,11 @@
 {
-  "generated": "2026-10-28T09:19:17.949507+00:00",
-  "previous_generated": "2026-10-27T07:22:36.995337+00:00",
-  "standfirst": "This issue covers ChatGPT moving deeper into business software, Codex case studies from legal and other teams, and skills you can try this week.",
+  "generated": "2026-10-29T07:38:19.653575+00:00",
+  "previous_generated": "2026-10-28T09:19:17.949507+00:00",
+  "standfirst": "This issue covers Google's Gemini 4 Carbon, new API credits in ChatGPT plans, and tools you can try without an engineer.",
   "digest": [
-    "OpenAI and Oracle are widening their partnership to bring Oracle's business apps and agents into ChatGPT, and Uber is rolling ChatGPT Work out to more than 30,000 staff. Anthropic also announced a 40% discount on Claude for government partners through GSA, and Claude Code 2.1.312 is out.",
-    "Codex case studies dominate the video list. Shopify's CTO, HashiCorp's Mitchell Hashimoto and Sotira each show a different way to use it, including one speaker who says not being technical is no reason not to build. They are easy to borrow when a client asks what people actually do with agents.",
-    "For legal and professional services clients, the AT&T and Cooley clips share one message: AI does the groundwork and people stay responsible for the answer. Matt Wolfe also tests Google's new Gemini 4 Argon with five prompts, a quick way to see what it can do.",
-    "Anthropic donated the Agent Skills standard to the Agentic AI Foundation, and more than 70 platforms already support it. The tools this week are mostly skills and desktop apps: Hallmark and Impeccable for design, Claude SEO for audits, Call.md for meetings.",
-    "One caution: a Claude Code user reports service errors using up their paid limits. It is a single account, but worth knowing if your team relies on Claude Code every day."
+    "Google announced Gemini 4 Carbon and Genie 4, and OpenAI released GPT-6.1 Terra for computer use. Kimi K3.1, a free open-weight model, also landed earlier this week. Expect clients to ask how these compare with what they already pay for.",
+    "ChatGPT Pro and Business plans now include up to $500 a month in API credits, and OpenAI is linking ServiceNow with ChatGPT and Codex. If a client already has those plans, check what they can claim before talking about new budget.",
+    "Legora's legal team says NDA review fell from about 20% of capacity to under 1%, with lawyers still making the decisions. On the tools side, n8n, Postiz and Upscayl are the easiest to try, and SkillSpector is worth knowing before anyone installs a skill from the internet. One Reddit post is a reminder to check what your agents send to outside sites."
   ],
   "sections": [
     {
@@ -15,60 +13,68 @@
       "title": "Watch",
       "items": [
         {
-          "title": "AT&T's legal team uses AI while lawyers keep the decisions",
-          "url": "https://www.youtube.com/shorts/Yim7JrVzSkk",
+          "title": "Merge CEO says executives set the ceiling for AI fluency",
+          "url": "https://www.youtube.com/watch?v=6ep8Vvm4Bdw",
           "source": "OpenAI",
-          "published": "2026-10-27T15:40:48+00:00",
-          "summary": "AT&T's David McAtee and Bill Ryan explain how AI can support legal work while lawyers keep strategy and judgment. A short framing for cautious clients.",
-          "thumbnail": "https://i.ytimg.com/vi/Yim7JrVzSkk/mqdefault.jpg"
+          "published": "2026-10-28T11:50:26+00:00",
+          "summary": "Co-founder Shensi Ding says leaders cap their organisation's AI skill, and shows Codex redesigning a feature from the existing design system.",
+          "thumbnail": "https://i.ytimg.com/vi/6ep8Vvm4Bdw/mqdefault.jpg"
         },
         {
-          "title": "Mitchell Hashimoto ends his day by putting Codex agents to work",
-          "url": "https://www.youtube.com/watch?v=lPZQrVFcz3c",
+          "title": "ChatGPT Pro and Business plans now include monthly API credits",
+          "url": "https://www.youtube.com/watch?v=ujmyzWSj8IU",
           "source": "OpenAI",
-          "published": "2026-10-27T15:04:57+00:00",
-          "summary": "Agents research competitors, compare tools and prototype half-formed features before the next morning. A routine any consultant could copy with an AI assistant.",
-          "thumbnail": "https://i.ytimg.com/vi/lPZQrVFcz3c/mqdefault.jpg"
+          "published": "2026-10-28T23:45:26+00:00",
+          "summary": "Pro gets $100 to $500 a month by tier; Business gets $20 or $100 per seat, pooled to $500. Worth checking against your own plan.",
+          "thumbnail": "https://i.ytimg.com/vi/ujmyzWSj8IU/mqdefault.jpg"
         },
         {
-          "title": "Shopify's CTO brings a Codex prototype to the meeting",
-          "url": "https://www.youtube.com/watch?v=cflbzHRvGvg",
-          "source": "OpenAI",
-          "published": "2026-10-27T15:03:41+00:00",
-          "summary": "Mikhail Parakhin uses Codex to delegate tasks and explore architecture options, so ideas arrive as prototypes. Shows how prototype-first conversations can work.",
-          "thumbnail": "https://i.ytimg.com/vi/cflbzHRvGvg/mqdefault.jpg"
-        },
-        {
-          "title": "Sotira uses Codex to give unsold inventory a second life",
-          "url": "https://www.youtube.com/watch?v=C2vdw5GSTQo",
-          "source": "OpenAI",
-          "published": "2026-10-27T15:02:46+00:00",
-          "summary": "Amrita Bhasin says being non-technical is no reason not to build, and uses Codex to connect unsold products with buyers. Good for sceptical clients.",
-          "thumbnail": "https://i.ytimg.com/vi/C2vdw5GSTQo/mqdefault.jpg"
-        },
-        {
-          "title": "Cooley speeds up IPO preparation with a tool built on OpenAI",
-          "url": "https://www.youtube.com/shorts/XAVYrC9lY7Q",
-          "source": "OpenAI",
-          "published": "2026-10-27T14:42:25+00:00",
-          "summary": "Cooley's GO Public puts substantive work in front of clients sooner and flags issues earlier, with people still reviewing every answer. Relevant to professional services.",
-          "thumbnail": "https://i.ytimg.com/vi/XAVYrC9lY7Q/mqdefault.jpg"
-        },
-        {
-          "title": "Higgsfield stretches AI video from one minute to over ten",
-          "url": "https://www.youtube.com/watch?v=inrYeej3Big",
-          "source": "OpenAI",
-          "published": "2026-10-26T22:03:06+00:00",
-          "summary": "Credits GPT-6 Astra for longer videos and GPT-Image-2.5 for readable text in infographics. Worth a look if clients ask what AI video can do now.",
-          "thumbnail": "https://i.ytimg.com/vi/inrYeej3Big/mqdefault.jpg"
-        },
-        {
-          "title": "Matt Wolfe tests five prompts on Google's Gemini 4 Argon",
-          "url": "https://www.youtube.com/shorts/S2srfNCa50A",
+          "title": "Nate Herk walks through three daily AI workflows, including Claude Code video editing",
+          "url": "https://www.youtube.com/watch?v=AtjFk9f44HE",
           "source": "Matt Wolfe",
-          "published": "2026-10-21T12:53:28+00:00",
-          "summary": "A short clip trying five different uses of Google's new Gemini 4 Argon model. Quick way to see what it handles before a client asks.",
-          "thumbnail": "https://i.ytimg.com/vi/S2srfNCa50A/mqdefault.jpg"
+          "published": "2026-10-28T19:25:38+00:00",
+          "summary": "Matt Wolfe talks to Nate Herk about using Claude Code to edit videos, plus an AI expert panel for decisions. Watch for ideas to borrow.",
+          "thumbnail": "https://i.ytimg.com/vi/AtjFk9f44HE/mqdefault.jpg"
+        },
+        {
+          "title": "Legora's legal team cut NDA review from 20% of capacity to under 1%",
+          "url": "https://www.youtube.com/watch?v=M2Oa42hF67E",
+          "source": "OpenAI",
+          "published": "2026-10-28T09:45:24+00:00",
+          "summary": "General Counsel Emma Kadri Bergström says NDA review fell from about 20% of team capacity to under 1%, with lawyers still deciding.",
+          "thumbnail": "https://i.ytimg.com/vi/M2Oa42hF67E/mqdefault.jpg"
+        },
+        {
+          "title": "Gemini 4 Carbon announcement explained in a short Matthew Berman clip",
+          "url": "https://www.youtube.com/shorts/3yZb9rGt-rk",
+          "source": "Matthew Berman",
+          "published": "2026-10-28T22:20:44+00:00",
+          "summary": "A short clip on Google's new Gemini 4 Carbon announcement. Watch it first if a client asks what changed, then read Google's post.",
+          "thumbnail": "https://i.ytimg.com/vi/3yZb9rGt-rk/mqdefault.jpg"
+        },
+        {
+          "title": "Kimi K3.1 is a free open-weight model near Opus on coding",
+          "url": "https://www.youtube.com/watch?v=G_em1hHPnXY",
+          "source": "Fireship",
+          "published": "2026-10-26T18:55:29+00:00",
+          "summary": "Fireship tests a free 3-trillion-parameter open-weight model that comes within one point of Opus on Terminal Bench. Good context for open-model questions.",
+          "thumbnail": "https://i.ytimg.com/vi/G_em1hHPnXY/mqdefault.jpg"
+        },
+        {
+          "title": "AI news roundup: 24 things from the week, including Claude Duet",
+          "url": "https://www.youtube.com/watch?v=TVRCcMlvR10",
+          "source": "Matt Wolfe",
+          "published": "2026-10-23T17:40:19+00:00",
+          "summary": "Matt Wolfe's weekly roundup covers Claude Duet, AI-powered security threats and OpenAI updates. A quick catch-up if you missed the week.",
+          "thumbnail": "https://i.ytimg.com/vi/TVRCcMlvR10/mqdefault.jpg"
+        },
+        {
+          "title": "Three ways to put ChatGPT's always-on Dots agents to work",
+          "url": "https://www.youtube.com/shorts/WSHEBdmahHY",
+          "source": "Matt Wolfe",
+          "published": "2026-10-23T21:15:47+00:00",
+          "summary": "Dots are ChatGPT's always-on background agents. The clip suggests tracking purchases for price drops and monitoring travel delays. A short clip with ideas to copy.",
+          "thumbnail": "https://i.ytimg.com/vi/WSHEBdmahHY/mqdefault.jpg"
         }
       ]
     },
@@ -77,43 +83,35 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "Claude Code 2.1.312 adds Entra ID identity option for gateway",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
-          "source": "Claude Code releases",
-          "published": "2026-10-27T20:24:20+00:00",
-          "summary": "Admins can pick which sign-in claim identifies users, and fullscreen users can click a queued message to send it now. Mostly matters for enterprise rollouts.",
+          "title": "Google announces Gemini 4 Carbon as its next frontier model",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+          "source": "Google DeepMind",
+          "published": "2026-10-28T17:00:58+00:00",
+          "summary": "Google's own announcement of its next frontier model, which drew over 700 comments on Hacker News. Likely to come up with clients.",
           "thumbnail": null
         },
         {
-          "title": "Oracle's business apps and AI agents are coming to ChatGPT",
-          "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+          "title": "OpenAI introduces GPT-6.1 Terra for fast computer use",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra",
           "source": "OpenAI",
-          "published": "2026-10-27T07:00:00+00:00",
-          "summary": "Matters for clients on Oracle software, who may reach those apps from ChatGPT. The partnership also powers new Oracle offerings.",
+          "published": "2026-10-26T00:00:00+00:00",
+          "summary": "OpenAI's new model aims to bring fast, capable computer use to everyone. Worth a test on a repetitive browser task before a client asks.",
           "thumbnail": null
         },
         {
-          "title": "Anthropic offers government partners 40% off Claude through GSA",
-          "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
-          "source": "Anthropic",
-          "published": "2026-10-27T00:00:00+00:00",
-          "summary": "A new GSA agreement discounts Claude Enterprise, Claude for Government and the API by 40%. A useful reference for public-sector pricing conversations.",
-          "thumbnail": null
-        },
-        {
-          "title": "Anthropic donates Agent Skills to the Agentic AI Foundation",
-          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
-          "source": "Anthropic",
-          "published": "2026-10-22T00:00:00+00:00",
-          "summary": "More than 70 platforms, including ChatGPT, Cursor and GitHub Copilot, already support skills. It means a skill you build should work across tools.",
-          "thumbnail": null
-        },
-        {
-          "title": "Uber rolls out ChatGPT Work to 30,000 employees",
-          "url": "https://openai.com/index/uber-chatgpt-work-rollout",
+          "title": "OpenAI and ServiceNow bring models and workflows into each other's tools",
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
           "source": "OpenAI",
-          "published": "2026-10-22T00:00:00+00:00",
-          "summary": "Staff will use it for research, data analysis, presentations and multi-step workflows. A scale reference for clients weighing a company-wide rollout.",
+          "published": "2026-10-28T13:15:00+00:00",
+          "summary": "OpenAI models and agents come into ServiceNow, and ServiceNow workflows reach ChatGPT and Codex. Relevant for clients who run ServiceNow.",
+          "thumbnail": null
+        },
+        {
+          "title": "Google DeepMind introduces Genie 4 for real-time world simulation",
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+          "source": "Google DeepMind",
+          "published": "2026-10-27T16:01:38+00:00",
+          "summary": "Google DeepMind's new world model for real-time simulation, which it says is much more realistic. Skim it so you can answer client questions.",
           "thumbnail": null
         }
       ]
@@ -123,59 +121,59 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "Hallmark is an anti-AI-slop design skill for coding agents",
-          "url": "https://github.com/Nutlope/hallmark",
+          "title": "n8n automates workflows with AI and 400+ integrations",
+          "url": "https://github.com/n8n-io/n8n",
           "source": "GitHub trending",
-          "published": "2026-10-28T09:19:17.949507+00:00",
-          "summary": "Works with Claude Code, Cursor and Codex to keep generated designs from looking generic. Install it into your agent to try.",
+          "published": "2026-10-29T07:38:19.653575+00:00",
+          "summary": "Workflow automation with AI built in, 400+ integrations and a visual builder. Can be self-hosted or used in the cloud; a good afternoon project.",
           "thumbnail": null
         },
         {
-          "title": "Impeccable gives your coding agent a design vocabulary",
-          "url": "https://github.com/pbakaus/impeccable",
+          "title": "Postiz schedules social media posts with AI agents",
+          "url": "https://github.com/gitroomhq/postiz-app",
           "source": "GitHub trending",
-          "published": "2026-10-28T09:19:17.949507+00:00",
-          "summary": "Commands like polish, bolder, critique and audit let you steer and review designs, and catch generic AI output before it ships. Needs a coding agent.",
+          "published": "2026-10-29T07:38:19.653575+00:00",
+          "summary": "Social media scheduling tool with AI agents built in. Useful for client content calendars; check how it is hosted before connecting accounts.",
           "thumbnail": null
         },
         {
-          "title": "Claude SEO adds 26 sub-skills for SEO audits in Claude Code",
-          "url": "https://github.com/AgriciDaniel/claude-seo",
+          "title": "Upscayl is a free desktop app that upscales images with AI",
+          "url": "https://github.com/upscayl/upscayl",
           "source": "GitHub trending",
-          "published": "2026-10-28T09:19:17.949507+00:00",
-          "summary": "Covers technical SEO, schema, local and e-commerce SEO, and PDF or Excel reports. Useful for web clients; optional extensions add live data.",
+          "published": "2026-10-29T07:38:19.653575+00:00",
+          "summary": "Free open-source AI image upscaler for Windows, Mac and Linux. Handy for rescuing small logos and screenshots in client decks; install it like any app.",
           "thumbnail": null
         },
         {
-          "title": "Call.md records and analyses meetings with real-time AI",
-          "url": "https://github.com/video-db/call.md",
+          "title": "NVIDIA's SkillSpector scans agent skills for security risks before install",
+          "url": "https://github.com/NVIDIA/SkillSpector",
           "source": "GitHub trending",
-          "published": "2026-10-28T09:19:17.949507+00:00",
-          "summary": "Gives agents live context from calls, from prep to follow-up. Test on an internal call first; setup effort is not stated.",
+          "published": "2026-10-29T07:38:19.653575+00:00",
+          "summary": "Checks Claude Code, Codex and MCP skills for prompt injection, data exfiltration and malicious patterns before you install them. Good habit.",
           "thumbnail": null
         },
         {
-          "title": "VoiceStudio runs voice cloning and dubbing fully on your own machine",
-          "url": "https://github.com/debpalash/VoiceStudio",
+          "title": "Open SEO is a free alternative to Semrush and Ahrefs",
+          "url": "https://github.com/every-app/open-seo",
           "source": "GitHub trending",
-          "published": "2026-10-28T09:19:17.949507+00:00",
-          "summary": "Open-source tool covering transcription, dictation, video dubbing and audiobooks in 646 languages. Handy for client content, though voice cloning needs consent.",
+          "published": "2026-10-29T07:38:19.653575+00:00",
+          "summary": "Open-source alternative to Semrush and Ahrefs. Handy for web and content clients who do not want a paid SEO seat; setup effort is not stated.",
           "thumbnail": null
         },
         {
-          "title": "Openbot runs persistent AI teammates in a local desktop app",
-          "url": "https://github.com/nightly-labs/openbot",
+          "title": "Macro puts email, chat, docs and CRM in one AI workspace",
+          "url": "https://github.com/macro-inc/macro",
           "source": "GitHub trending",
-          "published": "2026-10-28T09:19:17.949507+00:00",
-          "summary": "Runs Codex, Claude and Grok with their own workspaces, task queues and browser control, all in a local-first desktop app.",
+          "published": "2026-10-29T07:38:19.653575+00:00",
+          "summary": "A shared workspace that links email, chat, docs, tasks and CRM with shared AI memory. Check hosting and setup before a client trial.",
           "thumbnail": null
         },
         {
-          "title": "Claude-mem carries context from one agent session to the next",
-          "url": "https://github.com/thedotmack/claude-mem",
+          "title": "HyperFrames turns HTML into rendered video for coding agents",
+          "url": "https://github.com/heygen-com/hyperframes",
           "source": "GitHub trending",
-          "published": "2026-10-28T09:19:17.949507+00:00",
-          "summary": "Captures what your agent does, compresses it with AI and feeds relevant parts back into later sessions. Works with Claude Code, Codex, Gemini and Copilot.",
+          "published": "2026-10-29T07:38:19.653575+00:00",
+          "summary": "Write HTML and an agent renders it as video, useful for explainers and title cards. Needs a coding agent, so allow more than an afternoon.",
           "thumbnail": null
         }
       ]
@@ -185,27 +183,51 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Claude Code builds a pizzeria its own ordering app",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xcm78x/i_used_claude_code_to_build_a_pizzeria_its_own/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-22T15:46:42+00:00",
-          "summary": "Aims to spare restaurants the 25 to 30% delivery-app fee, with Claude Code writing the app and backend. A real build with a paying customer.",
+          "title": "Reddit user says Opus now handles design through deploy on long projects",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/",
+          "source": "r/ClaudeCode",
+          "published": "2026-10-28T20:56:41+00:00",
+          "summary": "A user reports forty-hour sessions, six or seven agents and nearly 600 tests, with Opus getting design through deploy right. One account only.",
           "thumbnail": null
         },
         {
-          "title": "Anthropic reports early progress on drug development with Claude",
-          "url": "https://www.anthropic.com/research/early-progress-drug-development",
+          "title": "Claude Code reportedly sends background agent transcripts to its model",
+          "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
           "source": "Hacker News",
-          "published": "2026-10-27T20:50:42+00:00",
-          "summary": "Anthropic's own update on using Claude to speed up drug development, with a busy Hacker News discussion. Useful background for life sciences clients.",
+          "published": "2026-10-29T03:33:42+00:00",
+          "summary": "Unverified, but the 86-comment thread is a useful starting point when clients ask what an agent sends and where.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code user reports usage spike and drained paid limits",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xh3yyu/claude_code_usage_exploded_8x_today_anthropic/",
+          "title": "Opus 5.5 put a user's email address in an outside request",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xhqvzn/opus_55_just_shared_my_email_address/",
+          "source": "r/ClaudeCode",
+          "published": "2026-10-28T15:16:58+00:00",
+          "summary": "A user's burner email address ended up in a request's User-Agent header while Claude researched stock lists. A reminder to check agent requests.",
+          "thumbnail": null
+        },
+        {
+          "title": "Anthropic guide argues most agents need fewer subagents",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xdwquj/anthropics_new_guide_oct_22_argues_most_agents/",
           "source": "r/ClaudeAI",
-          "published": "2026-10-27T20:34:10+00:00",
-          "summary": "A Pro subscriber says service errors drained their five-hour allowance and Anthropic will not compensate. One user's account, but useful if your team hits limits.",
+          "published": "2026-10-24T02:15:23+00:00",
+          "summary": "Anthropic's Oct 22 guide, summarised here, favours one agent loop with skills and tool search. Useful if you design agent setups for clients.",
+          "thumbnail": null
+        },
+        {
+          "title": "Users share the one CLAUDE.md line that changed Claude Code most",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xeautc/whats_the_one_line_in_your_claudemd_that_made_the/",
+          "source": "r/ClaudeCode",
+          "published": "2026-10-24T15:00:09+00:00",
+          "summary": "Readers share the single CLAUDE.md instruction that changed behaviour most; the opening example batches reads, edits and one test run. Quick ideas to copy.",
+          "thumbnail": null
+        },
+        {
+          "title": "OpenAI data shows how people use ChatGPT across 165 work activities",
+          "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+          "source": "OpenAI",
+          "published": "2026-10-26T10:00:00+00:00",
+          "summary": "OpenAI Signals data on 165 work activities across nearly 100 countries shows how people use ChatGPT for work. Handy evidence for adoption conversations.",
           "thumbnail": null
         }
       ]
