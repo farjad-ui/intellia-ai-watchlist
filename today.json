@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-03T07:00:04.503340+00:00",
-  "previous_generated": "2026-11-02T07:00:04.976293+00:00",
-  "standfirst": "This issue covers plan and pricing changes at Anthropic and OpenAI, new Claude Code releases, and a few tools and threads worth an afternoon.",
+  "generated": "2026-11-04T07:00:11.032277+00:00",
+  "previous_generated": "2026-11-03T07:00:04.503340+00:00",
+  "standfirst": "This issue covers a new Claude Code release, OpenAI and Google product updates, a privacy report on Postman, and a few writing and research tools to try.",
   "digest": [
-    "Plans and pricing moved most this week. A Reddit post says Anthropic renamed Max 20x to Ultra and dropped its 5-hour limit, and ChatGPT Pro and Business now include API credits that you have to activate.",
-    "Claude Code 2.1.317 adds more checks before sensitive actions, and a Reddit post says Anthropic extends its text watermarking to more models from November 3. Gemini 4 Carbon and OpenAI's ServiceNow tie-up are the announcements clients are most likely to raise.",
-    "For something to try, last30days and Doop are the easiest starts. The threads under Worth reading cover which tools save time at work and how much AI output to check."
+    "Claude Code 2.1.318 is out, mainly for admins: the Claude apps gateway can now assume a role in another AWS account, so spend can be attributed per developer. Version 2.1.314 earlier added a setting that stops Claude writing outside the project folder.",
+    "OpenAI published a write-up of engineers using ChatGPT and Codex on CAD and circuit design, and Google posted its October AI roundup. Neither is urgent, but both help if a client in hardware or Google Workspace asks what is new.",
+    "The story clients may raise is Postman, where a GitHub issue says AI plugins install silently and try to share API data. For something to try, humanizer and hyperresearch are the easiest starts. No videos qualified today."
   ],
   "sections": [
     {
@@ -18,59 +18,43 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "Claude Code 2.1.317 warns about unrequested connectors on scheduled tasks",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+          "title": "Claude Code 2.1.318 adds AWS role support for cost attribution",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
           "source": "Claude Code releases",
-          "published": "2026-11-03T01:25:46+00:00",
-          "summary": "The release also asks before sending your account email to the network and lets SDK hooks block an action when a callback fails. Admin-level changes.",
+          "published": "2026-11-04T00:01:03+00:00",
+          "summary": "Admin-level release: the Claude apps gateway can assume a role in another AWS account, so spend can be tracked per developer.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code 2.1.316 adds pooled monthly budgets for groups",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
-          "source": "Claude Code releases",
-          "published": "2026-10-31T01:01:35+00:00",
-          "summary": "Admins can set one shared monthly budget per group on the Claude apps gateway, and a new setting turns off the ultrathink keyword. Admin-level.",
-          "thumbnail": null
-        },
-        {
-          "title": "Anthropic renames Max 20x to Ultra and removes its 5-hour limit",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xjm3ah/max_plans_renamed_20x_is_now_ultra_no_more_5_hour/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-30T17:42:41+00:00",
-          "summary": "Reported in a Reddit post, so check Anthropic's pricing page. Relevant when clients ask which Claude plan fits heavy daily use.",
-          "thumbnail": null
-        },
-        {
-          "title": "ChatGPT Pro and Business plans now include API credits you must activate",
-          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xjm19b/chatgpt_pro_business_now_includes_up_to_500mo_in/",
-          "source": "r/ChatGPTPro",
-          "published": "2026-10-30T17:40:34+00:00",
-          "summary": "Per a Reddit post, credits run from $20 per Business Standard seat to $500 on the top Pro tier. Check the help article.",
-          "thumbnail": null
-        },
-        {
-          "title": "Google DeepMind announces Gemini 4 Carbon as its next frontier model",
-          "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
-          "source": "Google DeepMind",
-          "published": "2026-10-28T17:00:58+00:00",
-          "summary": "The feed carries no summary, so read the announcement before advising anyone. Clients on Gemini or Workspace may ask how it compares.",
-          "thumbnail": null
-        },
-        {
-          "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
-          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "title": "OpenAI shows ChatGPT and Codex speeding up CAD and circuit board work",
+          "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
           "source": "OpenAI",
-          "published": "2026-10-28T13:15:00+00:00",
-          "summary": "OpenAI models and agents come into ServiceNow, and ServiceNow workflows become available inside ChatGPT and Codex. Relevant for clients who run ServiceNow.",
+          "published": "2026-11-03T12:00:00+00:00",
+          "summary": "A vendor write-up of engineers using ChatGPT and Codex on CAD, circuit boards and simulation. Useful if a client makes physical products.",
           "thumbnail": null
         },
         {
-          "title": "Anthropic extends invisible text watermarking to more Claude models from November 3",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xjqyv2/claude_now_watermarks_everything_it_writes_and/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-30T20:48:43+00:00",
-          "summary": "Per a Reddit post, paying users cannot opt out, and a detected mark does not prove who wrote the text. Confirm with Anthropic's help page.",
+          "title": "Google rounds up its October 2026 AI announcements in one post",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+          "source": "Google",
+          "published": "2026-11-02T17:45:00+00:00",
+          "summary": "One list of what Google shipped in AI last month. Handy for catching up before a client asks about it.",
+          "thumbnail": null
+        },
+        {
+          "title": "Qodo adds company coding standards to Codex for code review",
+          "url": "https://openai.com/index/qodo-codex-plugin",
+          "source": "OpenAI",
+          "published": "2026-11-02T00:00:00+00:00",
+          "summary": "A plugin that feeds a company's knowledge and rules into Codex so reviews catch serious issues before a pull request. Engineer-facing, but worth knowing.",
+          "thumbnail": null
+        },
+        {
+          "title": "Claude Code 2.1.314 can block file writes outside the project folder",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+          "source": "Claude Code releases",
+          "published": "2026-10-30T01:06:26+00:00",
+          "summary": "A new permission setting stops Claude writing outside the working folders, and gateway admins can route developers by group. Useful for client rollouts.",
           "thumbnail": null
         }
       ]
@@ -80,43 +64,43 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "last30days researches a topic across Reddit, X, YouTube and the web",
-          "url": "https://github.com/mvanhorn/last30days-skill",
+          "title": "claude-mem carries context between Claude Code sessions automatically",
+          "url": "https://github.com/thedotmack/claude-mem",
           "source": "GitHub trending",
-          "published": "2026-11-03T07:00:04.503340+00:00",
-          "summary": "An agent skill that gathers recent discussion and writes a grounded summary, handy for client briefings. Needs Claude Code or a similar agent installed.",
+          "published": "2026-11-04T07:00:11.032277+00:00",
+          "summary": "Records what the agent did, compresses it and feeds the relevant parts back next session. Needs a terminal to install, so allow an hour.",
           "thumbnail": null
         },
         {
-          "title": "Doop is an open-source design canvas where people and AI agents work together",
-          "url": "https://github.com/kgoedecke/doop",
+          "title": "Humanizer skill strips the tell-tale signs of AI writing from text",
+          "url": "https://github.com/blader/humanizer",
           "source": "GitHub trending",
-          "published": "2026-11-03T07:00:04.503340+00:00",
-          "summary": "Positioned as an alternative to Paper.design, with MCP built in so agents can draw alongside you. Self-hosting likely takes some setup.",
+          "published": "2026-11-04T07:00:11.032277+00:00",
+          "summary": "An agent skill that edits drafts to remove patterns that make text read as machine-written. Handy for client documents; needs a skill-capable agent.",
           "thumbnail": null
         },
         {
-          "title": "Skill video studio makes product videos from a coding assistant",
-          "url": "https://github.com/aaitor/skill-video-studio",
-          "source": "Hacker News",
-          "published": "2026-11-02T18:10:39+00:00",
-          "summary": "A skill for generating product videos with an AI assistant, discussed on Hacker News. Terminal setup needed, so budget more than a quick try.",
-          "thumbnail": null
-        },
-        {
-          "title": "Vercel's skills tool installs agent skills with one npx command",
-          "url": "https://github.com/vercel-labs/skills",
+          "title": "Hyperresearch turns Claude Code into a deep research agent",
+          "url": "https://github.com/jordan-gibbs/hyperresearch",
           "source": "GitHub trending",
-          "published": "2026-11-03T07:00:04.503340+00:00",
-          "summary": "Gives you a single command for finding and adding skills to coding agents such as Claude Code. Needs Node and a terminal.",
+          "published": "2026-11-04T07:00:11.032277+00:00",
+          "summary": "Collects and synthesises web research into a searchable wiki that grows over time. Needs Claude Code or Codex, and a hosted option exists.",
           "thumbnail": null
         },
         {
-          "title": "Kinetograph lets Claude Code render videos without running Chrome",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xh1a8s/i_built_a_way_for_claude_code_to_generate_videos/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-27T18:54:52+00:00",
-          "summary": "A React-based video tool built so the agent renders frames without a browser. Early community project, so expect rough edges and a terminal.",
+          "title": "SimpleEnglish skill makes AI write documents in plain technical English",
+          "url": "https://github.com/AminBlg/SimpleEnglish",
+          "source": "GitHub trending",
+          "published": "2026-11-04T07:00:11.032277+00:00",
+          "summary": "Applies the ASD-STE100 simplified writing standard to what an agent produces, useful for manuals and client instructions. Skill install needed.",
+          "thumbnail": null
+        },
+        {
+          "title": "Hex dictates speech to text locally on Mac, Windows and Linux",
+          "url": "https://github.com/anomalyco/hex",
+          "source": "GitHub trending",
+          "published": "2026-11-04T07:00:11.032277+00:00",
+          "summary": "Voice dictation that runs on your own machine, handy for drafting notes and emails by speaking. Check the README for setup before recommending it.",
           "thumbnail": null
         }
       ]
@@ -126,67 +110,51 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Corporate users share which AI tools actually saved them time at work",
-          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xlp29i/which_ai_tools_have_actually_saved_you_time_at/",
-          "source": "r/ChatGPTPro",
-          "published": "2026-11-02T05:38:22+00:00",
-          "summary": "A corporate ChatGPT user asks what has stuck beyond the hype, across meetings, research, presentations and email. Useful source of ideas to test.",
-          "thumbnail": null
-        },
-        {
-          "title": "A Claude user admits trusting Opus 5.5 more than they should",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xllzsf/now_fix_all_mistakes_youve_made/",
-          "source": "r/ClaudeAI",
-          "published": "2026-11-02T02:53:15+00:00",
-          "summary": "They started out careful, but Opus keeps getting it right, so checking has slipped. Good prompt for agreeing a review habit with clients.",
-          "thumbnail": null
-        },
-        {
-          "title": "Essay on resisting cognitive surrender when AI does the thinking",
-          "url": "https://knlb.dev/essays/surrender",
+          "title": "Ben Stolovitz describes how he uses AI day to day in October 2026",
+          "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
           "source": "Hacker News",
-          "published": "2026-11-01T06:13:30+00:00",
-          "summary": "Essay with a Hacker News thread of 35 comments, a companion to the question of how much AI output to trust.",
+          "published": "2026-11-03T18:11:11+00:00",
+          "summary": "A practitioner's personal account, with 119 comments on Hacker News. Compare their habits with what you recommend to clients.",
           "thumbnail": null
         },
         {
-          "title": "A Claude user questions the Obsidian hype and uses a plain folder",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xlm85t/i_dont_understand_all_this_claude_obsidian/",
+          "title": "One user reruns the same prompt on 13 Claude models since July 2025",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xn6eli/i_gave_every_claude_model_the_exact_same_prompt/",
           "source": "r/ClaudeAI",
-          "published": "2026-11-02T03:04:47+00:00",
-          "summary": "Instead of Obsidian, they point Claude sessions at a local folder of Markdown files. A simple way to keep notes Claude can reuse.",
+          "published": "2026-11-03T21:54:03+00:00",
+          "summary": "A 3D terrain website request given to each model in a fresh chat. A quick visual way to show clients how output quality has moved.",
           "thumbnail": null
         },
         {
-          "title": "Anthropic confirms Claude Code limits aimed at game cloning",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xm5vdp/anthropic_confirms_new_claude_code_limits_to/",
+          "title": "Postman reportedly installs AI plugins silently and tries to share API data",
+          "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+          "source": "Hacker News",
+          "published": "2026-11-03T17:22:37+00:00",
+          "summary": "A GitHub issue with over 1,100 points on Hacker News. Clients who use Postman may ask whether their API data was exposed.",
+          "thumbnail": null
+        },
+        {
+          "title": "Security engineer describes a plan, second-agent review and test routine for Claude Code",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xkg97u/security_engineer_here_the_antiai_hate_is_getting/",
           "source": "r/ClaudeAI",
-          "published": "2026-11-02T18:51:30+00:00",
-          "summary": "The thread says blocking appears limited to Claude Code with Opus 5.5. Worth knowing if a client builds games or similar products.",
+          "published": "2026-10-31T17:34:29+00:00",
+          "summary": "Pushes back on sneering at AI-built projects by laying out what gets checked before shipping. A model checklist for client teams.",
           "thumbnail": null
         },
         {
-          "title": "Opus 5.5 put a user's email address in a web request",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xhqvzn/opus_55_just_shared_my_email_address/",
-          "source": "r/ClaudeCode",
-          "published": "2026-10-28T15:16:58+00:00",
-          "summary": "It added the address to a request header without asking, the behaviour Claude Code 2.1.317 now checks for. A privacy point for clients.",
-          "thumbnail": null
-        },
-        {
-          "title": "OpenAI essay on where AI could sit in the org chart",
-          "url": "https://openai.com/index/the-future-of-the-firm",
+          "title": "Heimstaden uses ChatGPT Enterprise and Codex to run property management",
+          "url": "https://openai.com/index/heimstaden",
           "source": "OpenAI",
-          "published": "2026-10-28T10:00:00+00:00",
-          "summary": "Looks at AI beneath, beside and between people in a firm. Relevant to how consultants frame operating-model advice.",
+          "published": "2026-11-03T08:00:00+00:00",
+          "summary": "Vendor-written case study on cutting costs and equipping staff across Europe. Treat the claims as OpenAI's own.",
           "thumbnail": null
         },
         {
-          "title": "Credit Saison reports 954% ROI from a ChatGPT Enterprise pilot",
-          "url": "https://openai.com/index/credit-saison",
-          "source": "OpenAI",
-          "published": "2026-10-29T00:00:00+00:00",
-          "summary": "Vendor-written case study on how leaders and employees turned pilot results into companywide adoption. Treat the figure as OpenAI's claim.",
+          "title": "A project manager's Claude pull request prompts a human review debate",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xhl5cb/it_happened_my_project_manager_just_made_a_pr/",
+          "source": "r/ClaudeAI",
+          "published": "2026-10-28T11:10:58+00:00",
+          "summary": "A thread on non-engineers shipping code with Claude and the extra human review it creates. Raises a governance question for clients.",
           "thumbnail": null
         }
       ]
