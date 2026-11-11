@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-06T07:00:04.150428+00:00",
-  "previous_generated": "2026-11-05T07:02:58.636958+00:00",
-  "standfirst": "This issue covers Google's cheaper video model, a Claude Code release for admins, and a privacy issue clients may ask about.",
+  "generated": "2026-11-11T07:00:07.260329+00:00",
+  "previous_generated": "2026-11-06T07:00:04.150428+00:00",
+  "standfirst": "This issue covers Anthropic's new Fable 5.2 and Mythos 5.2 models, Google's Gemini 4 Carbon, and Office skills you can try this week.",
   "digest": [
-    "Google released Gemini Omni 1.2 Flash, which makes 15-second videos and edits them, with better consistency and prices 30% lower. Claude Code 2.1.318 added per-developer AWS cost attribution for the Claude apps gateway. No videos qualified today.",
-    "For a consultant, the practical point is trust. A Hacker News issue reports that Claude Code sent users' email addresses to websites, and 2.1.317 now asks before doing that. If a client is rolling out Claude Code, tell them to update and check their settings.",
-    "For something to try, google/skills and ConardLi's garden-skills are ready-made skill sets, and the Figma console MCP connects an assistant to a design system. The MCP explainer is good background before you recommend connectors."
+    "Anthropic released Claude Fable 5.2 and Mythos 5.2 on 9 November. Claude Code 2.1.321 made Fable 5.2 the default Fable model, with a 1M context window and pricing of $8 and $40 per million tokens. Google followed with Gemini 4 Carbon, and OpenAI put ChatGPT Enterprise on AWS Marketplace.",
+    "For a consultant, the practical points are cost and procurement. Clients on Claude Code will ask what Fable 5.2 costs, and clients buying through AWS can now add ChatGPT Enterprise to an existing bill. Claude's new Sheets, Whiteboards and Data features are worth a look before those conversations.",
+    "For something to try, Anthropic's own skills repository and its Office skills (Word, PDF, PowerPoint, Excel) are the easiest start, and the Figma MCP guide shows how a connector is set up. The Reddit threads on a 100% AI mandate and on sandboxing are useful background for client risk talks."
   ],
   "sections": [
     {
@@ -18,27 +18,67 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "Gemini Omni 1.2 Flash generates 15-second video at 30% lower price",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-          "source": "Google",
-          "published": "2026-11-05T17:00:00+00:00",
-          "summary": "Native video generation and editing with stronger consistency across a clip, priced 30% lower. Worth a test if clients ask about AI video costs.",
+          "title": "Anthropic releases Claude Fable 5.2 and Claude Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "source": "Anthropic",
+          "published": "2026-11-09T00:00:00+00:00",
+          "summary": "Anthropic's new top models, aimed at technical work in coding, finance and the sciences. Available now, so clients on Claude will ask about them.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code 2.1.318 adds per-developer AWS cost attribution",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+          "title": "Claude Code 2.1.321 makes Fable 5.2 the default Fable model",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
           "source": "Claude Code releases",
-          "published": "2026-11-04T00:01:03+00:00",
-          "summary": "Adds assume_role for the Claude apps gateway so spend can be tracked per developer across AWS accounts. Mostly relevant to IT teams running rollouts.",
+          "published": "2026-11-09T19:22:30+00:00",
+          "summary": "Fable 5.2 gets a 1M context window and costs $8 input and $40 output per million tokens. Just update Claude Code to use it.",
           "thumbnail": null
         },
         {
-          "title": "Google's October 2026 AI announcements collected in one post",
-          "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+          "title": "Claude Code 2.1.322 adds fast mode on Vertex",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+          "source": "Claude Code releases",
+          "published": "2026-11-10T02:29:43+00:00",
+          "summary": "Fast mode now works on Google Vertex in the global, US and EU regions. Relevant to IT teams running Claude Code on Google Cloud.",
+          "thumbnail": null
+        },
+        {
+          "title": "Google DeepMind makes Gemini 4 Carbon available",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "source": "Google DeepMind",
+          "published": "2026-11-10T16:03:47+00:00",
+          "summary": "A new Gemini model is out. The announcement post is the place to check what it does and how it is priced before clients ask.",
+          "thumbnail": null
+        },
+        {
+          "title": "ChatGPT Enterprise is now available in AWS Marketplace",
+          "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+          "source": "OpenAI",
+          "published": "2026-11-09T19:00:00+00:00",
+          "summary": "Companies can buy ChatGPT Enterprise through their existing AWS billing. This removes a procurement hurdle for clients already committed to AWS.",
+          "thumbnail": null
+        },
+        {
+          "title": "OpenAI introduces Businesses in ChatGPT",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt",
+          "source": "OpenAI",
+          "published": "2026-11-10T10:00:00+00:00",
+          "summary": "Lets a business manage its information and see how it appears in ChatGPT. Worth a look for retail and local-services clients.",
+          "thumbnail": null
+        },
+        {
+          "title": "Google and Adobe bring PDF editing and Adobe AI into Google apps",
+          "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
           "source": "Google",
-          "published": "2026-11-02T17:45:00+00:00",
-          "summary": "A one-page recap of the month's Google AI releases. Quick way to catch up before a client asks about Gemini.",
+          "published": "2026-11-10T14:00:00+00:00",
+          "summary": "You can edit PDFs inside Drive and use Adobe's AI from Gemini. Useful for teams already working in Google Workspace.",
+          "thumbnail": null
+        },
+        {
+          "title": "Gemini Intelligence rolls out to more Android devices",
+          "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+          "source": "Google",
+          "published": "2026-11-10T19:00:00+00:00",
+          "summary": "Google's on-phone Gemini features are reaching more devices with expanded capabilities. Check your own phone, since there is nothing to install.",
           "thumbnail": null
         }
       ]
@@ -48,43 +88,59 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "Google publishes agent skills for its own products and technologies",
-          "url": "https://github.com/google/skills",
+          "title": "Anthropic's skills repository collects public Agent Skills in one place",
+          "url": "https://github.com/anthropics/skills",
           "source": "GitHub trending",
-          "published": "2026-11-06T07:00:04.150428+00:00",
-          "summary": "A repository of ready-made skills for working with Google products from an AI agent. Copy the relevant ones into Claude Code; allow an hour.",
+          "published": "2026-11-11T07:00:07.260329+00:00",
+          "summary": "Anthropic's own library of ready-made skills for Claude. Copy one into Claude Code or Claude.ai and try it in an afternoon.",
           "thumbnail": null
         },
         {
-          "title": "ConardLi's garden-skills collects skills for web design, retrieval and images",
-          "url": "https://github.com/ConardLi/garden-skills",
-          "source": "GitHub trending",
-          "published": "2026-11-06T07:00:04.150428+00:00",
-          "summary": "An open-source skills set covering web design, knowledge retrieval and image generation. Install into your agent and test one skill at a time.",
+          "title": "Anthropic's Word, PDF, PowerPoint and Excel skills move to Apache 2.0",
+          "url": "https://github.com/anthropics/skills/commit/2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+          "source": "Anthropic skills repo",
+          "published": "2026-11-06T22:32:28+00:00",
+          "summary": "The document, slide and spreadsheet skills now use the same open license as other skills, which makes them easier to share with clients.",
           "thumbnail": null
         },
         {
-          "title": "Figma console MCP lets AI read, build and debug your design system",
-          "url": "https://github.com/southleft/figma-console-mcp",
+          "title": "Academic research skills for Claude Code cover research through to final draft",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
           "source": "GitHub trending",
-          "published": "2026-11-06T07:00:04.150428+00:00",
-          "summary": "Connects an AI assistant to Figma to extract design data, create components and debug files. Useful for design-minded consultants; needs a Figma setup.",
+          "published": "2026-11-11T07:00:07.260329+00:00",
+          "summary": "A skill set that walks Claude through research, writing, review and revision. Handy for long reports; install is a copy-paste job.",
           "thumbnail": null
         },
         {
-          "title": "MoneyPrinterTurbo generates short videos from a topic or keyword",
-          "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "title": "Figma publishes a guide to using its MCP server",
+          "url": "https://github.com/figma/mcp-server-guide",
           "source": "GitHub trending",
-          "published": "2026-11-06T07:00:04.150428+00:00",
-          "summary": "Give it a topic and an automated workflow produces an HD short video. Handy for quick social drafts; expect some install work.",
+          "published": "2026-11-11T07:00:07.260329+00:00",
+          "summary": "Step-by-step guidance for connecting an AI assistant to Figma designs. A good model for how a connector is set up; needs a Figma account.",
           "thumbnail": null
         },
         {
-          "title": "Switch runs open-source AI teammates inside Slack, Teams and Discord",
-          "url": "https://github.com/sandbox-quantum/switch",
+          "title": "Google's Stitch skills work with the Stitch MCP server",
+          "url": "https://github.com/google-labs-code/stitch-skills",
           "source": "GitHub trending",
-          "published": "2026-11-06T07:00:04.150428+00:00",
-          "summary": "Self-hosted AI coworkers in your team chat that work with any model. Needs IT to host, so treat it as a pilot idea.",
+          "published": "2026-11-11T07:00:07.260329+00:00",
+          "summary": "Skills for Google's Stitch design tool that run in Claude Code, Gemini CLI and Cursor. Try after you have a Stitch connection working.",
+          "thumbnail": null
+        },
+        {
+          "title": "Open SEO offers an open source alternative to Semrush and Ahrefs",
+          "url": "https://github.com/every-app/open-seo",
+          "source": "GitHub trending",
+          "published": "2026-11-11T07:00:07.260329+00:00",
+          "summary": "A free SEO research tool for clients with small budgets. You may need some technical help to host it.",
+          "thumbnail": null
+        },
+        {
+          "title": "VoiceStudio runs voice cloning, dubbing and transcription locally",
+          "url": "https://github.com/debpalash/VoiceStudio",
+          "source": "GitHub trending",
+          "published": "2026-11-11T07:00:07.260329+00:00",
+          "summary": "An open-source, fully local alternative to ElevenLabs that also does dictation and audiobooks. Useful for meeting transcripts; expect some install work.",
           "thumbnail": null
         }
       ]
@@ -94,59 +150,59 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Claude Code reported sending your email address to websites",
-          "url": "https://github.com/anthropics/claude-code/issues/107757",
+          "title": "Claude adds Whiteboards, Sheets and Data",
+          "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
           "source": "Hacker News",
-          "published": "2026-11-05T22:17:15+00:00",
-          "summary": "A heavily discussed issue with 292 comments; version 2.1.317 now asks before a web or shell call shares your account email. Update before client work.",
+          "published": "2026-11-10T17:55:07+00:00",
+          "summary": "Anthropic's guide to three new Claude features, discussed in 139 comments. Read it before your next client workshop.",
           "thumbnail": null
         },
         {
-          "title": "MCP Explained walks through how the Model Context Protocol works",
-          "url": "https://mcp-explained.com/",
+          "title": "Claude's new Personal Finance tool analyzes your spending",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xp0qxj/claude_can_now_analyze_your_spending_with_its_new/",
+          "source": "r/ClaudeAI",
+          "published": "2026-11-06T01:53:28+00:00",
+          "summary": "A Reddit post about Claude's spending-analysis feature. Try it on your own accounts first to see what it can do.",
+          "thumbnail": null
+        },
+        {
+          "title": "Apple plans a Mac app for running local AI models",
+          "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
           "source": "Hacker News",
-          "published": "2026-11-05T14:08:35+00:00",
-          "summary": "An explainer on the protocol behind many AI connectors, discussed in 119 comments. Useful background before you recommend connectors to a client.",
+          "published": "2026-11-10T21:25:03+00:00",
+          "summary": "A report on an Apple app that makes local models easy to run, with 121 comments. Relevant when clients ask about keeping data on-device.",
           "thumbnail": null
         },
         {
-          "title": "Closed AI models now lead the price-performance frontier, one analysis argues",
-          "url": "https://village.dev/blog/closed-ai-models-now-dominate-the-price-performance-frontier/",
-          "source": "Hacker News",
-          "published": "2026-11-06T02:49:56+00:00",
-          "summary": "Argues paid models beat open ones on cost for a given quality, with 43 comments. Useful when a client asks whether open models save money.",
-          "thumbnail": null
-        },
-        {
-          "title": "Opus 5.5 with Blender MCP works best when tasks are small",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xmcwbt/opus_55_medium_with_blender_mcp_is_insane_with/",
+          "title": "One prompt that breaks a big task into 30-minute steps",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xr0drc/whats_the_one_prompt_you_keep_coming_back_to/",
           "source": "r/ClaudeAI",
-          "published": "2026-11-02T23:21:35+00:00",
-          "summary": "A game developer's tip: give Claude a bite-sized task list instead of the whole project. The same habit helps with any multi-step brief.",
+          "published": "2026-11-08T15:01:02+00:00",
+          "summary": "A user shares a prompt that splits any project into small steps with done-checks, and replies add other favourites. Copy it today.",
           "thumbnail": null
         },
         {
-          "title": "A Markdown spec before prompting Claude, and Google's spec method",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xkn61s/for_over_a_year_ive_spent_a_full_day_writing_a/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-31T22:27:55+00:00",
-          "summary": "A long-time user explains why a written spec stops agent threads drifting by day three. Worth reading before your next big build.",
+          "title": "Two Claude Code settings that stretch usage limits",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xo6dfy/thanks_to_two_lines_in_the_claude_setting_i_was/",
+          "source": "r/ClaudeCode",
+          "published": "2026-11-05T01:48:40+00:00",
+          "summary": "A user reports lasting through three 5-hour windows after changing two auto-compact lines in settings. A five-minute change, though results may vary.",
           "thumbnail": null
         },
         {
-          "title": "A security engineer's workflow for building with Claude Code",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xkg97u/security_engineer_here_the_antiai_hate_is_getting/",
-          "source": "r/ClaudeAI",
-          "published": "2026-10-31T17:34:29+00:00",
-          "summary": "Plan first, have a second agent review, then test by hand before shipping. A simple review routine you can borrow for client deliverables.",
+          "title": "Why so few people sandbox Claude on work machines",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xp5c6f/how_come_so_few_people_seems_to_bother_sandboxing/",
+          "source": "r/ClaudeCode",
+          "published": "2026-11-06T05:56:47+00:00",
+          "summary": "A newcomer notices IT installed Claude Desktop with no sandboxing, and replies debate the risk. Good prompts for a client security conversation.",
           "thumbnail": null
         },
         {
-          "title": "Franklin Templeton builds AI research workflows for portfolio managers with OpenAI",
-          "url": "https://openai.com/index/franklin-templeton",
-          "source": "OpenAI",
-          "published": "2026-11-05T00:00:00+00:00",
-          "summary": "A finance case study starting with equity research, comparing research views and examining risks. Handy example for financial services clients.",
+          "title": "A year after a 100% AI mandate, nobody understands the code",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/",
+          "source": "r/ClaudeCode",
+          "published": "2026-11-07T09:46:23+00:00",
+          "summary": "An engineer describes a codebase that tripled in size while understanding shrank. A useful cautionary story for clients pushing AI-only rules.",
           "thumbnail": null
         }
       ]
