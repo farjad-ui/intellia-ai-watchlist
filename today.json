@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-12T07:00:09.908335+00:00",
-  "previous_generated": "2026-11-11T07:00:07.260329+00:00",
-  "standfirst": "This issue covers new Google releases, customer case studies you can reuse with clients, and a few free tools worth an afternoon.",
+  "generated": "2026-11-13T07:00:06.892915+00:00",
+  "previous_generated": "2026-11-12T07:00:09.908335+00:00",
+  "standfirst": "This issue covers Google's Gemini 4 Hydrogen launch, a new experimental mode in Claude Code, and customer stories you can reuse with clients.",
   "digest": [
-    "It is a quiet day after Fable 5.2, Mythos 5.2 and Gemini 4 Carbon, which were in yesterday's issue. New today are Google Labs' Tabletop, Gemini for healthcare and a Gemini Decisions API announcement. Gemini Omni 1.2 Flash, from last week, adds short video generation at 30% lower pricing.",
-    "For a consultant, the most useful material is in the case studies and the cautions. Kuken, Singapore Airlines and JioStar give concrete numbers and lessons you can reuse in client conversations. United's ban on AI booking agents shows that companies are starting to restrict what agents can do.",
-    "To try something, Yogurt is a free meeting-notes app, SimpleEnglish is a skill for plain technical writing, and Jane Street's Socratic tutor is a single file you can copy. Read the thread on Claude Code wiping a Mac's Library folder before advising a client on agent permissions."
+    "Google released Gemini 4 Hydrogen and is already putting it into Google Search, so clients will see it in everyday results soon. Claude Code 2.1.323 adds Code Mode, an experimental option where Claude writes JavaScript to call its tools. OpenAI introduced Businesses in ChatGPT, and ChatGPT Enterprise is now available through AWS Marketplace.",
+    "For a consultant, the AWS Marketplace listing matters most for clients who buy through existing cloud contracts. The Amplitude, Holiday Extras, Gondola and Gilbert + Tobin stories give you concrete examples of AI work inside real companies. Microsoft 365 had a global outage yesterday, so expect questions about relying on one vendor.",
+    "To try something this week, last30days is a research skill, SkillSpector checks skills for risks before you install them, and Anthropic has moved its Word, PDF, PowerPoint and Excel skills to the Apache 2.0 license."
   ],
   "sections": [
     {
@@ -18,35 +18,59 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "Google Labs launches Tabletop for group planning and play",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
-          "source": "Google",
-          "published": "2026-11-11T16:00:00+00:00",
-          "summary": "A Google Labs experiment for building shared itineraries, polls and brackets with a team. Waitlist only for now, so there is nothing to try yet.",
+          "title": "Google introduces Gemini 4 Hydrogen",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+          "source": "Google DeepMind",
+          "published": "2026-11-12T18:00:50+00:00",
+          "summary": "Google's newest Gemini model, launched yesterday and the main story of the day. Read it first, because clients will ask how it compares with what they use.",
           "thumbnail": null
         },
         {
-          "title": "Google Cloud launches Gemini for healthcare",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "title": "Google Search gets Gemini 4 Hydrogen for more visual answers",
+          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
           "source": "Google",
-          "published": "2026-11-10T13:00:00+00:00",
-          "summary": "Aims to cut administrative work by pulling clinical data together and automating workflows. A useful talking point for health clients. Needs Google Cloud.",
+          "published": "2026-11-12T18:00:00+00:00",
+          "summary": "The new model is rolling out globally in Search, with more visual responses. Nothing to set up, but it changes what your clients see when they search.",
           "thumbnail": null
         },
         {
-          "title": "Gemini Omni 1.2 Flash adds 15-second video and lower pricing",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-          "source": "Google",
-          "published": "2026-11-05T17:00:00+00:00",
-          "summary": "Native video generation and editing with better consistency across clips, at 30% lower pricing. Worth a test for quick marketing video mockups.",
+          "title": "Claude Code 2.1.323 adds an experimental Code Mode",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+          "source": "Claude Code releases",
+          "published": "2026-11-12T22:12:13+00:00",
+          "summary": "Code Mode lets Claude write JavaScript to call its tools, and it is opt-in. Organizations can switch it off, which is worth knowing for client rollouts.",
           "thumbnail": null
         },
         {
-          "title": "Google announces the Gemini Decisions API",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
-          "source": "Hacker News",
-          "published": "2026-11-11T18:32:42+00:00",
-          "summary": "Google's announcement of a new Gemini API, with 120 Hacker News comments. Read the post before a client asks what it does.",
+          "title": "OpenAI introduces Businesses in ChatGPT",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt",
+          "source": "OpenAI",
+          "published": "2026-11-10T10:00:00+00:00",
+          "summary": "Business owners can manage their information, see how they show up in ChatGPT and act on customer interest. Relevant for retail and local-business clients.",
+          "thumbnail": null
+        },
+        {
+          "title": "ChatGPT Enterprise is now available in AWS Marketplace",
+          "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+          "source": "OpenAI",
+          "published": "2026-11-09T19:00:00+00:00",
+          "summary": "Clients can buy it through their existing AWS contracts and billing, which removes a procurement step. Useful to mention to AWS-heavy organizations.",
+          "thumbnail": null
+        },
+        {
+          "title": "Gemini Intelligence rolls out new features on more devices",
+          "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+          "source": "Google",
+          "published": "2026-11-10T19:00:00+00:00",
+          "summary": "Google's assistant features on Android are reaching more devices this month. Check your own phone, since clients with Android fleets may ask about it.",
+          "thumbnail": null
+        },
+        {
+          "title": "Google and Adobe bring PDF editing and Adobe AI into Google apps",
+          "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+          "source": "Google",
+          "published": "2026-11-10T14:00:00+00:00",
+          "summary": "You can edit PDFs inside Drive and use Adobe's AI tools within Gemini. A practical change for teams that live in Google Workspace.",
           "thumbnail": null
         }
       ]
@@ -56,27 +80,59 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "SimpleEnglish skill makes AI write documents in simplified technical English",
-          "url": "https://github.com/AminBlg/SimpleEnglish",
+          "title": "last30days skill researches a topic across Reddit, X, YouTube and the web",
+          "url": "https://github.com/mvanhorn/last30days-skill",
           "source": "GitHub trending",
-          "published": "2026-11-12T07:00:09.908335+00:00",
-          "summary": "An agent skill that has the model follow the ASD-STE100 plain-English standard for documentation. Useful for manuals and handover documents, and easy to try.",
+          "published": "2026-11-13T07:00:06.892915+00:00",
+          "summary": "A skill that gathers recent discussion on any topic and writes a grounded summary. Handy for client research before a meeting, and quick to install.",
           "thumbnail": null
         },
         {
-          "title": "Yogurt is a free, private, open source alternative to Granola",
-          "url": "https://github.com/FrigadeHQ/yogurt",
-          "source": "Hacker News",
-          "published": "2026-11-11T15:33:06+00:00",
-          "summary": "A free, private meeting-notes app pitched as a Granola replacement. Good for client calls; check the setup steps first.",
+          "title": "SkillSpector scans agent skills for risks before you install them",
+          "url": "https://github.com/NVIDIA/SkillSpector",
+          "source": "GitHub trending",
+          "published": "2026-11-13T07:00:06.892915+00:00",
+          "summary": "NVIDIA's checker looks for malicious patterns and data leaks in Claude Code, Codex and MCP skills. Worth knowing when advising clients on skill safety.",
           "thumbnail": null
         },
         {
-          "title": "Jane Street shares a Socratic tutor skill for AI assistants",
-          "url": "https://github.com/janestreet/agent_skills/blob/master/socratic-tutor/SKILL.md",
-          "source": "Hacker News",
-          "published": "2026-11-10T10:18:22+00:00",
-          "summary": "A skill that makes the assistant teach by asking questions instead of handing over answers. Good for learning a new domain; one file to copy.",
+          "title": "Anthropic moves its Word, PDF, PowerPoint and Excel skills to Apache 2.0",
+          "url": "https://github.com/anthropics/skills/commit/2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+          "source": "Anthropic skills repo",
+          "published": "2026-11-06T22:32:28+00:00",
+          "summary": "The document skills now carry the same permissive license as most of the repo. That makes them easier to reuse and adapt for client work.",
+          "thumbnail": null
+        },
+        {
+          "title": "n8n is a workflow automation platform with built-in AI features",
+          "url": "https://github.com/n8n-io/n8n",
+          "source": "GitHub trending",
+          "published": "2026-11-13T07:00:06.892915+00:00",
+          "summary": "Build automations visually with over 400 integrations, self-hosted or in the cloud. A good afternoon project for connecting client tools without an engineer.",
+          "thumbnail": null
+        },
+        {
+          "title": "Claude Code Templates is a registry of agents, skills and hooks",
+          "url": "https://github.com/davila7/claude-code-templates",
+          "source": "GitHub trending",
+          "published": "2026-11-13T07:00:06.892915+00:00",
+          "summary": "Browse and install ready-made Claude Code components from one command-line tool. A fast way to see what is possible before building your own.",
+          "thumbnail": null
+        },
+        {
+          "title": "Figma publishes a guide to using its MCP server",
+          "url": "https://github.com/figma/mcp-server-guide",
+          "source": "GitHub trending",
+          "published": "2026-11-13T07:00:06.892915+00:00",
+          "summary": "Official steps for connecting Figma designs to AI assistants. Useful if your clients design in Figma and want to hand work to Claude.",
+          "thumbnail": null
+        },
+        {
+          "title": "Postiz is an AI-assisted tool for scheduling social media posts",
+          "url": "https://github.com/gitroomhq/postiz-app",
+          "source": "GitHub trending",
+          "published": "2026-11-13T07:00:06.892915+00:00",
+          "summary": "An open source scheduler with agent features for planning posts across channels. Needs some setup, so check the install steps first.",
           "thumbnail": null
         }
       ]
@@ -86,59 +142,67 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "United Airlines bans AI agents from booking flights for travelers",
-          "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+          "title": "Microsoft 365 suffers a global outage",
+          "url": "https://www.cnn.com/2026/11/12/business/live-news/microsoft-global-outage-intl-hnk",
           "source": "Hacker News",
-          "published": "2026-11-11T21:24:35+00:00",
-          "summary": "United is blocking AI agents from booking on travelers' behalf. A signal that companies may restrict agent access, which matters for clients planning purchasing agents.",
+          "published": "2026-11-13T06:18:23+00:00",
+          "summary": "CNN's live coverage of the disruption. Clients who run Copilot or other AI on Microsoft 365 will ask what it means for them.",
           "thumbnail": null
         },
         {
-          "title": "Claude helped build a searchable archive of 300,000 military board decisions",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xt44ar/claude_helped_me_organize_my_legal_database_into/",
+          "title": "Amplitude ships product improvements in one to two days with OpenAI",
+          "url": "https://openai.com/business/customer-stories/amplitude",
+          "source": "OpenAI",
+          "published": "2026-11-12T20:00:00+00:00",
+          "summary": "Its Wave agent decides what to build, helps ship changes with coding agents and measures the impact. A useful reference for product teams.",
+          "thumbnail": null
+        },
+        {
+          "title": "Holiday Extras rethinks what it can build with Codex",
+          "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+          "source": "OpenAI",
+          "published": "2026-11-12T09:30:00+00:00",
+          "summary": "A travel company turns its customer knowledge into apps and reports higher booking conversion. Good evidence for clients asking where the return comes from.",
+          "thumbnail": null
+        },
+        {
+          "title": "Gondola doubles revenue as its team builds more with Codex",
+          "url": "https://openai.com/business/customer-stories/gondola",
+          "source": "OpenAI",
+          "published": "2026-11-12T12:00:00+00:00",
+          "summary": "A small company says Codex raised its lead engineer's output by 50%. A short example of AI helping a lean team.",
+          "thumbnail": null
+        },
+        {
+          "title": "Gilbert + Tobin's CEO on rethinking the business of law with AI",
+          "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+          "source": "OpenAI",
+          "published": "2026-11-12T00:00:00+00:00",
+          "summary": "An interview with the law firm's chief executive on how AI changes professional services. Directly relevant to consulting, and a quick read.",
+          "thumbnail": null
+        },
+        {
+          "title": "A game developer shares exactly how he built a game with Claude",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xul18m/my_game_got_removed_from_gamedev_subs_for_using/",
           "source": "r/ClaudeAI",
-          "published": "2026-11-11T00:56:48+00:00",
-          "summary": "A veteran used Claude to organise a legal database that is now evidence in a federal lawsuit. A concrete example of document-heavy work with AI.",
+          "published": "2026-11-12T18:46:30+00:00",
+          "summary": "A five-week walkthrough covering code, art, marketing and the Steam page. Skim it to see what an end-to-end AI workflow looks like.",
           "thumbnail": null
         },
         {
-          "title": "Kuken Industries searches 70 years of cooling tower drawings in minutes",
-          "url": "https://openai.com/index/kuken",
-          "source": "OpenAI",
-          "published": "2026-11-09T08:00:00+00:00",
-          "summary": "Engineers find the right drawing for a repair in 4.5 minutes instead of nearly an hour. A clean before-and-after story to borrow for client pitches.",
+          "title": "Claude users share the one prompt they keep coming back to",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xr0drc/whats_the_one_prompt_you_keep_coming_back_to/",
+          "source": "r/ClaudeAI",
+          "published": "2026-11-08T15:01:02+00:00",
+          "summary": "The top reply splits big projects into small steps with done-checks, and you can copy it as is. Skim the replies for more.",
           "thumbnail": null
         },
         {
-          "title": "Singapore Airlines doubles chatbot satisfaction scores using OpenAI models",
-          "url": "https://openai.com/index/singapore-airlines-travel-work",
-          "source": "OpenAI",
-          "published": "2026-11-10T08:00:00+00:00",
-          "summary": "Its Kris chatbot doubled customer satisfaction scores. A useful reference case for clients weighing a customer support assistant.",
-          "thumbnail": null
-        },
-        {
-          "title": "JioStar's chief architect shares lessons on AI at 500M-user scale",
-          "url": "https://openai.com/index/jiostar-vijay-seshadri",
-          "source": "OpenAI",
-          "published": "2026-11-11T00:00:00+00:00",
-          "summary": "Covers evals, guardrails and taking AI into production. Useful background for clients asking how to move beyond a pilot.",
-          "thumbnail": null
-        },
-        {
-          "title": "People who hit Claude limits weekly are asked what they build",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xoemgc/people_who_hit_their_claude_limits_every_week/",
-          "source": "r/ClaudeCode",
-          "published": "2026-11-05T09:45:20+00:00",
-          "summary": "A thread asking heavy users what a typical day looks like, to see how people really use Claude Code. Skim the replies for ideas.",
-          "thumbnail": null
-        },
-        {
-          "title": "Claude Code on Opus 5.5 wiped a user's Mac Library folder",
-          "url": "https://www.reddit.com/r/ClaudeCode/comments/1xqfp7m/opus_55_xhigh_just_deleted_all_my_apps_data/",
-          "source": "r/ClaudeCode",
-          "published": "2026-11-07T20:11:24+00:00",
-          "summary": "A user reports the agent deleted app data, saved passwords and settings while cleaning up test files. Useful for client talks on permissions and backups.",
+          "title": "Claude wrote its own connector to control SolidWorks",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xpeg2l/claude_make_me_these_parts_in_solidworks_7/",
+          "source": "r/ClaudeAI",
+          "published": "2026-11-06T14:40:50+00:00",
+          "summary": "A user had Claude build an MCP connector to desktop CAD software and now makes parts in minutes. Shows how connectors extend beyond office tools.",
           "thumbnail": null
         }
       ]
