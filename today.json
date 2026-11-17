@@ -1,68 +1,125 @@
 {
-  "generated": "2026-11-16T07:00:05.658463+00:00",
-  "previous_generated": "2026-11-16T05:13:17.774599+00:00",
-  "standfirst": "This issue covers Claude Fable 5.2 and a new Claude Code release, ChatGPT Wallet, two Gemini launches, and practical tips from people using Claude and ChatGPT at work.",
+  "generated": "2026-11-17T07:00:04.411870+00:00",
+  "previous_generated": "2026-11-16T07:00:05.658463+00:00",
+  "standfirst": "This issue covers Claude Code's new Code Mode, Gemini 4 Hydrogen in Search, ChatGPT for businesses and healthcare, and practical tools and threads you can try this week.",
   "digest": [
-    "Anthropic made Claude Fable 5.2 the default Fable model in Claude Code, with a 1M context window and published per-token pricing, and Claude Code 2.1.325 followed with a security fix. OpenAI introduced ChatGPT Wallet, which lets its agents complete purchases with user approval.",
-    "For a consultant, ChatGPT Wallet is the one clients may ask about, because it moves agents from drafting to spending money. Ask what approval steps and card protections apply before anyone suggests it for a client workflow. Google also released Gemini 4 Carbon and a Decisions API.",
-    "To try something this week, ffmpeg-skill gives Claude Code local video editing, and the community threads on keeping a decision page, using project-only memory per client and event-driven scheduled tasks are easy to copy today without an engineer."
+    "Claude Code added an experimental Code Mode, where Claude writes JavaScript to call its tools, and the latest release lets it run alongside agent teams. Google is rolling Gemini 4 Hydrogen into Search worldwide, and OpenAI added Businesses in ChatGPT and computer-use agents for healthcare teams.",
+    "For a consultant, the OpenAI and Google items are the ones clients may mention. Businesses in ChatGPT matters for clients who depend on how they appear in answers, and the healthcare agents matter if you work with hospitals or clinics. Google and Adobe also announced PDF editing in Drive and Adobe tools inside Gemini.",
+    "To try something this week, last30days-skill gives you a research helper for client briefings, and Anthropic's updated Word, PowerPoint and Excel skills are worth pulling if you generate documents. The Mem shutdown is a good prompt to ask clients how they would get their data out of any AI tool."
   ],
   "sections": [
     {
       "key": "watch",
       "title": "Watch",
-      "items": []
+      "items": [
+        {
+          "title": "Claude's new whiteboards, sheets and data features, and what you can do now",
+          "url": "https://www.youtube.com/watch?v=SDipcfxxa8s",
+          "source": "The AI Advantage",
+          "published": "2026-11-13T23:57:34+00:00",
+          "summary": "Compares Claude's new whiteboard, sheet and data features and asks whether any is a reason to leave Google Sheets. A quick way to judge what is worth trying.",
+          "thumbnail": "https://i.ytimg.com/vi/SDipcfxxa8s/mqdefault.jpg"
+        },
+        {
+          "title": "Fable 5.2 slide decks and interactive explainers, tested hands-on",
+          "url": "https://www.youtube.com/watch?v=6RAjpFNnST8",
+          "source": "The AI Advantage",
+          "published": "2026-11-12T23:21:54+00:00",
+          "summary": "Shows a slide deck built with Fable 5.2 and interactive pages that teach winemaking and Central Park history. Useful if you build presentations or explainers for clients.",
+          "thumbnail": "https://i.ytimg.com/vi/6RAjpFNnST8/mqdefault.jpg"
+        },
+        {
+          "title": "ChatGPT Images: three ways to get started",
+          "url": "https://www.youtube.com/watch?v=CrrpfvbNyMw",
+          "source": "OpenAI",
+          "published": "2026-11-11T21:10:10+00:00",
+          "summary": "Walks through creating an image from scratch, refining it by conversation and editing a photo you already have. Short, and needs no setup.",
+          "thumbnail": "https://i.ytimg.com/vi/CrrpfvbNyMw/mqdefault.jpg"
+        },
+        {
+          "title": "Six people share their underrated ways to use ChatGPT",
+          "url": "https://www.youtube.com/shorts/ErOVIC-MGVA",
+          "source": "OpenAI",
+          "published": "2026-11-13T18:15:41+00:00",
+          "summary": "Answers range from personal style to everyday logistics and stopping random subscription charges. A short source of ideas to copy.",
+          "thumbnail": "https://i.ytimg.com/vi/ErOVIC-MGVA/mqdefault.jpg"
+        },
+        {
+          "title": "Peter Yang shows the personal AI system behind his one-person business",
+          "url": "https://www.youtube.com/watch?v=pvl3z_GyU2Y",
+          "source": "Matt Wolfe",
+          "published": "2026-11-11T16:00:07+00:00",
+          "summary": "Covers an AI chief of staff, a personal advisor and automated workflows for podcast research and video editing. Good inspiration for organizing your own workday.",
+          "thumbnail": "https://i.ytimg.com/vi/pvl3z_GyU2Y/mqdefault.jpg"
+        },
+        {
+          "title": "Matt Wolfe recaps the week: Fable 5.2, Gemini 4 Carbon and Adobe MAX",
+          "url": "https://www.youtube.com/watch?v=G_Jrexy_5Bg",
+          "source": "Matt Wolfe",
+          "published": "2026-11-13T17:21:49+00:00",
+          "summary": "A weekly roundup that also covers new Claude features and a rapid-fire list of other launches. Good catch-up if you missed last week.",
+          "thumbnail": "https://i.ytimg.com/vi/G_Jrexy_5Bg/mqdefault.jpg"
+        },
+        {
+          "title": "OpenAI's decision model can automate sorting a photo library",
+          "url": "https://www.youtube.com/shorts/IehCboBcYsA",
+          "source": "Matt Wolfe",
+          "published": "2026-11-12T17:20:42+00:00",
+          "summary": "A short demo of the decision model applied to a photo library. It shows the kind of classification task it suits.",
+          "thumbnail": "https://i.ytimg.com/vi/IehCboBcYsA/mqdefault.jpg"
+        }
+      ]
     },
     {
       "key": "models",
       "title": "New models and tools",
       "items": [
         {
-          "title": "Claude Code adds Claude Fable 5.2 as its default Fable model",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+          "title": "Claude Code 2.1.326 allows Code Mode alongside agent teams",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
           "source": "Claude Code releases",
-          "published": "2026-11-09T19:22:30+00:00",
-          "summary": "Fable 5.2 has a 1M context window and costs $8 input and $40 output per million tokens. Check the pricing before recommending it for heavy client work.",
+          "published": "2026-11-16T22:11:05+00:00",
+          "summary": "Code Mode now works with agent teams turned on, and Claude Code warns you when a tool permission rule looks incomplete. Update as usual.",
           "thumbnail": null
         },
         {
-          "title": "Claude Code 2.1.325 fixes a security issue in compressed responses",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+          "title": "Claude Code 2.1.323 adds experimental Code Mode and plugin version limits",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
           "source": "Claude Code releases",
-          "published": "2026-11-13T20:40:01+00:00",
-          "summary": "A security fix for how compressed responses are decoded, plus a clearer message when an organization's policy blocks a request. Worth updating on managed machines.",
+          "published": "2026-11-12T22:11:12+00:00",
+          "summary": "Code Mode is an opt-in experiment where Claude writes JavaScript to call its tools. Administrators can switch it off for an organization.",
           "thumbnail": null
         },
         {
-          "title": "ChatGPT Wallet lets agents complete purchases with user approval",
-          "url": "https://openai.com/index/introducing-chatgpt-wallet",
+          "title": "Google Search now uses Gemini 4 Hydrogen worldwide",
+          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+          "source": "Google",
+          "published": "2026-11-12T18:00:00+00:00",
+          "summary": "Search answers become more visual and intuitive. Nothing to install, but clients will notice the change in how results look.",
+          "thumbnail": null
+        },
+        {
+          "title": "ChatGPT for Healthcare adds computer-use agents and plugins",
+          "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
           "source": "OpenAI",
-          "published": "2026-11-13T15:00:00+00:00",
-          "summary": "Agents in ChatGPT Work, Codex and dots can pay for things, with approval and existing card protections. Nothing to install, but ask clients about spending controls.",
+          "published": "2026-11-16T06:00:00+00:00",
+          "summary": "Agents can now work across healthcare software, with better clinical answers and new plugins. Relevant if you advise hospital or clinic clients.",
           "thumbnail": null
         },
         {
-          "title": "Gemini 4 Carbon is now available",
-          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
-          "source": "Google DeepMind",
-          "published": "2026-11-10T16:03:47+00:00",
-          "summary": "Google's latest Gemini 4 model, announced days before Hydrogen reached Search. Skim the post to see where it sits in the range.",
+          "title": "Businesses in ChatGPT lets companies manage how they appear",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt",
+          "source": "OpenAI",
+          "published": "2026-11-10T10:00:00+00:00",
+          "summary": "Business owners can manage their information, see how they show up in ChatGPT and act on customer interest. Worth a look for retail or local clients.",
           "thumbnail": null
         },
         {
-          "title": "Gemini Decisions API offers fast, calibrated multimodal decisions",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "title": "Google and Adobe bring PDF editing to Drive and Adobe AI to Gemini",
+          "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
           "source": "Google",
-          "published": "2026-11-11T18:00:00+00:00",
-          "summary": "An API aimed at quick classification-style calls across text and images. Developer-facing, so useful mainly for knowing what is on offer when a client's tech team asks.",
-          "thumbnail": null
-        },
-        {
-          "title": "Google Labs Tabletop builds shared planning spaces for groups",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
-          "source": "Google",
-          "published": "2026-11-11T16:00:00+00:00",
-          "summary": "An experiment for building itineraries, polls and brackets with a team. There is a waitlist, so you cannot try it yet.",
+          "published": "2026-11-10T14:00:00+00:00",
+          "summary": "Useful for clients on Google Workspace who spend their days in PDFs. Check which features are live before promising anything.",
           "thumbnail": null
         }
       ]
@@ -72,43 +129,51 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "ffmpeg-skill gives Claude Code a local video editor",
-          "url": "https://github.com/kajisho5/ffmpeg-skill",
+          "title": "last30days-skill researches any topic across social sites and the web",
+          "url": "https://github.com/mvanhorn/last30days-skill",
           "source": "GitHub trending",
-          "published": "2026-11-16T07:00:05.658463+00:00",
-          "summary": "Cut clips, add captions, reframe for social and export for each platform, all on your own machine with no API keys. Needs a little terminal comfort.",
+          "published": "2026-11-17T07:00:04.411870+00:00",
+          "summary": "Pulls from Reddit, X, YouTube, Hacker News and the web, then writes a grounded summary. A handy start for client briefings.",
           "thumbnail": null
         },
         {
-          "title": "Stitch skills teach coding agents to work with Google's design tool",
-          "url": "https://github.com/google-labs-code/stitch-skills",
-          "source": "GitHub trending",
-          "published": "2026-11-16T07:00:05.658463+00:00",
-          "summary": "A set of skills that works with the Stitch MCP server in Claude Code and other agents. Useful for quick interface mock-ups.",
+          "title": "Anthropic updates its Word, PowerPoint and Excel skills with validation fixes",
+          "url": "https://github.com/anthropics/skills/commit/e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+          "source": "Anthropic skills repo",
+          "published": "2026-11-16T14:22:47+00:00",
+          "summary": "Fixes to unpacking and file checks in the document skills. Worth pulling if you generate decks, documents or spreadsheets with Claude.",
           "thumbnail": null
         },
         {
-          "title": "Plannotator lets you annotate agent plans and send feedback in one click",
-          "url": "https://github.com/backnotprop/plannotator",
-          "source": "GitHub trending",
-          "published": "2026-11-16T07:00:05.658463+00:00",
-          "summary": "A workspace for reviewing what an agent plans to do, marking it up and sharing it with your team before it acts.",
+          "title": "host-html MCP server publishes HTML as a shareable link",
+          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/84172dd2e8003f06d3124be0189f6d41a4975fb3",
+          "source": "Awesome MCP servers list",
+          "published": "2026-11-17T05:10:40+00:00",
+          "summary": "Lets an agent put a page or prototype online so you can send a client a link. Newly listed, so test it first.",
           "thumbnail": null
         },
         {
-          "title": "Univer is an open-source office suite you can embed for people and AI agents",
-          "url": "https://github.com/dream-num/univer",
-          "source": "GitHub trending",
-          "published": "2026-11-16T07:00:05.658463+00:00",
-          "summary": "Editing, calculation and collaboration for documents and sheets inside a product. Aimed at developers, so treat it as something to show a client's tech team.",
+          "title": "Dinoctor MCP server makes animated videos from an agent",
+          "url": "https://github.com/punkpeye/awesome-mcp-servers/commit/50fe60e4fe128aaa83aa7072746cb396d6477e71",
+          "source": "Awesome MCP servers list",
+          "published": "2026-11-17T05:21:32+00:00",
+          "summary": "Newly added to the MCP list for short animated videos. Early stage, so try a small example before suggesting it to a client.",
           "thumbnail": null
         },
         {
-          "title": "Claude trading skills cover market analysis, charts and screeners",
-          "url": "https://github.com/tradermonty/claude-trading-skills",
+          "title": "Claude Code templates is a registry of agents, skills and hooks",
+          "url": "https://github.com/davila7/claude-code-templates",
           "source": "GitHub trending",
-          "published": "2026-11-16T07:00:05.658463+00:00",
-          "summary": "Claude Code skills for investors, including economic calendars and strategy development. Handy as an example of a finished skill bundle for one profession.",
+          "published": "2026-11-17T07:00:04.411870+00:00",
+          "summary": "A command line tool for browsing and installing ready-made Claude Code components, including MCP servers. Needs a little terminal comfort.",
+          "thumbnail": null
+        },
+        {
+          "title": "Agenticos is a self-hosted platform for company AI agents",
+          "url": "https://github.com/vstorm-co/agenticos",
+          "source": "GitHub trending",
+          "published": "2026-11-17T07:00:04.411870+00:00",
+          "summary": "Pitched as an alternative to ChatGPT Enterprise, with shared chat, budgets, approvals and an audit trail. Needs IT to set up, so mainly one to show clients.",
           "thumbnail": null
         }
       ]
@@ -118,59 +183,59 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "Keep a short decision page so ChatGPT stops suggesting rejected options",
-          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xwzt1s/if_you_keep_reexplaining_the_same_rejected_option/",
-          "source": "r/ChatGPTPro",
-          "published": "2026-11-15T16:30:34+00:00",
-          "summary": "Three lines per entry, pasted into project instructions. A five-minute habit that saves repeating yourself across sessions.",
-          "thumbnail": null
-        },
-        {
-          "title": "One project per client for project-only memory: is it overkill?",
-          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xv88cr/projectonly_memory_for_client_work_one_project/",
-          "source": "r/ChatGPTPro",
-          "published": "2026-11-13T13:43:53+00:00",
-          "summary": "Explains the new project-only memory setting and how it keeps client context from bleeding between chats. Directly relevant to how we organize client work.",
-          "thumbnail": null
-        },
-        {
-          "title": "Event-driven scheduled tasks make ChatGPT follow your SOPs more reliably",
-          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xwxvbm/a_more_consistent_dot_did_i_find_a_solution/",
-          "source": "r/ChatGPTPro",
-          "published": "2026-11-15T15:11:36+00:00",
-          "summary": "One user's workaround for Dot ignoring procedures, using scheduled tasks as checks. A single account, but easy to test on your own process.",
-          "thumbnail": null
-        },
-        {
-          "title": "Build a provider-agnostic context file to move between ChatGPT and Claude",
-          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xw5caa/build_an_agnostic_context_window/",
-          "source": "r/ChatGPTPro",
-          "published": "2026-11-14T15:38:13+00:00",
-          "summary": "Someone paying for both tools shares how to carry project context between them. Useful if you switch models as releases land.",
-          "thumbnail": null
-        },
-        {
-          "title": "Fable 5.2 paints in MS Paint for 2.5 hours through computer use",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xvghd1/fable_52_painting_in_ms_paint/",
+          "title": "Using Fable as an advisor reportedly skips the weekly Fable limit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xvnq0t/psa_using_fable_as_an_advisor_doesnt_touch_your/",
           "source": "r/ClaudeAI",
-          "published": "2026-11-13T19:00:14+00:00",
-          "summary": "Claude controlled the mouse in the desktop app for roughly $45 at API prices. A concrete look at what computer use costs.",
+          "published": "2026-11-13T23:54:29+00:00",
+          "summary": "One user runs Opus 5.5 with Fable 5.2 as the advisor and says it does not use their Fable quota. Easy to test.",
           "thumbnail": null
         },
         {
-          "title": "A Claude Code mod draws a live map of what the agent is doing",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xst2qe/i_made_a_claude_code_mod_that_draws_a_live_map_of/",
+          "title": "A developer explains how they built and shipped a game with Claude",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xul18m/my_game_got_removed_from_gamedev_subs_for_using/",
           "source": "r/ClaudeAI",
-          "published": "2026-11-10T17:31:57+00:00",
-          "summary": "Shows tool calls, hooks and errors as pulses on a map beside the chat. Helpful for explaining to clients what an agent actually does.",
+          "published": "2026-11-12T18:46:30+00:00",
+          "summary": "Covers code, art, marketing and the Steam page over about five weeks. A full-pipeline example, useful even if you never make games.",
           "thumbnail": null
         },
         {
-          "title": "Claude helps organize 300,000 military board decisions into a public archive",
-          "url": "https://www.reddit.com/r/ClaudeAI/comments/1xt44ar/claude_helped_me_organize_my_legal_database_into/",
-          "source": "r/ClaudeAI",
-          "published": "2026-11-11T00:56:48+00:00",
-          "summary": "A nonprofit founder describes using Claude to structure a large legal database, now cited in a federal lawsuit. A strong document-heavy example.",
+          "title": "How to handle tangents in a long ChatGPT research chat",
+          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xxw7hr/how_do_you_handle_tangents_in_a_long_research_chat/",
+          "source": "r/ChatGPTPro",
+          "published": "2026-11-16T17:57:05+00:00",
+          "summary": "Side questions bury the main answer, and the poster asks what works, having tried new chats and branching. Relevant to any long client analysis.",
+          "thumbnail": null
+        },
+        {
+          "title": "Rebuilding context is the slow part when switching AI tools mid-project",
+          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xxo69e/what_makes_you_switch_ai_tools_midproject_and/",
+          "source": "r/ChatGPTPro",
+          "published": "2026-11-16T12:30:50+00:00",
+          "summary": "Users describe why they switch and what breaks first, often ending up copy-pasting between tools. Anecdotal but a familiar problem.",
+          "thumbnail": null
+        },
+        {
+          "title": "Regular ChatGPT may write better documentation than ChatGPT Work",
+          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xt9u0z/anyone_else_find_regular_chatgpt_produces_better/",
+          "source": "r/ChatGPTPro",
+          "published": "2026-11-11T05:45:42+00:00",
+          "summary": "An IT writer finds regular ChatGPT more natural and concise for Confluence documentation. One person's view, but easy to compare on your own drafts.",
+          "thumbnail": null
+        },
+        {
+          "title": "Mem, the AI notes app, is shutting down",
+          "url": "https://get.mem.ai/blog/mem-is-shutting-down",
+          "source": "Hacker News",
+          "published": "2026-11-17T02:13:41+00:00",
+          "summary": "A reminder to ask clients how they would export their data from any AI tool before relying on it.",
+          "thumbnail": null
+        },
+        {
+          "title": "ChatGPT Pro user weighs Claude for contracts, procurement and legal work",
+          "url": "https://www.reddit.com/r/ChatGPTPro/comments/1xt35p1/chat_not_workcodex_vs_claude/",
+          "source": "r/ChatGPTPro",
+          "published": "2026-11-11T00:12:57+00:00",
+          "summary": "Describes an iterative quality-gate workflow of repeated review passes, then asks how Claude compares. A useful look at heavy document work.",
           "thumbnail": null
         }
       ]
