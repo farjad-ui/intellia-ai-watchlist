@@ -15,11 +15,12 @@ A static daily AI learning page for the Intellia consulting team, curated by Cla
 
 ## Next steps
 1. Check the 2026-11-26 noon run: `logs/daily.log` should end with `ok` and `slack ok`.
-2. Reddit feeds in `sources.txt` return HTTP 404; fix the URLs or drop them.
+2. Optional: the "Worth reading" section now has only Hacker News as a source; consider adding blogs or newsletters to `sources.txt`.
 3. Optional cleanup: delete `daily.ps1` / `schedule.ps1`; remove `/bin/bash` from Full Disk Access (no longer needed now the job is outside OneDrive).
 
 ## Decisions (and why)
 - 2026-11-25: Job runs from `~/intellia-ai-watchlist`, not the OneDrive folder. macOS blocks launchd jobs from OneDrive (needed Full Disk Access for `/bin/bash`), and OneDrive left 200 files (git objects, the webhook) online-only that would not download. The OneDrive copy is stale; edit in the new folder or push from anywhere (the job pulls first).
+- 2026-11-25: Dropped the three Reddit feeds and Reddit-specific code in `build.py`: Reddit retired RSS on 2026-11-13 (404s, login redirects) and has no replacement for non-moderators.
 - 2026-11-25: launchd over cron: it runs a missed noon job when the Mac wakes from sleep. If the Mac is shut down at noon, that day is skipped.
 - 2026-10-15: Claude curates in a scratch folder holding only its inputs, so feed text cannot steer it into editing the repo.
 - 2026-10-15: Anthropic news comes from a community RSS mirror (Olshansk/rss-feeds); Meta AI and Mistral have no RSS and are dropped.

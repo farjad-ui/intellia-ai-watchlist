@@ -9,7 +9,6 @@ import html
 import json
 import re
 import sys
-import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -34,8 +33,6 @@ def decode(body):
 
 
 def fetch(url):
-    if "reddit.com" in url:
-        time.sleep(3)  # reddit returns 429 to back-to-back requests
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     with urllib.request.urlopen(req, timeout=20) as r:
         return decode(r.read())
@@ -79,9 +76,6 @@ def item(
 
 
 def source_name(url, feed_title):
-    m = re.search(r"reddit\.com/r/([^/]+)", url)
-    if m:
-        return "r/" + m.group(1)
     return clean(feed_title, 60) or re.sub(
         r"^www\.", "", urllib.parse.urlparse(url).netloc
     )
@@ -90,7 +84,7 @@ def source_name(url, feed_title):
 def parse_feed(text, section, url):
     root = ET.fromstring(text)
     items = []
-    if root.tag.endswith("feed"):  # Atom: YouTube, Reddit, GitHub
+    if root.tag.endswith("feed"):  # Atom: YouTube, GitHub
         source = source_name(url, root.findtext("a:title", "", NS))
         for e in root.findall("a:entry", NS):
             link = next(

@@ -1,5 +1,6 @@
 # section url [display name]   sections: watch, models, tools, reading
 # Meta AI and Mistral publish no RSS; Anthropic's feed is a community mirror (github.com/Olshansk/rss-feeds).
+# Reddit retired RSS on 2026-11-13, so r/ClaudeAI, r/ClaudeCode and r/ChatGPTPro were dropped.
 
 # Watch: weekly recaps and explainers
 watch https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA   Fireship
@@ -26,6 +27,3 @@ tools https://github.com/punkpeye/awesome-mcp-servers/commits/main.atom   Awesom
 
 # Worth reading
 reading https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=60
-reading https://www.reddit.com/r/ClaudeAI/top/.rss?t=week
-reading https://www.reddit.com/r/ClaudeCode/top/.rss?t=week
-reading https://www.reddit.com/r/ChatGPTPro/top/.rss?t=week
