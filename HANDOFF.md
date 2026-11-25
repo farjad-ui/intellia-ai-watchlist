@@ -11,7 +11,7 @@ A static daily AI learning page for the Intellia consulting team, curated by Cla
 - Repo-local git identity set to `farjad-ui` so daily commits match the old ones (the two 2026-11-25 commits went out under the Mac's auto identity).
 
 ## In progress
-- Nothing. `slack-webhook.txt` was copied from the OneDrive folder on 2026-11-25; daily runs post to Slack at 12:15. The 2026-11-25 issue was not posted to Slack.
+- Nothing. `slack-webhook.txt` was copied from the OneDrive folder on 2026-11-25; daily runs post to Slack at 12:15. The 2026-11-25 issue was posted by hand with `python3 notify.py`.
 
 ## Next steps
 1. Check the 2026-11-26 noon run: `logs/daily.log` should end with `ok` and `slack ok`.
