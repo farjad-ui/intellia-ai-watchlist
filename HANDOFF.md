@@ -1,37 +1,33 @@
 # Handoff
-_Last updated: 2026-10-15 · desktop · branch `main`_
+_Last updated: 2026-11-25 16:50 · desktop · branch `main`_
 
 ## Goal
-A static daily AI learning page for the Intellia consulting team, curated by Claude Code from feeds, published on GitHub Pages, refreshed by a noon Task Scheduler job on the user's laptop.
+A static daily AI learning page for the Intellia consulting team, curated by Claude Code from feeds, published on GitHub Pages (https://farjad-ui.github.io/intellia-ai-watchlist/) and posted to Slack, refreshed by a noon job on the user's laptop.
 
 ## Done
-- Spec `docs/superpowers/specs/2026-10-15-ai-watchlist-design.md` and plan `docs/superpowers/plans/2026-10-15-ai-watchlist.md`.
-- `build.py` (feeds to `pool.json`), `render.py` + `template.html` (to `index.html`), `editorial.md` + `prompt.md` (curation brief), `daily.ps1` (the job), `README.md`. `python test_watchlist.py` passes 15 tests.
-- Live run: 204 items from 16 sources; `claude -p` curated a real first issue (watch 8, models 5, tools 6, reading 8); page checked in the browser at desktop light and phone dark.
-- Design skill `~/.claude/skills/avoiding-ai-slop-design/` with editorial reference; research in `docs/design-research/`.
-
-- Reviewer findings applied (http-only links, tolerant dates, Atom alternate links, scratch-folder curation, full step logging, restore on failure).
-- `daily.ps1` verified end to end twice against a throwaway local remote: pull, build, curate, render, commit, push, `ok` logged; second issue showed "new since last issue" markers.
+- Pipeline: `build.py` (feeds to `pool.json`), Claude curates `today.json` against `editorial.md` + `prompt.md`, `render.py` + `template.html` to `index.html`, `notify.py` posts to Slack (webhook in gitignored `slack-webhook.txt`).
+- Ran on the old Windows PC via `daily.ps1` + Task Scheduler (`schedule.ps1`) until 2026-11-20.
+- 2026-11-25: moved to this Mac. The job's copy is now `~/intellia-ai-watchlist` (fresh clone from GitHub, outside OneDrive). `daily.sh` (port of `daily.ps1`) runs it; `schedule.sh` writes `~/Library/LaunchAgents/com.intellia.watchlist.plist` (daily 12:00) and loads it. Verified: `launchctl kickstart gui/$(id -u)/com.intellia.watchlist` ran end to end, exit 0, pushed `daily: 2026-11-25`; `python3 test_watchlist.py` passes 16 tests.
+- Repo-local git identity set to `farjad-ui` so daily commits match the old ones (the two 2026-11-25 commits went out under the Mac's auto identity).
 
 ## In progress
-- Nothing. Deployed and scheduled: Task Scheduler job "Intellia AI Watchlist" runs `daily.ps1` daily at 12:00 (registered by `schedule.ps1`); a triggered test run logged `ok`. Page is light-only with a two-column layout above 70rem.
+- Slack is off on this Mac: `~/intellia-ai-watchlist/slack-webhook.txt` doesn't exist yet. The user must paste the webhook URL into it. Until then the job publishes the page but skips Slack.
 
 ## Next steps
-1. Watch the first few noon runs in `logs/daily.log`; tune `editorial.md` if picks drift.
-2. Optional: drop r/ChatGPTPro (rate-limited) or add more channels in `sources.txt`.
+1. Once the webhook file exists, `cd ~/intellia-ai-watchlist && python3 notify.py` posts today's issue; future runs post at 12:15.
+2. Reddit feeds in `sources.txt` return HTTP 404; fix the URLs or drop them.
+3. Optional cleanup: delete `daily.ps1` / `schedule.ps1`; remove `/bin/bash` from Full Disk Access (no longer needed now the job is outside OneDrive).
 
 ## Decisions (and why)
-- 2026-10-15: Laptop is primary (user's call), noon daily, `-StartWhenAvailable` so a missed noon runs at next login. Cloud routine is the fallback.
-- 2026-10-15: Content is curated against `editorial.md` (learning hub for non-engineer consultants), not summarised news.
-- 2026-10-15: Prompt is piped to `claude -p` on stdin; PowerShell 5.1 truncates native arguments at the first double quote.
+- 2026-11-25: Job runs from `~/intellia-ai-watchlist`, not the OneDrive folder. macOS blocks launchd jobs from OneDrive (needed Full Disk Access for `/bin/bash`), and OneDrive left 200 files (git objects, the webhook) online-only that would not download. The OneDrive copy is stale; edit in the new folder or push from anywhere (the job pulls first).
+- 2026-11-25: launchd over cron: it runs a missed noon job when the Mac wakes from sleep. If the Mac is shut down at noon, that day is skipped.
+- 2026-10-15: Claude curates in a scratch folder holding only its inputs, so feed text cannot steer it into editing the repo.
 - 2026-10-15: Anthropic news comes from a community RSS mirror (Olshansk/rss-feeds); Meta AI and Mistral have no RSS and are dropped.
 
 ## Open questions / blockers
-- r/ChatGPTPro returns 429 when fetched third in a row; non-fatal. Could drop it or space Reddit calls further.
 - Repo must be public for free GitHub Pages; the page is therefore public too.
 
 ## How to verify
-- `python test_watchlist.py` prints `ok (15 tests)`.
-- `python build.py` prints an item count; `python render.py` writes `index.html`.
+- `python3 test_watchlist.py` prints `ok (16 tests)`.
+- `logs/daily.log` gets an `ok` line each day (launchd output also in `logs/launchd.log`); the Pages footer date updates.
 - Preview: `.claude/launch.json` config `site`, http://localhost:8766/.
-- After deploy: `logs/daily.log` gets an `ok` line each day and the Pages footer date updates.
