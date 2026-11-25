@@ -11,10 +11,10 @@ A static daily AI learning page for the Intellia consulting team, curated by Cla
 - Repo-local git identity set to `farjad-ui` so daily commits match the old ones (the two 2026-11-25 commits went out under the Mac's auto identity).
 
 ## In progress
-- Slack is off on this Mac: `~/intellia-ai-watchlist/slack-webhook.txt` doesn't exist yet. The user must paste the webhook URL into it. Until then the job publishes the page but skips Slack.
+- Nothing. `slack-webhook.txt` was copied from the OneDrive folder on 2026-11-25; daily runs post to Slack at 12:15. The 2026-11-25 issue was not posted to Slack.
 
 ## Next steps
-1. Once the webhook file exists, `cd ~/intellia-ai-watchlist && python3 notify.py` posts today's issue; future runs post at 12:15.
+1. Check the 2026-11-26 noon run: `logs/daily.log` should end with `ok` and `slack ok`.
 2. Reddit feeds in `sources.txt` return HTTP 404; fix the URLs or drop them.
 3. Optional cleanup: delete `daily.ps1` / `schedule.ps1`; remove `/bin/bash` from Full Disk Access (no longer needed now the job is outside OneDrive).
 
