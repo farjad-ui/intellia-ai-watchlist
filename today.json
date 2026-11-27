@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-26T07:00:01.967088+00:00",
-  "previous_generated": "2026-11-25T11:44:10.800806+00:00",
-  "standfirst": "This issue covers OpenAI tightening GPT-6.2 usage limits, several ChatGPT demos you can try with a calendar or bank account, and a few skills worth testing.",
+  "generated": "2026-11-27T07:00:02.354588+00:00",
+  "previous_generated": "2026-11-26T07:00:01.967088+00:00",
+  "standfirst": "This issue covers three Claude Code releases, Google's push to personalise Search, and a handful of ChatGPT demos and open-source tools you can try this week.",
   "digest": [
-    "The one change that affects planning is OpenAI lowering usage limits on GPT-6.2. An OpenAI engineer says Astra now hits its cap 40% sooner and Sol 25% sooner. Claude Code and the Gemini API had smaller updates, covered below.",
-    "For a consultant, the useful clips this week are OpenAI's walkthroughs of Finances in ChatGPT and of a dot that watches projects while you are away. Both show agent-style work in a form a client can follow in a few minutes.",
-    "On the tools side, last30days and diagram-design are the easiest to try, though both need a Claude Code setup. Markitdown helps when you need to feed client documents to an assistant. Clients may also ask about the Photoshop warning from the New York Times."
+    "Claude Code shipped three releases this week. Version 2.1.332 lets MCP servers offer skills, 2.1.331 adds Code Mode on Bedrock, Google Cloud and Foundry, and 2.1.330 adds a built-in mod that draws charts on request.",
+    "For a consultant, the Bedrock and Foundry support matters most when a client must keep AI inside its own cloud. Google also let users connect Wallet, Drive and Gemini to Search, so expect privacy questions about it.",
+    "On the tools side, Firecrawl, AFFiNE and AutoClip are the easiest to point a client at, though Firecrawl needs an engineer. The Watch section has short ChatGPT clips you can try in a minute, and a Fireship breakdown of Gemini 4 Neon."
   ],
   "sections": [
     {
@@ -13,60 +13,44 @@
       "title": "Watch",
       "items": [
         {
-          "title": "OpenAI shows how a dot keeps work moving while you're away",
-          "url": "https://www.youtube.com/watch?v=A4UNP-axGHU",
+          "title": "Codex plugin turns a reference image into editable SVG and 3D",
+          "url": "https://www.youtube.com/watch?v=1u0hTd86_HU",
           "source": "OpenAI",
-          "published": "2026-11-25T18:21:11+00:00",
-          "summary": "A user walks through prompts that have his dot watch projects, flag what needs attention and queue approvals. The prompts are in the description, so they are easy to copy.",
-          "thumbnail": "https://i.ytimg.com/vi/A4UNP-axGHU/mqdefault.jpg"
+          "published": "2026-11-24T21:32:42+00:00",
+          "summary": "A newcomer turns a reference image into an editable graphic and 3D model, then changes it by asking in plain language. Needs Codex.",
+          "thumbnail": "https://i.ytimg.com/vi/1u0hTd86_HU/mqdefault.jpg"
         },
         {
-          "title": "Finances in ChatGPT: a beginner's walkthrough",
-          "url": "https://www.youtube.com/watch?v=hwKct_1ilEQ",
+          "title": "Fireship explains why Gemini 4 Neon outscores Google's own flagship",
+          "url": "https://www.youtube.com/watch?v=jP9yjEDlc4k",
+          "source": "Fireship",
+          "published": "2026-11-23T19:14:30+00:00",
+          "summary": "A short breakdown of Google's mid-tier model beating its three-week-old flagship. Useful context if clients ask which Gemini to use; no setup needed.",
+          "thumbnail": "https://i.ytimg.com/vi/jP9yjEDlc4k/mqdefault.jpg"
+        },
+        {
+          "title": "ChatGPT can check a price daily and tell you when it drops",
+          "url": "https://www.youtube.com/shorts/asUuxCqj0GE",
           "source": "OpenAI",
-          "published": "2026-11-25T14:00:28+00:00",
-          "summary": "Covers linking a bank account, reviewing subscriptions and building a budget. Consumer-facing, but good background if clients ask about ChatGPT and personal data.",
-          "thumbnail": "https://i.ytimg.com/vi/hwKct_1ilEQ/mqdefault.jpg"
+          "published": "2026-11-24T01:36:38+00:00",
+          "summary": "A short clip with a copyable prompt that asks ChatGPT to track an item's price and report drops. Takes a minute to try.",
+          "thumbnail": "https://i.ytimg.com/vi/asUuxCqj0GE/mqdefault.jpg"
         },
         {
-          "title": "ChatGPT checks your calendar and drafts a note when plans change",
-          "url": "https://www.youtube.com/watch?v=DLV3XRdJAog",
+          "title": "ChatGPT browses local sites and helps book a family day out",
+          "url": "https://www.youtube.com/watch?v=4MFBNFyBmQg",
           "source": "OpenAI",
-          "published": "2026-11-24T17:13:55+00:00",
-          "summary": "With a calendar connected, it proposes another slot and drafts the message to attendees. Takes a minute to try on your own calendar.",
-          "thumbnail": "https://i.ytimg.com/vi/DLV3XRdJAog/mqdefault.jpg"
+          "published": "2026-11-24T17:14:01+00:00",
+          "summary": "Describe what you want and ChatGPT searches local information and helps with bookings. Consumer-focused, but shows the browsing agent in plain terms.",
+          "thumbnail": "https://i.ytimg.com/vi/4MFBNFyBmQg/mqdefault.jpg"
         },
         {
-          "title": "Tier list ranks the best AI models for coding",
-          "url": "https://www.youtube.com/watch?v=iA0ns69dZGM",
-          "source": "Matthew Berman",
-          "published": "2026-11-25T19:28:41+00:00",
-          "summary": "Matthew Berman's opinionated ranking of current coding models. Useful for a quick view of how they compare, though the video carries a sponsor read.",
-          "thumbnail": "https://i.ytimg.com/vi/iA0ns69dZGM/mqdefault.jpg"
-        },
-        {
-          "title": "Amateur astronomers use Codex and Astra to find possible exoplanets",
-          "url": "https://www.youtube.com/watch?v=p8lvQQebvpg",
+          "title": "ChatGPT explains a photo and flags what to double-check",
+          "url": "https://www.youtube.com/watch?v=2DUJ2whBJRM",
           "source": "OpenAI",
-          "published": "2026-11-24T20:00:45+00:00",
-          "summary": "Two hobbyists searched public telescope data for dips in starlight. A clear example of non-experts using AI on open data; nothing to set up.",
-          "thumbnail": "https://i.ytimg.com/vi/p8lvQQebvpg/mqdefault.jpg"
-        },
-        {
-          "title": "Hark Pro sorts an inbox, orders dinner and spots a double booking",
-          "url": "https://www.youtube.com/shorts/2qd2LEXDYpo",
-          "source": "Matthew Berman",
-          "published": "2026-11-19T22:36:08+00:00",
-          "summary": "A hands-off test of a sponsored assistant handling email, a DoorDash order and a calendar check. Treat it as a demo, not a recommendation.",
-          "thumbnail": "https://i.ytimg.com/vi/2qd2LEXDYpo/mqdefault.jpg"
-        },
-        {
-          "title": "The AI Advantage flags ChatGPT updates worth knowing about",
-          "url": "https://www.youtube.com/shorts/9iLQBxa5tXU",
-          "source": "The AI Advantage",
-          "published": "2026-11-23T18:13:01+00:00",
-          "summary": "A short clip on recent ChatGPT changes from a creator who covers AI tools. Quick to watch, though it also promotes a paid community.",
-          "thumbnail": "https://i.ytimg.com/vi/9iLQBxa5tXU/mqdefault.jpg"
+          "published": "2026-11-24T17:14:03+00:00",
+          "summary": "Snap a photo and ask what you are looking at; ChatGPT also points out details worth verifying. Easy to try on a phone.",
+          "thumbnail": "https://i.ytimg.com/vi/2DUJ2whBJRM/mqdefault.jpg"
         }
       ]
     },
@@ -75,27 +59,35 @@
       "title": "New models and tools",
       "items": [
         {
-          "title": "OpenAI cuts GPT-6.2 usage limits, with Astra capped 40% sooner",
-          "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
-          "source": "Hacker News",
-          "published": "2026-11-26T03:36:58+00:00",
-          "summary": "An OpenAI engineer says Astra now hits limits 40% faster and Sol 25% faster. Check team usage before promising clients a workload.",
-          "thumbnail": null
-        },
-        {
-          "title": "Claude Code 2.1.329 warns where a folder's hooks come from",
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+          "title": "Claude Code 2.1.332 adds skills from MCP servers in beta",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
           "source": "Claude Code releases",
-          "published": "2026-11-19T22:14:41+00:00",
-          "summary": "Adds a trust dialog showing where hooks are declared, and lists scheduled tasks and /loop wakeups in /tasks. Mostly useful for security-minded teams.",
+          "published": "2026-11-25T01:32:14+00:00",
+          "summary": "Skills offered by connected MCP servers now appear in the / menu as server:skill, plus a new hook that can block inline shell commands.",
           "thumbnail": null
         },
         {
-          "title": "Gemini API adds Tool Retrieval so agents can use hundreds of tools",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+          "title": "Claude Code 2.1.331 supports Code Mode on Bedrock, Google Cloud and Foundry",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+          "source": "Claude Code releases",
+          "published": "2026-11-23T21:34:41+00:00",
+          "summary": "Terminal sessions on Amazon Bedrock, Google Cloud and Microsoft Foundry now get Code Mode. Relevant for clients who must run Claude through their own cloud.",
+          "thumbnail": null
+        },
+        {
+          "title": "Claude Code 2.1.330 adds easel, a built-in mod that draws charts",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+          "source": "Claude Code releases",
+          "published": "2026-11-20T22:32:56+00:00",
+          "summary": "Claude Code can now draw charts on request and under MCP metrics results, on Pro, Max and some Team plans on macOS and Linux.",
+          "thumbnail": null
+        },
+        {
+          "title": "Google Search can use Wallet, Drive and Gemini data in AI Mode",
+          "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
           "source": "Google",
-          "published": "2026-11-19T18:00:00+00:00",
-          "summary": "In preview, it lets an agent pick from many tools while spending fewer tokens. Aimed at developers, so ask an engineer before pitching it.",
+          "published": "2026-11-23T17:00:00+00:00",
+          "summary": "Users can opt in to connect Google Wallet, Drive and the Gemini app so Search answers are more personal. Clients may ask about privacy.",
           "thumbnail": null
         }
       ]
@@ -105,35 +97,59 @@
       "title": "Tools and skills you can use",
       "items": [
         {
-          "title": "diagram-design generates 52 types of editorial diagrams in HTML and SVG",
-          "url": "https://github.com/cathrynlavery/diagram-design",
+          "title": "Firecrawl searches and scrapes web data through one API for agents",
+          "url": "https://github.com/firecrawl/firecrawl",
           "source": "GitHub trending",
-          "published": "2026-11-26T07:00:01.967088+00:00",
-          "summary": "A skill for Claude Code and other coding agents that produces clean, self-contained diagrams. Handy for client decks, though it needs a coding agent installed.",
+          "published": "2026-11-27T07:00:02.354588+00:00",
+          "summary": "Gives an AI agent search, scraping and access to 550+ data providers. Needs an API key and some setup, so ask an engineer.",
           "thumbnail": null
         },
         {
-          "title": "last30days researches a topic across Reddit, X, YouTube and Hacker News",
-          "url": "https://github.com/mvanhorn/last30days-skill",
+          "title": "AFFiNE is an open-source Notion and Miro alternative",
+          "url": "https://github.com/toeverything/AFFiNE",
           "source": "GitHub trending",
-          "published": "2026-11-26T07:00:01.967088+00:00",
-          "summary": "An agent skill that gathers recent discussion on any topic and writes a grounded summary. Good for client prep; needs a Claude Code setup.",
+          "published": "2026-11-27T07:00:02.354588+00:00",
+          "summary": "A privacy-first knowledge base combining planning, notes and whiteboards. Worth a look if clients want a self-hosted option. Some setup needed to self-host.",
           "thumbnail": null
         },
         {
-          "title": "Microsoft's markitdown converts Office documents and other files to Markdown",
-          "url": "https://github.com/microsoft/markitdown",
+          "title": "Twenty offers an open-source, AI-ready alternative to Salesforce",
+          "url": "https://github.com/twentyhq/twenty",
           "source": "GitHub trending",
-          "published": "2026-11-26T07:00:01.967088+00:00",
-          "summary": "Makes client documents easy to feed to an AI assistant. It is a Python tool run from the command line, so a little technical comfort helps.",
+          "published": "2026-11-27T07:00:02.354588+00:00",
+          "summary": "A CRM built with AI in mind. Useful to see what an open Salesforce alternative looks like; self-hosting needs an engineer.",
           "thumbnail": null
         },
         {
-          "title": "Academic Research Skills guide Claude Code from research to final draft",
-          "url": "https://github.com/Imbad0202/academic-research-skills",
+          "title": "AutoClip cuts long podcasts and interviews into short videos locally",
+          "url": "https://github.com/zhouxiaoka/autoclip",
           "source": "GitHub trending",
-          "published": "2026-11-26T07:00:01.967088+00:00",
-          "summary": "A skill set that walks through research, writing, review and revision. Worth testing on a literature-heavy brief; needs Claude Code.",
+          "published": "2026-11-27T07:00:02.354588+00:00",
+          "summary": "Open-source desktop tool that generates clips, subtitles, covers and post copy from long videos. Handy for client content teams; runs on your own machine.",
+          "thumbnail": null
+        },
+        {
+          "title": "Edgeever is a free AI-native note app with a web clipper and MCP",
+          "url": "https://github.com/tianma-if/edgeever",
+          "source": "GitHub trending",
+          "published": "2026-11-27T07:00:02.354588+00:00",
+          "summary": "An Evernote and Obsidian alternative with MCP support so AI assistants can use your notes. Free to host on Cloudflare or Docker.",
+          "thumbnail": null
+        },
+        {
+          "title": "Google's Stitch skills add design tasks to Claude Code and other agents",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "source": "GitHub trending",
+          "published": "2026-11-27T07:00:02.354588+00:00",
+          "summary": "A library of agent skills for Google's Stitch design MCP server, working with Claude Code, Gemini CLI and Cursor. Needs the Stitch server set up.",
+          "thumbnail": null
+        },
+        {
+          "title": "Superpowers adds a structured skills workflow to coding agents",
+          "url": "https://github.com/obra/superpowers",
+          "source": "GitHub trending",
+          "published": "2026-11-27T07:00:02.354588+00:00",
+          "summary": "A skills framework and working method for coding agents that is trending today. Install in Claude Code to try; best suited to technical users.",
           "thumbnail": null
         }
       ]
@@ -143,19 +159,19 @@
       "title": "Worth reading",
       "items": [
         {
-          "title": "New York Times warns photographers off updating Photoshop over AI features",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+          "title": "Google will make AI agents use its MCP servers, but Gmail can't send",
+          "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
           "source": "Hacker News",
-          "published": "2026-11-25T21:18:02+00:00",
-          "summary": "The Verge reports the warning, and the Hacker News thread has 269 comments. A live example of clients worrying about AI in everyday software.",
+          "published": "2026-11-26T09:44:23+00:00",
+          "summary": "A write-up on Google Workspace's MCP servers and their gaps, with 267 comments on Hacker News. Useful before promising clients an email agent.",
           "thumbnail": null
         },
         {
-          "title": "Golden State Warriors use Gemini for fan experiences and operations",
-          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
-          "source": "Google",
-          "published": "2026-11-24T16:00:00+00:00",
-          "summary": "Google's partnership story covers the Warriors, Valkyries and Chase Center. Vendor-written, but a concrete sports and venue example to borrow from.",
+          "title": "AI made self-hosting fun again, one developer writes",
+          "url": "https://janlukas.blog/posts/ai-self-hosting",
+          "source": "Hacker News",
+          "published": "2026-11-26T21:47:45+00:00",
+          "summary": "A blogger's account of using AI to run their own services, which drew 545 points and 280 comments. Shows the do-it-yourself side of AI use.",
           "thumbnail": null
         }
       ]
